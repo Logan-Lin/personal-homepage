@@ -50,6 +50,7 @@ primaryPublications:
       - "AAAI"
       - "2025"
     links:
+      Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/33350"
       Preprint: "https://arxiv.org/abs/2408.12809"
 
   - title: "Mobility-LLM: Learning Visiting Intentions and Travel Preference from Human Mobility Data with Large Language Models"
@@ -106,6 +107,7 @@ secondaryPublications:
       - "KDD"
       - "2025"
     links:
+      Paper: "https://dl.acm.org/doi/10.1145/3690624.3709325"
       Preprint: "https://arxiv.org/abs/2412.10859"
       Code: "https://github.com/decisionintelligence/DUET"
 
@@ -278,5 +280,5 @@ presentations:
 services:
   - "IEEE, ACM member"
   - "Secretary of IEEE (Denmark Section) Computer Society"
-  - "Reviewer for journals: TKDE, TIST, TII, and TVT"
+  - "Reviewer for journals: TKDE, TKDD, TIST, TII, and TVT"
   - "Member of program committees of conferences: KDD, ICLR, NeurIPS, AAAI, CVPR, ICCV, IJCAI, WWW, and WACV"
