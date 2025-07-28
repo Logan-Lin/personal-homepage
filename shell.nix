@@ -7,13 +7,17 @@ pkgs.mkShell {
   ];
 
   shellHook = let
+    venvPath = "$HOME/.venv/homepage";
     remoteHost = "personal-vps";
   in ''
+    # Set uv to use specific virtual environment path
+    export UV_PROJECT_ENVIRONMENT=${venvPath}
+    
     # Install dependencies with uv
     uv sync ${if dev then "--group dev" else ""}
     
     # Activate the virtual environment
-    source .venv/bin/activate
+    source ${venvPath}/bin/activate
 
     python generate.py
 
