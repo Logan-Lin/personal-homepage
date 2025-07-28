@@ -3,27 +3,21 @@
 pkgs.mkShell {
   packages = with pkgs; [
     python312
-    python312Packages.pip
-    python312Packages.virtualenv
+    uv
   ];
 
   shellHook = let
-    venvPath = "$HOME/.venv/homepage";
     remoteHost = "personal-vps";
   in ''
-    export PIP_REQUIRE_VIRTUALENV=1
-    export VENV_PATH=${venvPath}
-
-    if [ ! -d $VENV_PATH ]; then
-      python -m venv $VENV_PATH
-    fi
-    source $VENV_PATH/bin/activate
-    pip install -r requirements.txt
+    # Install dependencies with uv
+    uv sync ${if dev then "--group dev" else ""}
+    
+    # Activate the virtual environment
+    source .venv/bin/activate
 
     python generate.py
 
     ${if dev then ''
-      pip install watchdog==6.0.0
       python watch.py && exit
     '' else ''
       rsync -avP --delete ./{dist,compose.yml} ${remoteHost}:/root/homepage/
