@@ -241,6 +241,12 @@ teaching:
     links: {}
 
 presentations:
+  - title: "AMDEN: Amorphous Materials DEnoising Network"
+    tags: 
+      - "Oral Representation"
+      - "PNCS17"
+    links:
+      Slides: "/assets/pncs17-slides.pdf"
   - title: "Self-supervised Learning of Trajectory Data"
     tags:
       - "Guest lecture"
