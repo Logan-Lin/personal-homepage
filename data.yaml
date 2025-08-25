@@ -238,7 +238,8 @@ teaching:
     tags:
       - "Fall 2025"
       - "Aalborg University"
-    links: {}
+    links:
+      Literature: https://blog.yanlincs.com/ai-system/
 
 presentations:
   - title: "AMDEN: Amorphous Materials DEnoising Network"
