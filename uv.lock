@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.12"
 
 [[package]]
@@ -11,10 +11,6 @@ dependencies = [
     { name = "markdown" },
     { name = "python-markdown-math" },
     { name = "pyyaml" },
-]
-
-[package.dev-dependencies]
-dev = [
     { name = "watchdog" },
 ]
 
@@ -24,10 +20,8 @@ requires-dist = [
     { name = "markdown", specifier = "==3.8.0" },
     { name = "python-markdown-math", specifier = "==0.9" },
     { name = "pyyaml", specifier = "==6.0.2" },
+    { name = "watchdog", specifier = "==6.0.0" },
 ]
-
-[package.metadata.requires-dev]
-dev = [{ name = "watchdog", specifier = "==6.0.0" }]
 
 [[package]]
 name = "jinja2"

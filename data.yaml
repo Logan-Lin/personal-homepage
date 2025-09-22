@@ -6,6 +6,33 @@ sections:
   - services
 
 primaryPublications:
+  - title: "TrajMamba: An Efficient and Semantic-rich Vehicle Trajectory Pre-training Model"
+    authors: Yichen Liu*, <strong>Yan Lin*</strong>, Shengnan Guo, Zeyu Zhou, Youfang Lin, Huaiyu Wan
+    tags:
+      - "NeurIPS"
+      - "2025"
+    links:
+      Poster: "https://neurips.cc/virtual/2025/poster/115959"
+
+  - title: "TransferTraj: A Vehicle Trajectory Learning Model for Region and Task Transferability"
+    authors: Tonglong Wei*, <strong>Yan Lin*</strong>, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, Gao Cong, Huaiyu Wan
+    tags:
+      - "NeurIPS"
+      - "2025"
+    links:
+      Oral: "https://neurips.cc/virtual/2025/oral/117509"
+      Poster: "https://neurips.cc/virtual/2025/poster/117508"
+      Preprint: "https://arxiv.org/abs/2505.12672"
+
+  - title: "PLMTrajRec: A Scalable and Generalizable Trajectory Recovery Method with Pre-trained Language Models"
+    authors: Tonglong Wei*, <strong>Yan Lin*</strong>, Youfang Lin, Shengnan Guo, Jilin Hu, Haitao Yuan, Gao Cong, Huaiyu Wan 
+    tags:
+      - "NeurIPS"
+      - "2025"
+    links:
+      Poster: "https://neurips.cc/virtual/2025/poster/117945"
+      Preprint: "https://arxiv.org/abs/2410.14281"
+
   - title: "UVTM: Universal Vehicle Trajectory Modeling with ST Feature Domain Generation"
     authors: "<strong>Yan Lin</strong>, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin, Huaiyu Wan"
     tags:

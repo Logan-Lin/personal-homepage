@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {}, dev ? false, restartRemote ? false }:
+{ pkgs ? import <nixpkgs> {}}:
 
 pkgs.mkShell {
   packages = with pkgs; [
@@ -8,28 +8,26 @@ pkgs.mkShell {
 
   shellHook = let
     venvPath = "$HOME/.venv/homepage";
-    remoteHost = "personal-vps";
+    remoteHost = "vps";
   in ''
     # Set uv to use specific virtual environment path
     export UV_PROJECT_ENVIRONMENT=${venvPath}
     
     # Install dependencies with uv
-    uv sync ${if dev then "--group dev" else ""}
-    
+    uv sync
+
     # Activate the virtual environment
     source ${venvPath}/bin/activate
 
-    python generate.py
+    # Define aliases
+    alias serve="python generate.py && python watch.py"
+    alias build="python generate.py"
+    alias sync="python generate.py && rsync -avP --delete ./dist/* ${remoteHost}:~/www/homepage"
+    
+    echo "Available commands:"
+    echo "  serve      - Watch and rebuild on changes (dev mode)"
+    echo "  build      - Generate the static site"
+    echo "  sync       - Build and sync with remote production server"
 
-    ${if dev then ''
-      python watch.py && exit
-    '' else ''
-      rsync -avP --delete ./{dist,compose.yml} ${remoteHost}:/root/homepage/
-
-      ${if restartRemote then ''
-        ssh ${remoteHost} "cd /root/homepage && docker compose down && docker compose up -d --remove-orphans"
-      '' else ""}
-      exit
-    ''}
   '';
 }
