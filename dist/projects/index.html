@@ -52,7 +52,7 @@
         
           
         <li class="nav-item">
-            <a class="link nav-link px-0" href="/#publications">
+            <a class="link nav-link px-0" href="/publications/">
                 <span class="d-inline d-md-none">Pubs</span>
                 <span class="d-none d-md-inline">Publications</span>
             </a>
@@ -61,7 +61,7 @@
         
           
         <li class="nav-item">
-            <a class="link nav-link px-0" href="/#projects">
+            <a class="link nav-link px-0" href="/projects/">
                 <span class="d-inline d-md-none">Work</span>
                 <span class="d-none d-md-inline">Projects</span>
             </a>
@@ -70,20 +70,13 @@
         
           
         <li class="nav-item">
-            <a class="link nav-link px-0" href="/#presentations">
+            <a class="link nav-link px-0" href="/presentations/">
                 <span class="d-inline d-md-none">Talks</span>
                 <span class="d-none d-md-inline">Presentations</span>
             </a>
         </li>
           
         
-          
-        <li class="nav-item">
-            <a class="link nav-link px-0" href="/#services">
-                <span class="d-inline d-md-none">Serve</span>
-                <span class="d-none d-md-inline">Services</span>
-            </a>
-        </li>
           
         
         <li class="nav-item">
@@ -216,37 +209,8 @@
     </div>
   </footer>
 
-  <button id="back-to-top" class="btn btn-light rounded-circle d-none align-items-center justify-content-center" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000; width: 40px; height: 40px; padding: 0;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
-    </svg>
-  </button>
 
   
-  <script>
-    // Show or hide the back-to-top button
-    window.addEventListener('scroll', function() {
-      var backToTopButton = document.getElementById('back-to-top');
-      if (window.scrollY > 100) {
-        backToTopButton.classList.remove('d-none');
-        backToTopButton.classList.add('d-flex');
-      } else {
-        backToTopButton.classList.add('d-none');
-        backToTopButton.classList.remove('d-flex');
-      }
-    });
-
-    // Scroll to top when the button is clicked
-    document.getElementById('back-to-top').addEventListener('click', function(e) {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-      window.location.href = '#';
-      return false;
-    });
-  </script>
   
 </body>
 

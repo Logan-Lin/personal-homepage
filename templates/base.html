@@ -74,37 +74,8 @@
     </div>
   </footer>
 
-  <button id="back-to-top" class="btn btn-light rounded-circle d-none align-items-center justify-content-center" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000; width: 40px; height: 40px; padding: 0;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"/>
-    </svg>
-  </button>
 
   {% block extra_js %}
-  <script>
-    // Show or hide the back-to-top button
-    window.addEventListener('scroll', function() {
-      var backToTopButton = document.getElementById('back-to-top');
-      if (window.scrollY > 100) {
-        backToTopButton.classList.remove('d-none');
-        backToTopButton.classList.add('d-flex');
-      } else {
-        backToTopButton.classList.add('d-none');
-        backToTopButton.classList.remove('d-flex');
-      }
-    });
-
-    // Scroll to top when the button is clicked
-    document.getElementById('back-to-top').addEventListener('click', function(e) {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-      window.location.href = '#';
-      return false;
-    });
-  </script>
   {% endblock %}
 </body>
 
