@@ -43,13 +43,13 @@ block content %}
     </div>
     <div>
         <div id="primary-publications" class="list-group list-group-flush">
-            {% for pub in data.primaryPublications[:10] %} {% with
+            {% for pub in data.primaryPublications[:6] %} {% with
             type='primary' %} {% include 'partials/publication.html' %} {%
             endwith %} {% endfor %}
         </div>
         <hr class="my-2" />
         <div id="secondary-publications" class="list-group list-group-flush">
-            {% for pub in data.secondaryPublications[:10] %} {% with
+            {% for pub in data.secondaryPublications[:6] %} {% with
             type='secondary' %} {% include 'partials/publication.html' %} {%
             endwith %} {% endfor %}
         </div>
@@ -96,7 +96,7 @@ block content %}
         </a>
     </div>
     <div class="list-group list-group-flush" id="teaching-list">
-        {% for teaching in data.teaching[:5] %} {% include
+        {% for teaching in data.teaching[:3] %} {% include
         'partials/teaching.html' %} {% endfor %}
     </div>
 </article>
@@ -112,7 +112,7 @@ block content %}
         </a>
     </div>
     <div class="list-group list-group-flush" id="presentation-list">
-        {% for presentation in data.presentations[:5] %} {% include
+        {% for presentation in data.presentations[:3] %} {% include
         'partials/presentation.html' %} {% endfor %}
     </div>
 </article>
