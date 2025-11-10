@@ -129,14 +129,14 @@ primaryPublications:
 
 secondaryPublications:
   - title: "SculptDrug: A Spatial Condition-Aware Bayesian Flow Model for Structure-based Drug Design"
-    authors: Qingsong Zhong, Haomin Yu, Yan Lin, Wangmeng Shen, Long Zeng, Jilin Hu
+    authors: Qingsong Zhong, Haomin Yu, <strong>Yan Lin</strong>, Wangmeng Shen, Long Zeng, Jilin Hu
     tags:
       - "AAAI"
       - "2026"
     links: {}
 
   - title: "Spatial-Temporal Feedback Diffusion Guidance for Controlled Traffic Imputation"
-    authors: Xiaowei Mao, Huihu Ding, Yan Lin, Tingrui Wu, Shengnan Guo, Dazhuo Qiu, Feiling Fang, Jilin Hu, Huaiyu Wan
+    authors: Xiaowei Mao, Huihu Ding, <strong>Yan Lin</strong>, Tingrui Wu, Shengnan Guo, Dazhuo Qiu, Feiling Fang, Jilin Hu, Huaiyu Wan
     tags:
       - "AAAI"
       - "2026"
