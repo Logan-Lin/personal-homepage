@@ -128,6 +128,20 @@ primaryPublications:
       Code: "https://github.com/Logan-Lin/CTLE"
 
 secondaryPublications:
+  - title: "SculptDrug: A Spatial Condition-Aware Bayesian Flow Model for Structure-based Drug Design"
+    authors: Qingsong Zhong, Haomin Yu, Yan Lin, Wangmeng Shen, Long Zeng, Jilin Hu
+    tags:
+      - "AAAI"
+      - "2026"
+    links: {}
+
+  - title: "Spatial-Temporal Feedback Diffusion Guidance for Controlled Traffic Imputation"
+    authors: Xiaowei Mao, Huihu Ding, Yan Lin, Tingrui Wu, Shengnan Guo, Dazhuo Qiu, Feiling Fang, Jilin Hu, Huaiyu Wan
+    tags:
+      - "AAAI"
+      - "2026"
+    links: {}
+
   - title: "DUET: Dual Clustering Enhanced Multivariate Time Series Forecasting"
     authors: "Xiangfei Qiu, Xingjian Wu, <strong>Yan Lin</strong>, Chenjuan Guo, Jilin Hu, Bin Yang"
     tags:
