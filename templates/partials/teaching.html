@@ -10,4 +10,7 @@
     </div>
   </div>
   <h5 class="mb-1 paper-title">{{ teaching.title|safe }}</h5>
+  {% if teaching.desc %}
+    <p class="card-text mb-auto project-desc">{{ teaching.desc|safe }}</p>
+  {% endif %}
 </div> 

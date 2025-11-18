@@ -1,7 +1,7 @@
 sections:
   - publications
   - projects
-  # - teaching
+  - teaching
   - presentations
   - services
 
@@ -279,7 +279,9 @@ teaching:
     tags:
       - "Fall 2025"
       - "Aalborg University"
+    desc: "This course introduces students to streamlined interaction with AI models and systems, as well as implementation and deployment of scalable, production-ready AI systems on real-world infrastructures."
     links:
+      Moodle: https://www.moodle.aau.dk/course/view.php?id=57016
       Literature: https://blog.yanlincs.com/ai-system/
 
 presentations:
