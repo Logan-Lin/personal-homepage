@@ -17,6 +17,10 @@ if __name__ == '__main__':
     os.makedirs('dist/presentations', exist_ok=True)
     os.makedirs('dist/teaching', exist_ok=True)
 
+    # Create .nojekyll file to prevent GitHub Pages from using Jekyll
+    with open('dist/.nojekyll', 'w') as f:
+        pass
+
     def render_template(template_name, output_path, **kwargs):
         template = env.get_template(template_name)
         html = template.render(year=current_year, **kwargs)
