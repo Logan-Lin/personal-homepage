@@ -8,7 +8,6 @@ pkgs.mkShell {
 
   shellHook = let
     venvPath = "$HOME/.venv/homepage";
-    remoteHost = "vps";
   in ''
     # Set uv to use specific virtual environment path
     export UV_PROJECT_ENVIRONMENT=${venvPath}
@@ -21,13 +20,8 @@ pkgs.mkShell {
 
     # Define aliases
     alias serve="python generate.py && python watch.py"
-    alias build="python generate.py"
-    alias sync="python generate.py && rsync -avP --delete ./dist/* ${remoteHost}:~/www/homepage"
     
     echo "Available commands:"
-    echo "  serve      - Watch and rebuild on changes (dev mode)"
-    echo "  build      - Generate the static site"
-    echo "  sync       - Build and sync with remote production server"
-
+    echo "  serve      - Watch and rebuild on changes"
   '';
 }
