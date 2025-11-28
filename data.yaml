@@ -6,6 +6,13 @@ sections:
   - services
 
 primaryPublications:
+  - title: "RIPCN: A Road Impedance Principal Component Network for Probabilistic Traffic Flow Forecasting"
+    authors: Haochen Lv*, <strong>Yan Lin*</strong>, Shengnan Guo, Xiaowei Mao, Hong Nie, Letian Gong, Youfang Lin, Huaiyu Wan
+    tags:
+      - "KDD"
+      - "2026"
+    links: {}
+
   - title: "TrajMamba: An Efficient and Semantic-rich Vehicle Trajectory Pre-training Model"
     authors: Yichen Liu*, <strong>Yan Lin*</strong>, Shengnan Guo, Zeyu Zhou, Youfang Lin, Huaiyu Wan
     tags:
@@ -128,6 +135,15 @@ primaryPublications:
       Code: "https://github.com/Logan-Lin/CTLE"
 
 secondaryPublications:
+
+  - title: "Traj-MLLM: Can Multimodal Large Language Models Reform Trajectory Data Mining?"
+    authors: Shuo Liu, Di Yao, <strong>Yan Lin</strong>, Gao Cong, Jingping Bi
+    tags:
+      - "KDD"
+      - "2026"
+    links:
+      Preprint: "https://arxiv.org/abs/2509.00053"
+
   - title: "SculptDrug: A Spatial Condition-Aware Bayesian Flow Model for Structure-based Drug Design"
     authors: Qingsong Zhong, Haomin Yu, <strong>Yan Lin</strong>, Wangmeng Shen, Long Zeng, Jilin Hu
     tags:
