@@ -116,7 +116,7 @@ primaryPublications:
       Preprint: "https://arxiv.org/abs/2207.14539"
       Code: "https://github.com/Logan-Lin/MMTEC"
 
-  - title: "Pre-training Time-aware location embeddings from spatial-temporal trajectories"
+  - title: "Pre-training Time-Aware Location Embeddings from Spatial-Temporal Trajectories"
     authors: "Huaiyu Wan, <strong>Yan Lin</strong>, Shengnan Guo, Youfang Lin"
     tags:
       - "IEEE TKDE"
