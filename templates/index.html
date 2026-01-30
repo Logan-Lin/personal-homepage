@@ -17,16 +17,6 @@ block content %}
             <i>representation learning</i>, and <i>AI for science</i>.
         </p>
     </div>
-    <div
-        class="col-5 col-xl-4 col-xxl-3 d-none d-lg-flex align-items-center"
-    >
-        <img
-            src="/profile.webp"
-            alt="Yan Lin"
-            class="rounded w-100"
-            style="object-fit: contain"
-        />
-    </div>
 </div>
 
 {% for section in data.sections %}
@@ -119,10 +109,7 @@ block content %}
   {% elif section == 'services' %}
 <article
     id="services"
-    class="rounded text-body-emphasis bg-body-secondary flex-md-row my-4 position-relative p-4 transition-shadow"
-    style="transition: box-shadow 0.2s ease-in-out"
-    onmouseover="this.classList.add('shadow-sm')"
-    onmouseout="this.classList.remove('shadow-sm')"
+    class="rounded text-body-emphasis bg-body-secondary flex-md-row my-4 position-relative p-4"
 >
     <h3 class="mb-3">Services</h3>
     <div id="service-list">
