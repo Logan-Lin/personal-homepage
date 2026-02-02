@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block title %}Yan Lin's Homepage{% endblock %} {%
 block navigation %} {% include 'partials/navigation.html' %} {% endblock %} {%
 block content %}
-<div class="row g-0 border rounded text-body-emphasis bg-body-secondary flex-md-row my-4 position-relative">
+<div class="row g-0 rounded text-body-emphasis bg-body-secondary flex-md-row my-4 position-relative">
     <div class="col p-4 d-flex flex-column position-static">
         <h3 class="fst-italic mb-3">Biography - Yan Lin</h3>
         <p class="card-text mb-auto" style="font-size: calc(1.0rem + 0.1vw)">
@@ -28,13 +28,13 @@ block content %}
     </div>
     <div>
         <div id="primary-publications" class="list-group list-group-flush">
-            {% for pub in data.primaryPublications[:6] %} {% with
+            {% for pub in data.primaryPublications[:7] %} {% with
             type='primary' %} {% include 'partials/publication.html' %} {%
             endwith %} {% endfor %}
         </div>
         <hr class="my-2" />
         <div id="secondary-publications" class="list-group list-group-flush">
-            {% for pub in data.secondaryPublications[:6] %} {% with
+            {% for pub in data.secondaryPublications[:7] %} {% with
             type='secondary' %} {% include 'partials/publication.html' %} {%
             endwith %} {% endfor %}
         </div>
@@ -58,12 +58,12 @@ block content %}
     </div>
     <div>
         <div id="primary-projects" class="list-group list-group-flush">
-            {% for project in data.primaryProjects[:3] %} {% with type='primary'
+            {% for project in data.primaryProjects[:5] %} {% with type='primary'
             %} {% include 'partials/project.html' %} {% endwith %} {% endfor %}
         </div>
         <hr class="my-2" />
         <div id="secondary-projects" class="list-group list-group-flush">
-            {% for project in data.secondaryProjects[:3] %} {% with
+            {% for project in data.secondaryProjects[:5] %} {% with
             type='secondary' %} {% include 'partials/project.html' %} {% endwith
             %} {% endfor %}
         </div>
@@ -81,7 +81,7 @@ block content %}
         </a>
     </div>
     <div class="list-group list-group-flush" id="teaching-list">
-        {% for teaching in data.teaching[:3] %} {% include
+        {% for teaching in data.teaching[:5] %} {% include
         'partials/teaching.html' %} {% endfor %}
     </div>
 </article>
@@ -97,7 +97,7 @@ block content %}
         </a>
     </div>
     <div class="list-group list-group-flush" id="presentation-list">
-        {% for presentation in data.presentations[:3] %} {% include
+        {% for presentation in data.presentations[:5] %} {% include
         'partials/presentation.html' %} {% endfor %}
     </div>
 </article>
