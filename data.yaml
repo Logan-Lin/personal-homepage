@@ -307,21 +307,21 @@ presentations:
       - "Oral Presentation"
       - "PNCS17"
     links:
-      Slides: "/assets/pncs17-slides.pdf"
+      Slides: "https://github.com/Logan-Lin/homepage/blob/main/assets/pncs17-slides.pdf"
 
   - title: "Self-supervised Learning of Trajectory Data"
     tags:
       - "Guest lecture"
       - "Aalborg University"
     links:
-      Slides: "/assets/Self-supervised Learning of Trajectory Data.pdf"
+      Slides: "https://github.com/Logan-Lin/homepage/blob/main/assets/Self-supervised%20Learning%20of%20Trajectory%20Data.pdf"
 
   - title: "PLM4Traj: Leveraging Pre-trained Language Models for Cognizing Movement Patterns and Travel Purposes from Trajectories"
     tags:
       - "Workshop presentation"
       - "KDD 2024"
     links:
-      Slides: "/assets/KDD_2024_Workshop_PLM4Traj.pdf"
+      Slides: "https://github.com/Logan-Lin/homepage/blob/main/assets/KDD_2024_Workshop_PLM4Traj.pdf"
       Paper: "https://arxiv.org/abs/2405.12459"
 
   - title: "Origin-Destination Travel Time Oracle for Map-based Services"
@@ -329,21 +329,21 @@ presentations:
       - "Paper Oral"
       - "SIGMOD 2024"
     links:
-      Slides: "/assets/SIGMOD-Oral-PPT.pdf"
+      Slides: "https://github.com/Logan-Lin/homepage/blob/main/assets/SIGMOD-Oral-PPT.pdf"
 
   - title: "Self-supervised Learning of Spatial-temporal Trajectories"
     tags:
       - "Tutorial"
       - "SpatialDI 2024"
     links:
-      Slides: "/assets/Talk on SpatialDI 2024.pdf"
+      Slides: "https://github.com/Logan-Lin/homepage/blob/main/assets/Talk%20on%20SpatialDI%202024.pdf"
 
   - title: "Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction"
     tags:
       - "Paper Oral"
       - "AAAI 2021"
     links:
-      Slides: "/assets/AAAI21 Oral PPT.pdf"
+      Slides: "https://github.com/Logan-Lin/homepage/blob/main/assets/AAAI21%20Oral%20PPT.pdf"
 
 services:
   - "IEEE, ACM member"

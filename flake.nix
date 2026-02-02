@@ -12,6 +12,9 @@
           (writeShellScriptBin "serve" ''
             python generate.py && python watch.py
           '')
+          (writeShellScriptBin "build" ''
+            python generate.py
+          '')
         ];
         shellHook = ''
           uv sync
