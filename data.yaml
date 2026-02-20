@@ -307,43 +307,38 @@ presentations:
       - "Oral Presentation"
       - "PNCS17"
     links:
-      Slides: "./assets/pncs17.pdf"
+      Slides: "https://github.com/yl-presentation/amden/releases"
 
   - title: "Self-supervised Learning of Trajectory Data"
     tags:
       - "Guest lecture"
       - "Aalborg University"
-    links:
-      Slides: "./assets/ssl-trajectory.pdf"
+    links: {}
 
   - title: "PLM4Traj: Leveraging Pre-trained Language Models for Cognizing Movement Patterns and Travel Purposes from Trajectories"
     tags:
       - "Workshop presentation"
       - "KDD 2024"
     links:
-      Slides: "./assets/kdd24-workshop.pdf"
       Paper: "https://arxiv.org/abs/2405.12459"
 
   - title: "Origin-Destination Travel Time Oracle for Map-based Services"
     tags:
       - "Paper Oral"
       - "SIGMOD 2024"
-    links:
-      Slides: "./assets/sigmod24-oral.pdf"
+    links: {}
 
   - title: "Self-supervised Learning of Spatial-temporal Trajectories"
     tags:
       - "Tutorial"
       - "SpatialDI 2024"
-    links:
-      Slides: "./assets/spatialdi24.pdf"
+    links: {}
 
   - title: "Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction"
     tags:
       - "Paper Oral"
       - "AAAI 2021"
-    links:
-      Slides: "./assets/aaai24-oral.pdf"
+    links: {}
 
 services:
   - "IEEE, ACM member"
