@@ -9,8 +9,7 @@ jobs:
   deploy:
     runs-on: node-20
     steps:
-      - name: Checkout
-        uses: https://code.forgejo.org/actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Install dependencies
         run: |
@@ -31,3 +30,7 @@ jobs:
           npx wrangler pages deploy dist/ \
             --project-name=${{ secrets.CF_PAGES_PROJECT_NAME }} \
             --commit-dirty=true
+
+      - name: Send notification
+        if: always()
+        run: curl -s -d "Homepage deploy ${{ job.status }}" https://ntfy.sh/yanlincs-homelab
