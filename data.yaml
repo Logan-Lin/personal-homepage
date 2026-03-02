@@ -307,7 +307,7 @@ presentations:
       - "Oral Presentation"
       - "PNCS17"
     links:
-      Slides: "https://github.com/yl-presentation/amden/releases"
+      Slides: "https://github.com/Logan-Lin/amden-presentation/releases/tag/v1.2-pncs17"
 
   - title: "Self-supervised Learning of Trajectory Data"
     tags:
