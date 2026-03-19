@@ -1,19 +1,69 @@
-sections:
-  - publications
-  - projects
-  - teaching
-  - presentations
-  - services
+footerLinks:
+  - name: Email
+    url: mailto:s@yanlincs.com
+  - name: GitHub
+    url: https://github.com/Logan-Lin
+    external: true
+  - name: Google Scholar
+    url: "https://scholar.google.com/citations?user=nHMmG2UAAAAJ&hl=en&oi=sra"
+    external: true
+  - name: Git Server
+    url: https://git.yanlincs.com/
+    external: true
+
+navbar:
+  - name: Publications
+    url: /publications/
+  - name: Projects
+    url: /projects/
+  - name: Blog
+    url: https://blog.yanlincs.com
+    external: true
+
+researchSections:
+  - desc: "Trajectory representation learning is one of my established research topics, where we aim to learn representations of trajectories (of vehicle, human, or vessel, etc.) that are universal across various downstream tasks. This also extends to building a multi-task/foundational model for trajectories that can perform various tasks at once."
+    items:
+      - unite-survey
+      - uvtm
+      - mmtec
+      - ctle
+      - transfertraj
+      - trajmamba
+
+  - desc: "Spatiotemporal data mining is a broader topic that is inclusive of the above. It covers research on extracting and utilizing patterns from large-scale data with spatial information and that is dynamic over time (usually sourced from transportation scenarios)."
+    items:
+      - dot
+      - ripcn
+      - plmtrajrec
+      - path-llm
+      - dutytte
+      - mobility-llm
+
+  - desc: "Interdisciplinary research between data mining and materials science is a new research direction I am exploring. The promise is that data mining enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design."
+    items:
+      - amden-pncs17
+      - villum-inverse-design
+      - sculptdrug
+
+teachingSections:
+  - desc: "My course teaching follows three core principles: a solid understanding of the subject matter, awareness of students' established experiences and background, and a PBL style applied throughout lectures, exercises, and exams. This translates to practices including tailor-made blog-style literature that is both professional and intuitive, inspirational lectures that connect theory to real-world problems, and progressively-arranged hands-on exercises that build practical problem-solving skills."
+    items:
+      - ai-systems
+  - desc: "I am building my supervision experience, currently supervising Bachelor's-level semester projects at Aalborg University. My supervision focuses on problem definition, critical thinking about design choices, and delivering convincing conclusions."
+    items:
+      - sw6-camera-behind
 
 primaryPublications:
-  - title: "RIPCN: A Road Impedance Principal Component Network for Probabilistic Traffic Flow Forecasting"
+  - id: ripcn
+    title: "RIPCN: A Road Impedance Principal Component Network for Probabilistic Traffic Flow Forecasting"
     authors: Haochen Lv*, <strong>Yan Lin*</strong>, Shengnan Guo, Xiaowei Mao, Hong Nie, Letian Gong, Youfang Lin, Huaiyu Wan
     tags:
       - "KDD"
       - "2026"
     links: {}
 
-  - title: "TrajMamba: An Efficient and Semantic-rich Vehicle Trajectory Pre-training Model"
+  - id: trajmamba
+    title: "TrajMamba: An Efficient and Semantic-rich Vehicle Trajectory Pre-training Model"
     authors: Yichen Liu*, <strong>Yan Lin*</strong>, Shengnan Guo, Zeyu Zhou, Youfang Lin, Huaiyu Wan
     tags:
       - "NeurIPS"
@@ -21,7 +71,8 @@ primaryPublications:
     links:
       Poster: "https://neurips.cc/virtual/2025/poster/115959"
 
-  - title: "TransferTraj: A Vehicle Trajectory Learning Model for Region and Task Transferability"
+  - id: transfertraj
+    title: "TransferTraj: A Vehicle Trajectory Learning Model for Region and Task Transferability"
     authors: Tonglong Wei*, <strong>Yan Lin*</strong>, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, Gao Cong, Huaiyu Wan
     tags:
       - "NeurIPS"
@@ -31,7 +82,8 @@ primaryPublications:
       Poster: "https://neurips.cc/virtual/2025/poster/117508"
       Preprint: "https://arxiv.org/abs/2505.12672"
 
-  - title: "PLMTrajRec: A Scalable and Generalizable Trajectory Recovery Method with Pre-trained Language Models"
+  - id: plmtrajrec
+    title: "PLMTrajRec: A Scalable and Generalizable Trajectory Recovery Method with Pre-trained Language Models"
     authors: Tonglong Wei*, <strong>Yan Lin*</strong>, Youfang Lin, Shengnan Guo, Jilin Hu, Haitao Yuan, Gao Cong, Huaiyu Wan 
     tags:
       - "NeurIPS"
@@ -40,7 +92,8 @@ primaryPublications:
       Poster: "https://neurips.cc/virtual/2025/poster/117945"
       Preprint: "https://arxiv.org/abs/2410.14281"
 
-  - title: "UVTM: Universal Vehicle Trajectory Modeling with ST Feature Domain Generation"
+  - id: uvtm
+    title: "UVTM: Universal Vehicle Trajectory Modeling with ST Feature Domain Generation"
     authors: "<strong>Yan Lin</strong>, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin, Huaiyu Wan"
     tags:
       - "IEEE TKDE"
@@ -50,7 +103,8 @@ primaryPublications:
       Preprint: "https://arxiv.org/abs/2402.07232"
       Code: "https://github.com/Logan-Lin/UVTM"
 
-  - title: "TrajCogn: Leveraging LLMs for Cognizing Movement Patterns and Travel Purposes from Trajectories"
+  - id: trajcogn
+    title: "TrajCogn: Leveraging LLMs for Cognizing Movement Patterns and Travel Purposes from Trajectories"
     authors: "Zeyu Zhou*, <strong>Yan Lin*</strong>, Haomin Wen, Shengnan Guo, Jilin Hu, Youfang Lin, Huaiyu Wan"
     tags:
       - "IJCAI"
@@ -60,7 +114,8 @@ primaryPublications:
       Preprint: "https://arxiv.org/abs/2405.12459"
       Code: "https://github.com/Zeru19/PLM4Traj"
 
-  - title: "UniTE: A Survey and Unified Pipeline for Pre-training Spatiotemporal Trajectory Embeddings"
+  - id: unite-survey
+    title: "UniTE: A Survey and Unified Pipeline for Pre-training Spatiotemporal Trajectory Embeddings"
     authors: "<strong>Yan Lin</strong>, Zeyu Zhou, Yicheng Liu, Haochen Lv, Haomin Wen, Tianyi Li, Yushuai Li, Christian S. Jensen, Shengnan Guo, Youfang Lin, Huaiyu Wan"
     tags:
       - "IEEE TKDE"
@@ -70,7 +125,8 @@ primaryPublications:
       Preprint: "https://arxiv.org/abs/2407.12550"
       Code: "https://github.com/Logan-Lin/UniTE"
 
-  - title: "Path-LLM: A Multi-Modal Path Representation Learning by Aligning and Fusing with Large Language Models"
+  - id: path-llm
+    title: "Path-LLM: A Multi-Modal Path Representation Learning by Aligning and Fusing with Large Language Models"
     authors: "Yongfu Wei*, <strong>Yan Lin*</strong>, Hongfan Gao, Ronghui Xu, Sean Bin Yang, Jilin Hu"
     tags:
       - "WWW"
@@ -79,7 +135,8 @@ primaryPublications:
       Paper: "https://openreview.net/forum?id=KmMSQS6tFn"
       Code: "https://github.com/decisionintelligence/Path-LLM"
 
-  - title: "DutyTTE: Deciphering Uncertainty in Origin-Destination Travel Time Estimation"
+  - id: dutytte
+    title: "DutyTTE: Deciphering Uncertainty in Origin-Destination Travel Time Estimation"
     authors: "Xiaowei Mao*, <strong>Yan Lin*</strong>, Shengnan Guo, Yubin Chen, Xingyu Xian, Haomin Wen, Qisen Xu, Youfang Lin, Huaiyu Wan"
     tags:
       - "AAAI"
@@ -88,7 +145,8 @@ primaryPublications:
       Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/33350"
       Preprint: "https://arxiv.org/abs/2408.12809"
 
-  - title: "Mobility-LLM: Learning Visiting Intentions and Travel Preference from Human Mobility Data with Large Language Models"
+  - id: mobility-llm
+    title: "Mobility-LLM: Learning Visiting Intentions and Travel Preference from Human Mobility Data with Large Language Models"
     authors: "Letian Gong*, <strong>Yan Lin*</strong>, Xinyue Zhang, Yiwen Lu, Xuedi Han, Yichen Liu, Shengnan Guo, Youfang Lin, Huaiyu Wan"
     tags:
       - "NeurIPS"
@@ -97,7 +155,8 @@ primaryPublications:
       Paper: "https://openreview.net/forum?id=0feJEykDRx"
       Poster: "https://neurips.cc/virtual/2024/poster/96914"
 
-  - title: "Origin-Destination Travel Time Oracle for Map-based Services"
+  - id: dot
+    title: "Origin-Destination Travel Time Oracle for Map-based Services"
     authors: "<strong>Yan Lin</strong>, Huaiyu Wan, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin"
     tags:
       - "SIGMOD"
@@ -107,7 +166,8 @@ primaryPublications:
       Preprint: "https://arxiv.org/abs/2307.03048"
       Code: "https://github.com/Logan-Lin/DOT"
 
-  - title: "Pre-training General Trajectory Embeddings with Maximum Multi-view Entropy Coding"
+  - id: mmtec
+    title: "Pre-training General Trajectory Embeddings with Maximum Multi-view Entropy Coding"
     authors: "<strong>Yan Lin</strong>, Huaiyu Wan, Shengnan Guo, Jilin Hu, Christian S. Jensen, Youfang Lin"
     tags:
       - "IEEE TKDE"
@@ -117,7 +177,8 @@ primaryPublications:
       Preprint: "https://arxiv.org/abs/2207.14539"
       Code: "https://github.com/Logan-Lin/MMTEC"
 
-  - title: "Pre-training Time-Aware Location Embeddings from Spatial-Temporal Trajectories"
+  - id: tale
+    title: "Pre-training Time-Aware Location Embeddings from Spatial-Temporal Trajectories"
     authors: "Huaiyu Wan, <strong>Yan Lin</strong>, Shengnan Guo, Youfang Lin"
     tags:
       - "IEEE TKDE"
@@ -126,7 +187,8 @@ primaryPublications:
       Paper: "https://ieeexplore.ieee.org/abstract/document/9351627"
       Code: "https://github.com/Logan-Lin/TALE"
 
-  - title: "Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction"
+  - id: ctle
+    title: "Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction"
     authors: "<strong>Yan Lin</strong>, Huaiyu Wan, Shengnan Guo, Youfang Lin"
     tags:
       - "AAAI"
@@ -145,7 +207,8 @@ secondaryPublications:
     links:
       Preprint: "https://arxiv.org/abs/2509.00053"
 
-  - title: "SculptDrug: A Spatial Condition-Aware Bayesian Flow Model for Structure-based Drug Design"
+  - id: sculptdrug
+    title: "SculptDrug: A Spatial Condition-Aware Bayesian Flow Model for Structure-based Drug Design"
     authors: Qingsong Zhong, Haomin Yu, <strong>Yan Lin</strong>, Wangmeng Shen, Long Zeng, Jilin Hu
     tags:
       - "AAAI"
@@ -273,7 +336,8 @@ primaryProjects:
       Code: "https://github.com/wenhaomin/ChatGPT-PromptGenius"
 
 secondaryProjects:
-  - title: "Research on <i>Inverse Design of Materials Using Diffusion Probabilistic Models</i>"
+  - id: villum-inverse-design
+    title: "Research on <i>Inverse Design of Materials Using Diffusion Probabilistic Models</i>"
     tags:
       - "Villum Foundation"
     desc: "This project focuses on developing diffusion probabilistic models to first understand the relationship between chemistry/structure and material properties, then enable the inverse design of new materials with specific properties. This project currently supports my postdoctoral research position."
@@ -292,7 +356,8 @@ secondaryProjects:
     links: {}
 
 teaching:
-  - title: "AI Systems & Infrastructure"
+  - id: ai-systems
+    title: "AI Systems & Infrastructure"
     tags:
       - "Fall 2025"
       - "Aalborg University"
@@ -301,8 +366,18 @@ teaching:
       Moodle: https://www.moodle.aau.dk/course/view.php?id=57016
       Literature: https://blog.yanlincs.com/ai-system/
 
+  - id: sw6-camera-behind
+    title: "A Camera That Sees Behind"
+    tags:
+      - "Spring 2026"
+      - "Aalborg University"
+    desc: "A Bachelor's semester project on developing a computationally lightweight model deployable on embedded devices to remove humans from images or video feeds, serving as a prototype GDPR-compliant surveillance system."
+    links:
+      Proposal: https://github.com/Logan-Lin/camera-sees-behind/releases/tag/v1.2-sw6-26
+
 presentations:
-  - title: "AMDEN: Amorphous Materials DEnoising Network"
+  - id: amden-pncs17
+    title: "AMDEN: Amorphous Materials DEnoising Network"
     tags: 
       - "Oral Presentation"
       - "PNCS17"
@@ -339,9 +414,3 @@ presentations:
       - "Paper Oral"
       - "AAAI 2021"
     links: {}
-
-services:
-  - "IEEE, ACM member"
-  - "Secretary of IEEE (Denmark Section) Computer Society"
-  - "Reviewer for journals: TKDE, TKDD, TIST, TII, and TVT"
-  - "Member of program committees of conferences: KDD, ICLR, NeurIPS, AAAI, CVPR, ICCV, IJCAI, WWW, and WACV"

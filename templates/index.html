@@ -1,121 +1,45 @@
 {% extends 'base.html' %} {% block title %}Yan Lin's Homepage{% endblock %} {%
-block navigation %} {% include 'partials/navigation.html' %} {% endblock %} {%
 block content %}
 <div class="row g-0 rounded text-body-emphasis bg-body-secondary flex-md-row my-4 position-relative">
     <div class="col p-4 d-flex flex-column position-static">
         <h3 class="fst-italic mb-3">Biography - Yan Lin</h3>
-        <p class="card-text mb-auto" style="font-size: calc(1.0rem + 0.1vw)">
-            I am currently a postdoctoral researcher in the Department of
-            Computer Science at Aalborg University, Denmark. I received my PhD and
-            Bachelor's degrees from Beijing Jiaotong University, China. My
-            research interests include <i>spatiotemporal data mining</i>,
-            <i>representation learning</i>, and <i>AI for science</i>.
-        </p>
+        <div class="section-desc">{{ content.bio|safe }}</div>
     </div>
 </div>
 
-{% for section in data.sections %}
-  {% if section == 'publications' %}
-<article class="section" id="publications">
-    <div class="d-flex align-items-center mb-1">
-        <h3 class="section-title d-inline-block mb-0">
-            Publications
-        </h3>
-        <div class="flex-grow-1 mx-3" style="border-bottom: 1px dashed var(--border-color); height: 1px;"></div>
-        <a class="mb-0 link link-secondary link-underline-opacity-0 h5" href="/publications/">
-            View All
-        </a>
-    </div>
-    <div>
-        <div id="primary-publications" class="list-group list-group-flush">
-            {% for pub in data.primaryPublications[:7] %} {% with
-            type='primary' %} {% include 'partials/publication.html' %} {%
-            endwith %} {% endfor %}
-        </div>
-        <hr class="my-2" />
-        <div id="secondary-publications" class="list-group list-group-flush">
-            {% for pub in data.secondaryPublications[:7] %} {% with
-            type='secondary' %} {% include 'partials/publication.html' %} {%
-            endwith %} {% endfor %}
-        </div>
-    </div>
-    <div class="text-start mt-1">
-        <small class="text-muted" style="font-size: 0.8rem"
-            >* Equal Contribution</small
-        >
-    </div>
-</article>
-  {% elif section == 'projects' %}
-<article class="section" id="projects">
-    <div class="d-flex align-items-center mb-1">
-        <h3 class="section-title d-inline-block mb-0">
-            Projects
-        </h3>
-        <div class="flex-grow-1 mx-3" style="border-bottom: 1px dashed var(--border-color); height: 1px;"></div>
-        <a class="mb-0 link link-secondary link-underline-opacity-0 h5" href="/projects/">
-            View All
-        </a>
-    </div>
-    <div>
-        <div id="primary-projects" class="list-group list-group-flush">
-            {% for project in data.primaryProjects[:5] %} {% with type='primary'
-            %} {% include 'partials/project.html' %} {% endwith %} {% endfor %}
-        </div>
-        <hr class="my-2" />
-        <div id="secondary-projects" class="list-group list-group-flush">
-            {% for project in data.secondaryProjects[:5] %} {% with
-            type='secondary' %} {% include 'partials/project.html' %} {% endwith
-            %} {% endfor %}
-        </div>
-    </div>
-</article>
-  {% elif section == 'teaching' %}
-<article class="section" id="teaching">
-    <div class="d-flex align-items-center mb-1">
-        <h3 class="section-title d-inline-block mb-0">
-            Teaching
-        </h3>
-        <div class="flex-grow-1 mx-3" style="border-bottom: 1px dashed var(--border-color); height: 1px;"></div>
-        <a class="mb-0 link link-secondary link-underline-opacity-0 h5" href="/teaching/">
-            View All
-        </a>
-    </div>
-    <div class="list-group list-group-flush" id="teaching-list">
-        {% for teaching in data.teaching[:5] %} {% include
-        'partials/teaching.html' %} {% endfor %}
-    </div>
-</article>
-  {% elif section == 'presentations' %}
-<article class="section" id="presentations">
-    <div class="d-flex align-items-center mb-1">
-        <h3 class="section-title d-inline-block mb-0">
-            Presentations
-        </h3>
-        <div class="flex-grow-1 mx-3" style="border-bottom: 1px dashed var(--border-color); height: 1px;"></div>
-        <a class="mb-0 link link-secondary link-underline-opacity-0 h5" href="/presentations/">
-            View All
-        </a>
-    </div>
-    <div class="list-group list-group-flush" id="presentation-list">
-        {% for presentation in data.presentations[:5] %} {% include
-        'partials/presentation.html' %} {% endfor %}
-    </div>
-</article>
-  {% elif section == 'services' %}
-<article
-    id="services"
-    class="rounded text-body-emphasis bg-body-secondary flex-md-row my-4 position-relative p-4"
->
-    <h3 class="mb-3">Services</h3>
-    <div id="service-list">
-        <ul class="list ps-3">
-            {% for service in data.services %}
-            <li>{{ service }}</li>
+<article class="section" id="research">
+    {% with section_title="Research" %}{% include 'partials/section-header.html' %}{% endwith %}
+    {% for subsection in data.researchSections %}
+      {% if not loop.first %}<hr class="my-3" />{% endif %}
+      <div>
+        <p class="section-desc">{{ subsection.desc }}</p>
+        <div class="list-group list-group-flush">
+            {% for item in subsection.resolved_items %}
+              {% include 'partials/item.html' %}
             {% endfor %}
-        </ul>
-    </div>
+        </div>
+      </div>
+    {% endfor %}
 </article>
-  {% endif %}
-{% endfor %}
+
+<article class="section" id="teaching">
+    {% with section_title="Teaching" %}{% include 'partials/section-header.html' %}{% endwith %}
+    {% for subsection in data.teachingSections %}
+      {% if not loop.first %}<hr class="my-2" />{% endif %}
+      <div>
+        <p class="section-desc">{{ subsection.desc }}</p>
+        <div class="list-group list-group-flush">
+            {% for item in subsection.resolved_items %}
+              {% include 'partials/item.html' %}
+            {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+</article>
+
+<article class="section" id="service">
+    {% with section_title="Service" %}{% include 'partials/section-header.html' %}{% endwith %}
+    <div class="section-desc">{{ content.service|safe }}</div>
+</article>
 
 {% endblock %} {% block extra_js %} {{ super() }} {% endblock %}

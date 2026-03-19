@@ -1,15 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %}Yan Lin's Publications{% endblock %}
-
-{% block header_title %}Yan Lin's Publications{% endblock %}
-
-{% block navigation %}
-  <!-- {% include 'partials/navigation.html' %} -->
-{% endblock %}
+{% block title %}Yan Lin's Homepage - Publications{% endblock %}
 
 {% block content %}
-  <article class="section mt-4">
+  <article class="section">
+    {% with section_title="Publications" %}{% include 'partials/section-header.html' %}{% endwith %}
     <div class="list-group list-group-flush">
       {% for pub in data.primaryPublications %}
         {% with type='primary' %}
@@ -30,4 +25,4 @@
       <small class="text-muted" style="font-size: 0.8rem;">* Equal Contribution</small>
     </div>
   </article>
-{% endblock %} 
+{% endblock %}

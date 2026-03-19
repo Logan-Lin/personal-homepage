@@ -1,15 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %}Yan Lin's Projects{% endblock %}
-
-{% block header_title %}Yan Lin's Projects{% endblock %}
-
-{% block navigation %}
-  <!-- {% include 'partials/navigation.html' %} -->
-{% endblock %}
+{% block title %}Yan Lin's Homepage - Projects{% endblock %}
 
 {% block content %}
-  <article class="section mt-4">
+  <article class="section">
+    {% with section_title="Projects" %}{% include 'partials/section-header.html' %}{% endwith %}
     <div class="list-group list-group-flush">
       {% for project in data.primaryProjects %}
         {% with type='primary' %}
@@ -26,4 +21,4 @@
       {% endfor %}
     </div>
   </article>
-{% endblock %} 
+{% endblock %}

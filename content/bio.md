@@ -1,0 +1,1 @@
+ I am currently a postdoctoral researcher in the Department of Computer Science at Aalborg University, Denmark. I received my PhD and Bachelor's degrees from Beijing Jiaotong University, China. My research interests include spatiotemporal data mining, representation learning, and AI for science. 

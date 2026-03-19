@@ -1,0 +1,17 @@
+{% if item._type == 'publication' %}
+  {% with pub=item, type=item._subtype %}
+    {% include 'partials/publication.html' %}
+  {% endwith %}
+{% elif item._type == 'project' %}
+  {% with project=item, type=item._subtype %}
+    {% include 'partials/project.html' %}
+  {% endwith %}
+{% elif item._type == 'teaching' %}
+  {% with teaching=item %}
+    {% include 'partials/teaching.html' %}
+  {% endwith %}
+{% elif item._type == 'presentation' %}
+  {% with presentation=item %}
+    {% include 'partials/presentation.html' %}
+  {% endwith %}
+{% endif %}
