@@ -13,6 +13,8 @@ navbar:
     url: /publications/
   - name: Projects
     url: /projects/
+  - name: Talks
+    url: /presentations/
   - name: Blog
     url: https://blog.yanlincs.com
 
