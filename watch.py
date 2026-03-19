@@ -8,18 +8,18 @@ class ChangeHandler(FileSystemEventHandler):
     def on_modified(self, event):
         if event.is_directory:
             return
-        if event.src_path.endswith('.html') and '/dist/' in event.src_path:
+        if '/dist/' in event.src_path:
             return
-        if any(event.src_path.endswith(ext) for ext in ['.md', '.py', '.html', '.css', '.js', '.yaml']):
+        if any(event.src_path.endswith(ext) for ext in ['.md', '.py', '.html', '.css', '.js', '.yaml', '.json', '.png', '.ico', '.svg', '.webmanifest']):
             print(f"File {event.src_path} has been modified")
             self.regenerate()
 
     def on_created(self, event):
         if event.is_directory:
             return
-        if event.src_path.endswith('.html') and '/dist/' in event.src_path:
+        if '/dist/' in event.src_path:
             return
-        if any(event.src_path.endswith(ext) for ext in ['.md', '.py', '.html', '.css', '.js', '.yaml']):
+        if any(event.src_path.endswith(ext) for ext in ['.md', '.py', '.html', '.css', '.js', '.yaml', '.json', '.png', '.ico', '.svg', '.webmanifest']):
             print(f"File {event.src_path} has been created")
             self.regenerate()
 

@@ -1,6 +1,8 @@
 import os
+import shutil
 import yaml
 import markdown
+import rcssmin
 from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
 
@@ -32,6 +34,25 @@ def resolve_subsections(subsections, lookup):
                 print(f"Warning: item '{item_id}' not found in lookup")
 
 
+def copy_assets(src_dir='asset', dst_dir='dist'):
+    for root, dirs, files in os.walk(src_dir):
+        rel_dir = os.path.relpath(root, src_dir)
+        target_dir = os.path.join(dst_dir, rel_dir) if rel_dir != '.' else dst_dir
+        os.makedirs(target_dir, exist_ok=True)
+        for filename in files:
+            src_path = os.path.join(root, filename)
+            dst_path = os.path.join(target_dir, filename)
+            if filename.endswith('.css'):
+                with open(src_path, 'r') as f:
+                    css_source = f.read()
+                with open(dst_path, 'w') as f:
+                    f.write(rcssmin.cssmin(css_source))
+                print(f'Minified {src_path} -> {dst_path}')
+            else:
+                shutil.copy2(src_path, dst_path)
+                print(f'Copied {src_path} -> {dst_path}')
+
+
 if __name__ == '__main__':
     with open('data.yaml', 'r') as file:
         profile_data = yaml.safe_load(file)
@@ -59,6 +80,8 @@ if __name__ == '__main__':
     os.makedirs('dist', exist_ok=True)
     os.makedirs('dist/publications', exist_ok=True)
     os.makedirs('dist/projects', exist_ok=True)
+
+    copy_assets()
 
     def render_template(template_name, output_path, **kwargs):
         template = env.get_template(template_name)
