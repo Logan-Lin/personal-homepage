@@ -4,9 +4,6 @@ footerLinks:
   - name: GitHub
     url: https://github.com/Logan-Lin
     external: true
-  - name: Google Scholar
-    url: "https://scholar.google.com/citations?user=nHMmG2UAAAAJ&hl=en&oi=sra"
-    external: true
   - name: Git Server
     url: https://git.yanlincs.com/
     external: true
@@ -18,7 +15,6 @@ navbar:
     url: /projects/
   - name: Blog
     url: https://blog.yanlincs.com
-    external: true
 
 researchSections:
   - desc: "Trajectory representation learning is one of my established research topics, where we aim to learn representations of trajectories (of vehicle, human, or vessel, etc.) that are universal across various downstream tasks. This also extends to building a multi-task/foundational model for trajectories that can perform various tasks at once."
