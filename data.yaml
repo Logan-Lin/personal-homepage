@@ -19,7 +19,7 @@ navbar:
     url: https://blog.yanlincs.com
 
 researchSections:
-  - desc: "Trajectory representation learning is one of my established research topics, where we aim to learn representations of trajectories (of vehicle, human, or vessel, etc.) that are universal across various downstream tasks. This also extends to building a multi-task/foundational model for trajectories that can perform various tasks at once."
+  - desc: "Trajectory representation learning is one of my established research topics. It aims to learn representations of trajectories (of vehicle, human, or vessel, etc.) that are universal across various downstream tasks. This also extends to building a multi-task/foundational model for trajectories that can perform various tasks at once."
     items:
       - unite-survey
       - uvtm

@@ -10,7 +10,7 @@ block content %}
 <article class="section" id="research">
     {% with section_title="Research" %}{% include 'partials/section-header.html' %}{% endwith %}
     {% for subsection in data.researchSections %}
-      {% if not loop.first %}<hr class="my-3" />{% endif %}
+      {% if not loop.first %}<hr/>{% endif %}
       <div>
         <p class="section-desc">{{ subsection.desc }}</p>
         <div class="list-group list-group-flush">
@@ -25,7 +25,7 @@ block content %}
 <article class="section" id="teaching">
     {% with section_title="Teaching" %}{% include 'partials/section-header.html' %}{% endwith %}
     {% for subsection in data.teachingSections %}
-      {% if not loop.first %}<hr class="my-2" />{% endif %}
+      {% if not loop.first %}<hr/>{% endif %}
       <div>
         <p class="section-desc">{{ subsection.desc }}</p>
         <div class="list-group list-group-flush">
