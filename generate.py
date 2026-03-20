@@ -98,4 +98,13 @@ if __name__ == '__main__':
     render_template('projects.html', 'dist/projects/index.html', data=profile_data, is_home_page=False)
     render_template('presentations.html', 'dist/presentations/index.html', data=profile_data, is_home_page=False)
 
+    # Generate sitemap.xml and robots.txt
+    base_url = profile_data['baseUrl']
+    today = datetime.now().strftime('%Y-%m-%d')
+    pages = [{'path': p, 'lastmod': today} for p in ['/', '/publications/', '/projects/', '/presentations/']]
+    for tmpl, output in [('sitemap.xml', 'dist/sitemap.xml'), ('robots.txt', 'dist/robots.txt')]:
+        with open(output, 'w') as f:
+            f.write(env.get_template(tmpl).render(base_url=base_url, pages=pages))
+        print(f'Generated {output}')
+
     print('Static site generation complete!')

@@ -1,3 +1,5 @@
+baseUrl: https://www.yanlincs.com
+
 footerLinks:
   - name: Email
     url: mailto:s@yanlincs.com
