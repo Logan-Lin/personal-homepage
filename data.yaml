@@ -1,4 +1,7 @@
 baseUrl: https://www.yanlincs.com
+siteName: Yan Lin's Homepage
+title: Yan Lin's Homepage
+description: Yan Lin - Postdoctoral researcher at Aalborg University, specializing in data mining and hobbyist in SysOps and full-stack development
 
 footerLinks:
   - name: Email

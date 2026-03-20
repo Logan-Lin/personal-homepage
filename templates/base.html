@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}Yan Lin{% endblock %}</title>
-  <meta name="description" content="Yan Lin - Computer science researcher interested in data mining, representation learning, and AI for science">
+  <title>{% block title %}{{ data.title }}{% endblock %}</title>
+  <meta name="description" content="{{ data.description }}">
 
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="YL Homepage" />
+  <meta name="apple-mobile-web-app-title" content="{{ data.title }}" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#161618" media="(prefers-color-scheme: dark)">
@@ -24,7 +24,7 @@
   <main class="container">
     <header class="border-bottom pt-3 pb-2 border-secondary">
       <nav class="header-nav">
-        <a href="/" class="site-title">Yan Lin's Homepage</a>
+        <a href="/" class="site-title">{{ data.siteName }}</a>
         {% for nav in data.navbar %}
         <a class="link" href="{{ nav.url }}"
            {% if nav.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
