@@ -5,6 +5,7 @@
 {% block content %}
   <article class="section">
     {% with section_title="Talks" %}{% include 'partials/section-header.html' %}{% endwith %}
+    {% if data.presentationsDesc %}<p class="section-desc">{{ data.presentationsDesc }}</p>{% endif %}
     <div class="list-group list-group-flush">
       {% for presentation in data.presentations %}
         {% include 'partials/presentation.html' %}

@@ -56,6 +56,7 @@ teachingSections:
     items:
       - sw6-camera-behind
 
+primaryPublicationsDesc: "Primary publications where I am the first, co-first, or lead student author. For each work, I contribute significantly to some or all of the following: problem formulation, algorithm design, paper drafting and revision, code implementation, and experimental evaluation."
 primaryPublications:
   - id: ripcn
     title: "RIPCN: A Road Impedance Principal Component Network for Probabilistic Traffic Flow Forecasting"
@@ -200,6 +201,7 @@ primaryPublications:
       Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/16548"
       Code: "https://github.com/Logan-Lin/CTLE"
 
+secondaryPublicationsDesc: "Secondary publications where I serve as a contributing author. My involvement in these works typically includes technical discussion, algorithm refinement, or contribution to experiments and writing."
 secondaryPublications:
 
   - title: "Traj-MLLM: Can Multimodal Large Language Models Reform Trajectory Data Mining?"
@@ -315,6 +317,7 @@ secondaryPublications:
       Paper: "https://openreview.net/forum?id=y08bkEtNBK"
       Code: "https://github.com/Water2sea/WITRAN"
 
+primaryProjectsDesc: "Projects where I serve as the principal investigator or lead developer, responsible for the overall research direction, system design, and implementation."
 primaryProjects:
   - title: "Research on <i>Prediction of User Travel Destination and Travel Time Based on Trajectory Representation Learning</i>"
     tags:
@@ -338,6 +341,7 @@ primaryProjects:
       Website: "https://www.promptgenius.site/"
       Code: "https://github.com/wenhaomin/ChatGPT-PromptGenius"
 
+secondaryProjectsDesc: "Projects where I participate as a key researcher, contributing to specific aspects such as model development, data analysis, or experimental design."
 secondaryProjects:
   - id: villum-inverse-design
     title: "Research on <i>Inverse Design of Materials Using Diffusion Probabilistic Models</i>"
@@ -378,6 +382,7 @@ teaching:
     links:
       Proposal: https://github.com/Logan-Lin/camera-sees-behind/releases/tag/v1.2-sw6-26
 
+presentationsDesc: "Oral presentations, tutorials, and guest lectures delivered at international conferences and universities."
 presentations:
   - id: amden-pncs17
     title: "AMDEN: Amorphous Materials DEnoising Network"
