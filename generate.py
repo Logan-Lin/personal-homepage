@@ -1,5 +1,6 @@
 import os
 import shutil
+import hashlib
 import yaml
 import markdown
 import rcssmin
@@ -34,23 +35,59 @@ def resolve_subsections(subsections, lookup):
                 print(f"Warning: item '{item_id}' not found in lookup")
 
 
+def fingerprint(content_bytes):
+    return hashlib.sha256(content_bytes).hexdigest()[:8]
+
+
+def hashed_name(filename, content_bytes):
+    name, ext = os.path.splitext(filename)
+    return f'{name}.{fingerprint(content_bytes)}{ext}'
+
+
 def copy_assets(src_dir='asset', dst_dir='dist'):
+    asset_map = {}
+    deferred = []
+
     for root, dirs, files in os.walk(src_dir):
         rel_dir = os.path.relpath(root, src_dir)
         target_dir = os.path.join(dst_dir, rel_dir) if rel_dir != '.' else dst_dir
         os.makedirs(target_dir, exist_ok=True)
         for filename in files:
             src_path = os.path.join(root, filename)
-            dst_path = os.path.join(target_dir, filename)
+            rel_path = os.path.join(rel_dir, filename) if rel_dir != '.' else filename
+
+            if filename.endswith('.webmanifest'):
+                deferred.append((src_path, target_dir, rel_path, filename))
+                continue
+
             if filename.endswith('.css'):
                 with open(src_path, 'r') as f:
-                    css_source = f.read()
-                with open(dst_path, 'w') as f:
-                    f.write(rcssmin.cssmin(css_source))
-                print(f'Minified {src_path} -> {dst_path}')
+                    content = rcssmin.cssmin(f.read()).encode()
             else:
-                shutil.copy2(src_path, dst_path)
-                print(f'Copied {src_path} -> {dst_path}')
+                with open(src_path, 'rb') as f:
+                    content = f.read()
+
+            out_name = hashed_name(filename, content)
+            dst_path = os.path.join(target_dir, out_name)
+            with open(dst_path, 'wb') as f:
+                f.write(content)
+            asset_map[rel_path] = os.path.join(rel_dir, out_name) if rel_dir != '.' else out_name
+            print(f'Hashed {src_path} -> {dst_path}')
+
+    for src_path, target_dir, rel_path, filename in deferred:
+        with open(src_path, 'r') as f:
+            content = f.read()
+        for original, hashed in asset_map.items():
+            content = content.replace(f'/{original}', f'/{hashed}')
+        content_bytes = content.encode()
+        out_name = hashed_name(filename, content_bytes)
+        dst_path = os.path.join(target_dir, out_name)
+        with open(dst_path, 'w') as f:
+            f.write(content)
+        asset_map[rel_path] = out_name
+        print(f'Hashed {src_path} -> {dst_path}')
+
+    return asset_map
 
 
 if __name__ == '__main__':
@@ -82,11 +119,11 @@ if __name__ == '__main__':
     os.makedirs('dist/projects', exist_ok=True)
     os.makedirs('dist/presentations', exist_ok=True)
 
-    copy_assets()
+    assets = copy_assets()
 
     def render_template(template_name, output_path, **kwargs):
         template = env.get_template(template_name)
-        html = template.render(year=current_year, **kwargs)
+        html = template.render(year=current_year, assets=assets, **kwargs)
 
         with open(output_path, 'w') as file:
             file.write(html)
