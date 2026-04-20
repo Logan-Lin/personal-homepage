@@ -39,17 +39,17 @@
 
   <footer>
     <div class="container">
-        <div class="footer-links">
-          {% for link in data.footerLinks %}
-          <a class="link" href="{{ link.url }}"
-             {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
-            {{ link.name }}
-          </a>
-          {% endfor %}
+        <div class="footer-line">
+            <span class="text-secondary footer-text">© {{ year }} - Designed and engineered by Yan Lin.</span>
+            <span class="footer-links">
+                {% for link in data.footerLinks %}
+                <a class="link" href="{{ link.url }}"
+                   {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+                  {{ link.name }}
+                </a>
+                {% endfor %}
+            </span>
         </div>
-        <p class="text-center text-secondary footer-text">
-            © {{ year }} - Designed and engineered by Yan Lin.
-        </p>
     </div>
   </footer>
 

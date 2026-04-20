@@ -9,9 +9,6 @@ footerLinks:
   - name: GitHub
     url: https://github.com/Logan-Lin
     external: true
-  - name: Git Server
-    url: https://git.yanlincs.com/
-    external: true
 
 navbar:
   - name: Publications
