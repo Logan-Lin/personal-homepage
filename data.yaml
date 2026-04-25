@@ -373,7 +373,7 @@ teaching:
   - id: sw6-camera-behind
     title: "A Camera That Sees Behind"
     tags:
-      - "Spring 2026"
+      - "Fall 2025 - Spring 2026"
       - "Aalborg University"
     desc: "A Bachelor's semester project on developing a computationally lightweight model deployable on embedded devices to remove humans from images or video feeds, serving as a prototype GDPR-compliant surveillance system."
     links:
