@@ -1,7 +1,7 @@
 baseUrl: https://www.yanlincs.com
 siteName: Yan Lin's Homepage
 title: Yan Lin's Homepage
-description: Yan Lin - Postdoctoral researcher at Aalborg University, specializing in data mining and hobbyist in SysOps and full-stack development
+description: Yan Lin - Researcher in computer science, specializing in data mining and hobbyist in SysOps and full-stack development
 
 footerLinks:
   - name: Email
@@ -49,7 +49,7 @@ teachingSections:
   - desc: "My course teaching follows three core principles: a solid understanding of the subject matter, awareness of students' established experiences and background, and a PBL style applied throughout lectures, exercises, and exams. This translates to practices including tailor-made blog-style literature that is both professional and intuitive, inspirational lectures that connect theory to real-world problems, and progressively-arranged hands-on exercises that build practical problem-solving skills."
     items:
       - ai-systems
-  - desc: "I am building my supervision experience, currently supervising Bachelor's-level semester projects at Aalborg University. My supervision focuses on problem definition, critical thinking about design choices, and delivering convincing conclusions."
+  - desc: "I am building my supervision experience, currently supervising Bachelor's-level semester projects. My supervision focuses on problem definition, critical thinking about design choices, and delivering convincing conclusions."
     items:
       - sw6-camera-behind
 
@@ -344,7 +344,7 @@ secondaryProjects:
     title: "Research on <i>Inverse Design of Materials Using Diffusion Probabilistic Models</i>"
     tags:
       - "Villum Foundation"
-    desc: "This project focuses on developing diffusion probabilistic models to first understand the relationship between chemistry/structure and material properties, then enable the inverse design of new materials with specific properties. This project currently supports my postdoctoral research position."
+    desc: "This project focuses on developing diffusion probabilistic models to first understand the relationship between chemistry/structure and material properties, then enable the inverse design of new materials with specific properties."
     links: {}
 
   - title: "Research on <i>Pre-training Representation Learning Methods of Spatial-temporal Trajectory Data for Traffic Prediction</i>"
