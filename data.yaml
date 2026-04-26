@@ -46,14 +46,14 @@ researchSections:
       - sculptdrug
 
 teachingSections:
-  - desc: "My course teaching follows three core principles: a solid understanding of the subject matter, awareness of students' established experiences and background, and a PBL style applied throughout lectures, exercises, and exams. This translates to practices including tailor-made blog-style literature that is both professional and intuitive, inspirational lectures that connect theory to real-world problems, and progressively-arranged hands-on exercises that build practical problem-solving skills."
+  - desc: "My course teaching follows three core principles: a solid understanding of the subject matter, awareness of students' established experiences and background, and problem-based learning style applied throughout lectures, exercises, and exams. This translates to practices including tailor-made blog-style literature that is both professional and intuitive, inspirational lectures that connect theory to real-world problems, and progressively-arranged hands-on exercises that build practical problem-solving skills."
     items:
       - ai-systems
   - desc: "I am building my supervision experience, currently supervising Bachelor's-level semester projects. My supervision focuses on problem definition, critical thinking about design choices, and delivering convincing conclusions."
     items:
       - sw6-camera-behind
 
-primaryPublicationsDesc: "Primary publications where I am the first, co-first, or lead student author. For each work, I contribute significantly to some or all of the following: problem formulation, algorithm design, paper drafting and revision, code implementation, and experimental evaluation."
+primaryPublicationsDesc: "Publications where I am the first, co-first, or lead student author. For each work, I contribute significantly to some or all of the following: problem formulation, algorithm design, paper drafting and revision, code implementation, and experimental evaluation."
 primaryPublications:
   - id: ripcn
     title: "RIPCN: A Road Impedance Principal Component Network for Probabilistic Traffic Flow Forecasting"
@@ -198,7 +198,7 @@ primaryPublications:
       Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/16548"
       Code: "https://github.com/Logan-Lin/CTLE"
 
-secondaryPublicationsDesc: "Secondary publications where I serve as a contributing author. My involvement in these works typically includes technical discussion, algorithm refinement, or contribution to experiments and writing."
+secondaryPublicationsDesc: "Publications where I serve as a contributing author. My involvement in these works typically includes technical discussion, algorithm refinement, or contribution to experiments and writing."
 secondaryPublications:
 
   - title: "Traj-MLLM: Can Multimodal Large Language Models Reform Trajectory Data Mining?"
