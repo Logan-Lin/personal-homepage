@@ -15,7 +15,8 @@ def build_item_lookup(data):
         ('secondaryPublications', 'publication', 'secondary'),
         ('primaryProjects', 'project', 'primary'),
         ('secondaryProjects', 'project', 'secondary'),
-        ('teaching', 'teaching', 'primary'),
+        ('courses', 'teaching', 'primary'),
+        ('supervision', 'teaching', 'primary'),
         ('presentations', 'presentation', 'secondary'),
     ]
     for key, item_type, subtype in sources:
@@ -117,7 +118,7 @@ if __name__ == '__main__':
     os.makedirs('dist', exist_ok=True)
     os.makedirs('dist/publications', exist_ok=True)
     os.makedirs('dist/projects', exist_ok=True)
-    os.makedirs('dist/presentations', exist_ok=True)
+    os.makedirs('dist/activities', exist_ok=True)
 
     assets = copy_assets()
 
@@ -133,12 +134,12 @@ if __name__ == '__main__':
     render_template('index.html', 'dist/index.html', data=profile_data, content=content, is_home_page=True)
     render_template('publications.html', 'dist/publications/index.html', data=profile_data, is_home_page=False)
     render_template('projects.html', 'dist/projects/index.html', data=profile_data, is_home_page=False)
-    render_template('presentations.html', 'dist/presentations/index.html', data=profile_data, is_home_page=False)
+    render_template('activities.html', 'dist/activities/index.html', data=profile_data, is_home_page=False)
 
     # Generate sitemap.xml and robots.txt
     base_url = profile_data['baseUrl']
     today = datetime.now().strftime('%Y-%m-%d')
-    pages = [{'path': p, 'lastmod': today} for p in ['/', '/publications/', '/projects/', '/presentations/']]
+    pages = [{'path': p, 'lastmod': today} for p in ['/', '/publications/', '/projects/', '/activities/']]
     for tmpl, output in [('sitemap.xml', 'dist/sitemap.xml'), ('robots.txt', 'dist/robots.txt')]:
         with open(output, 'w') as f:
             f.write(env.get_template(tmpl).render(base_url=base_url, pages=pages))

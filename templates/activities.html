@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ data.title }} - Activities{% endblock %}
+
+{% block content %}
+  <article class="section">
+    {% with section_title="Activities" %}{% include 'partials/section-header.html' %}{% endwith %}
+
+    <div>
+      <p class="section-desc">{{ data.coursesDesc }}</p>
+      <div class="list-group list-group-flush">
+        {% for teaching in data.courses %}
+          {% include 'partials/teaching.html' %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <hr/>
+
+    <div>
+      <p class="section-desc">{{ data.supervisionDesc }}</p>
+      <div class="list-group list-group-flush">
+        {% for teaching in data.supervision %}
+          {% include 'partials/teaching.html' %}
+        {% endfor %}
+      </div>
+    </div>
+
+    <hr/>
+
+    <div>
+      {% if data.presentationsDesc %}<p class="section-desc">{{ data.presentationsDesc }}</p>{% endif %}
+      <div class="list-group list-group-flush">
+        {% for presentation in data.presentations %}
+          {% include 'partials/presentation.html' %}
+        {% endfor %}
+      </div>
+    </div>
+  </article>
+{% endblock %}

@@ -15,8 +15,8 @@ navbar:
     url: /publications/
   - name: Projects
     url: /projects/
-  - name: Talks
-    url: /presentations/
+  - name: Activities
+    url: /activities/
   - name: Blog
     url: https://blog.yanlincs.com
 
@@ -359,7 +359,8 @@ secondaryProjects:
     desc: "This project explores how to generate high-quality spatial-temporal trajectory data and corresponding representations to address sparsity-related issues, thereby supporting a variety of downstream tasks."
     links: {}
 
-teaching:
+coursesDesc: "University-level courses I teach, covering lectures, literatures, exercises, and exam assessments."
+courses:
   - id: ai-systems
     title: "AI Systems & Infrastructure"
     tags:
@@ -370,6 +371,8 @@ teaching:
       Moodle: https://www.moodle.aau.dk/course/view.php?id=57016
       Literature: https://blog.yanlincs.com/ai-system/
 
+supervisionDesc: "Student projects I supervise, covering project proposals, problem definition, design choices, and final delivery."
+supervision:
   - id: sw6-camera-behind
     title: "A Camera That Sees Behind"
     tags:
