@@ -41,6 +41,7 @@ researchSections:
 
   - desc: "Interdisciplinary research between data mining and materials science is a new research direction I am exploring. The promise is that data mining enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design."
     items:
+      - amden-neurips25-ai4mat
       - amden-pncs17
       - villum-inverse-design
       - sculptdrug
@@ -384,6 +385,14 @@ supervision:
 
 presentationsDesc: "Oral presentations, tutorials, and guest lectures delivered at international conferences and universities."
 presentations:
+  - id: amden-neurips25-ai4mat
+    title: "AMDEN: Amorphous Materials DEnoising Network"
+    tags:
+      - "Workshop"
+      - "NeurIPS 2025"
+    links:
+      Paper: "https://openreview.net/forum?id=cEgjPFdLvl"
+
   - id: amden-pncs17
     title: "AMDEN: Amorphous Materials DEnoising Network"
     tags: 
@@ -400,7 +409,7 @@ presentations:
 
   - title: "PLM4Traj: Leveraging Pre-trained Language Models for Cognizing Movement Patterns and Travel Purposes from Trajectories"
     tags:
-      - "Workshop presentation"
+      - "Workshop"
       - "KDD 2024"
     links:
       Paper: "https://arxiv.org/abs/2405.12459"
