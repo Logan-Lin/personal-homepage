@@ -62,7 +62,8 @@ primaryPublications:
     tags:
       - "KDD"
       - "2026"
-    links: {}
+    links:
+      Preprint: "https://arxiv.org/abs/2512.21685"
 
   - id: trajmamba
     title: "TrajMamba: An Efficient and Semantic-rich Vehicle Trajectory Pre-training Model"
@@ -216,14 +217,18 @@ secondaryPublications:
     tags:
       - "AAAI"
       - "2026"
-    links: {}
+    links:
+      Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/37139"
+      Preprint: "https://arxiv.org/abs/2511.12489"
 
   - title: "Spatial-Temporal Feedback Diffusion Guidance for Controlled Traffic Imputation"
     authors: Xiaowei Mao, Huihu Ding, <strong>Yan Lin</strong>, Tingrui Wu, Shengnan Guo, Dazhuo Qiu, Feiling Fang, Jilin Hu, Huaiyu Wan
     tags:
       - "AAAI"
       - "2026"
-    links: {}
+    links:
+      Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/38581"
+      Preprint: "https://arxiv.org/abs/2601.04572"
 
   - title: "DUET: Dual Clustering Enhanced Multivariate Time Series Forecasting"
     authors: "Xiangfei Qiu, Xingjian Wu, <strong>Yan Lin</strong>, Chenjuan Guo, Jilin Hu, Bin Yang"
