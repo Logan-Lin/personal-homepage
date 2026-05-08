@@ -1,14 +1,14 @@
 <div class="list-group-item px-0">
   <div class="d-flex justify-content-between align-items-center">
-    <div class="d-inline-block venue-name {% if type == 'primary' %}primary-text{% else %}secondary-text{% endif %}">
+    <div class="d-inline-block item-tags {% if type == 'primary' %}primary-text{% else %}secondary-text{% endif %}">
       {{ pub.tags|join("<span class='text-muted'> | </span>")|safe }}
     </div>
     <div class="d-flex gap-2">
       {% for name, url in pub.links.items() %}
-        <a class="link icon-link icon-link-hover paper-link link-secondary" href="{{ url }}" target="_blank" rel="noopener noreferrer">{{ name }}</a>
+        <a class="link icon-link icon-link-hover item-link link-secondary" href="{{ url }}" target="_blank" rel="noopener noreferrer">{{ name }}</a>
       {% endfor %}
     </div>
   </div>
-  <div class="paper-title">{{ pub.title|safe }}</div>
-  <p class="card-text mb-auto author-name">{{ pub.authors|safe }}</p>
+  <div class="item-title">{{ pub.title|safe }}</div>
+  <p class="item-desc">{{ pub.authors|safe }}</p>
 </div> 
