@@ -3,6 +3,7 @@ site:
   name: Yan Lin's Homepage
   title: Yan Lin's Homepage
   description: Yan Lin - Researcher in computer science, specializing in data mining and hobbyist in SysOps and full-stack development
+  footerText: "Designed and engineered by Yan Lin."
 
 navigation:
   navbar:

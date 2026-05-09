@@ -40,7 +40,7 @@
   <footer>
     <div class="container">
         <div class="footer-line">
-            <span class="text-secondary footer-text">© {{ year }} - Designed and engineered by Yan Lin.</span>
+            <span class="text-secondary footer-text">© {{ year }} - {{ data.site.footerText }}</span>
             <span class="footer-links">
                 {% for link in data.navigation.footer %}
                 <a class="link" href="{{ link.url }}"
