@@ -87,9 +87,9 @@ func build() error {
 		home bool
 	}{
 		{"index.html", filepath.Join(outDir, "index.html"), true},
-		{"publications.html", filepath.Join(outDir, "publications", "index.html"), false},
-		{"projects.html", filepath.Join(outDir, "projects", "index.html"), false},
-		{"activities.html", filepath.Join(outDir, "activities", "index.html"), false},
+		{"pages/publications.html", filepath.Join(outDir, "publications", "index.html"), false},
+		{"pages/projects.html", filepath.Join(outDir, "projects", "index.html"), false},
+		{"pages/activities.html", filepath.Join(outDir, "activities", "index.html"), false},
 	}
 	for _, p := range pages {
 		ctx := pongo2.Context{"data": data, "is_home_page": p.home}

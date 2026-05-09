@@ -1,6 +1,3 @@
-/* ==========================================================================
-   THEME
-   ========================================================================== */
 :root {
   --main-font-family: Georgia, "Times New Roman", serif;
   --link-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -28,9 +25,6 @@
   }
 }
 
-/* ==========================================================================
-   ELEMENT DEFAULTS
-   ========================================================================== */
 * {
   box-sizing: border-box;
 }
@@ -117,9 +111,6 @@ h5 {
   margin-bottom: 0.5rem;
 }
 
-/* ==========================================================================
-   LAYOUT (container, row, col)
-   ========================================================================== */
 .container {
   --bs-gutter-x: 1.5rem;
   width: 100%;
@@ -166,9 +157,6 @@ h5 {
   flex: 1 0 0%;
 }
 
-/* ==========================================================================
-   HEADER & NAVIGATION
-   ========================================================================== */
 header.border-bottom {
   border-bottom: 1px solid var(--text-secondary);
 }
@@ -201,9 +189,6 @@ header.border-bottom {
   }
 }
 
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
 footer {
   margin-top: 2rem;
   padding-top: 1rem;
@@ -233,9 +218,6 @@ footer {
   gap: 1.5rem;
 }
 
-/* ==========================================================================
-   PAGE SECTIONS
-   ========================================================================== */
 .section {
   margin-top: 3.25rem;
 }
@@ -245,10 +227,6 @@ footer {
   margin: 0;
 }
 
-/* ==========================================================================
-   LIST GROUPS & ITEM CARDS
-   (publications, projects, teaching, presentations)
-   ========================================================================== */
 .list-group {
   display: flex;
   flex-direction: column;
@@ -304,9 +282,6 @@ footer {
   color: var(--secondary-text);
 }
 
-/* ==========================================================================
-   LINKS
-   ========================================================================== */
 .link {
   font-family: var(--link-font-family);
   text-decoration: none;
@@ -330,22 +305,15 @@ footer {
   text-decoration: underline;
 }
 
-/* ==========================================================================
-   UTILITIES
-   ========================================================================== */
-
-/* Display */
 .d-inline-block { display: inline-block; }
 .d-flex { display: flex; }
 
-/* Flex */
 .flex-column { flex-direction: column; }
 .flex-grow-1 { flex-grow: 1; }
 .justify-content-between { justify-content: space-between; }
 .align-items-center { align-items: center; }
 .gap-2 { gap: 0.5rem; }
 
-/* Spacing */
 .p-4 { padding: 1.5rem; }
 .px-0 { padding-left: 0; padding-right: 0; }
 .pt-3 { padding-top: 1rem; }
@@ -356,7 +324,6 @@ footer {
 .my-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
 .ml-3 { margin-left: 1rem; }
 
-/* Text */
 .text-start { text-align: left; }
 
 .text-secondary,
@@ -364,12 +331,10 @@ footer {
   color: var(--text-secondary);
 }
 
-/* Background */
 .bg-body-secondary {
   background-color: var(--background-secondary);
 }
 
-/* Border */
 .border-bottom {
   border-bottom: 1px solid var(--border-color);
 }
