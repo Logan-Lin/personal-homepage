@@ -8,18 +8,14 @@
     devShells = forAllSystems (pkgs: {
       default = pkgs.mkShell {
         packages = with pkgs; [
-          uv python312
-          (writeShellScriptBin "serve" ''
-            python generate.py && python watch.py
-          '')
+          go gopls
           (writeShellScriptBin "build" ''
-            python generate.py
+            exec go run ./src build "$@"
+          '')
+          (writeShellScriptBin "serve" ''
+            exec go run ./src serve "$@"
           '')
         ];
-        shellHook = ''
-          uv sync
-          source .venv/bin/activate
-        '';
       };
     });
   };

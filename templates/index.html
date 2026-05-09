@@ -1,5 +1,8 @@
-{% extends 'base.html' %} {% block title %}{{ data.site.title }}{% endblock %} {%
-block content %}
+{% extends 'base.html' %}
+
+{% block title %}{{ data.site.title }}{% endblock %}
+
+{% block content %}
 <div class="row g-0 rounded bg-body-secondary my-4">
     <div class="col p-4 d-flex flex-column pb-2">
         <div class="section-desc">{{ content.bio|safe }}</div>
@@ -9,7 +12,7 @@ block content %}
 <article class="section" id="research">
     {% with section_title="Research" %}{% include 'partials/section-header.html' %}{% endwith %}
     {% for subsection in data.home.research %}
-      {% if not loop.first %}<hr/>{% endif %}
+      {% if not forloop.First %}<hr/>{% endif %}
       <div>
         <p class="section-desc">{{ subsection.desc }}</p>
         <div class="list-group list-group-flush">
@@ -24,7 +27,7 @@ block content %}
 <article class="section" id="teaching">
     {% with section_title="Teaching" %}{% include 'partials/section-header.html' %}{% endwith %}
     {% for subsection in data.home.teaching %}
-      {% if not loop.first %}<hr/>{% endif %}
+      {% if not forloop.First %}<hr/>{% endif %}
       <div>
         <p class="section-desc">{{ subsection.desc }}</p>
         <div class="list-group list-group-flush">
@@ -41,4 +44,4 @@ block content %}
     <div class="section-desc">{{ content.service|safe }}</div>
 </article>
 
-{% endblock %} {% block extra_js %} {{ super() }} {% endblock %}
+{% endblock %}
