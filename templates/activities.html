@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ data.title }} - Activities{% endblock %}
+{% block title %}{{ data.site.title }} - Activities{% endblock %}
 
 {% block content %}
   <article class="section">
     {% with section_title="Activities" %}{% include 'partials/section-header.html' %}{% endwith %}
 
     <div>
-      <p class="section-desc">{{ data.coursesDesc }}</p>
+      <p class="section-desc">{{ data.activities.courses.desc }}</p>
       <div class="list-group list-group-flush">
-        {% for teaching in data.courses %}
+        {% for teaching in data.activities.courses.entries %}
           {% include 'partials/teaching.html' %}
         {% endfor %}
       </div>
@@ -18,9 +18,9 @@
     <hr/>
 
     <div>
-      <p class="section-desc">{{ data.supervisionDesc }}</p>
+      <p class="section-desc">{{ data.activities.supervision.desc }}</p>
       <div class="list-group list-group-flush">
-        {% for teaching in data.supervision %}
+        {% for teaching in data.activities.supervision.entries %}
           {% include 'partials/teaching.html' %}
         {% endfor %}
       </div>
@@ -29,9 +29,9 @@
     <hr/>
 
     <div>
-      {% if data.presentationsDesc %}<p class="section-desc">{{ data.presentationsDesc }}</p>{% endif %}
+      {% if data.activities.presentations.desc %}<p class="section-desc">{{ data.activities.presentations.desc }}</p>{% endif %}
       <div class="list-group list-group-flush">
-        {% for presentation in data.presentations %}
+        {% for presentation in data.activities.presentations.entries %}
           {% include 'partials/presentation.html' %}
         {% endfor %}
       </div>

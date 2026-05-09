@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}{{ data.title }}{% endblock %}</title>
-  <meta name="description" content="{{ data.description }}">
+  <title>{% block title %}{{ data.site.title }}{% endblock %}</title>
+  <meta name="description" content="{{ data.site.description }}">
 
   <link rel="icon" type="image/png" href="/{{ assets['favicon-96x96.png'] }}" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/{{ assets['favicon.svg'] }}" />
   <link rel="shortcut icon" href="/{{ assets['favicon.ico'] }}" />
   <link rel="apple-touch-icon" sizes="180x180" href="/{{ assets['apple-touch-icon.png'] }}" />
-  <meta name="apple-mobile-web-app-title" content="{{ data.title }}" />
+  <meta name="apple-mobile-web-app-title" content="{{ data.site.title }}" />
   <link rel="manifest" href="/{{ assets['site.webmanifest'] }}" />
   <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#161618" media="(prefers-color-scheme: dark)">
@@ -24,8 +24,8 @@
   <main class="container">
     <header class="border-bottom pt-3 pb-2">
       <nav class="header-nav">
-        <a href="/" class="site-title">{{ data.siteName }}</a>
-        {% for nav in data.navbar %}
+        <a href="/" class="site-title">{{ data.site.name }}</a>
+        {% for nav in data.navigation.navbar %}
         <a class="link" href="{{ nav.url }}"
            {% if nav.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
           {{ nav.name }}
@@ -42,7 +42,7 @@
         <div class="footer-line">
             <span class="text-secondary footer-text">© {{ year }} - Designed and engineered by Yan Lin.</span>
             <span class="footer-links">
-                {% for link in data.footerLinks %}
+                {% for link in data.navigation.footer %}
                 <a class="link" href="{{ link.url }}"
                    {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
                   {{ link.name }}

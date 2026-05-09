@@ -11,16 +11,21 @@ from jinja2 import Environment, FileSystemLoader
 def build_item_lookup(data):
     lookup = {}
     sources = [
-        ('primaryPublications', 'publication', 'primary'),
-        ('secondaryPublications', 'publication', 'secondary'),
-        ('primaryProjects', 'project', 'primary'),
-        ('secondaryProjects', 'project', 'secondary'),
-        ('courses', 'teaching', 'primary'),
-        ('supervision', 'teaching', 'primary'),
-        ('presentations', 'presentation', 'secondary'),
+        (['publications', 'primary', 'entries'], 'publication', 'primary'),
+        (['publications', 'secondary', 'entries'], 'publication', 'secondary'),
+        (['projects', 'primary', 'entries'], 'project', 'primary'),
+        (['projects', 'secondary', 'entries'], 'project', 'secondary'),
+        (['activities', 'courses', 'entries'], 'teaching', 'primary'),
+        (['activities', 'supervision', 'entries'], 'teaching', 'primary'),
+        (['activities', 'presentations', 'entries'], 'presentation', 'secondary'),
     ]
-    for key, item_type, subtype in sources:
-        for item in data.get(key, []):
+    for path, item_type, subtype in sources:
+        items = data
+        for key in path:
+            items = items.get(key, {}) if isinstance(items, dict) else []
+        if not isinstance(items, list):
+            items = []
+        for item in items:
             if 'id' in item:
                 lookup[item['id']] = {**item, '_type': item_type, '_subtype': subtype}
     return lookup
@@ -28,10 +33,10 @@ def build_item_lookup(data):
 
 def resolve_subsections(subsections, lookup):
     for section in subsections:
-        section['resolved_items'] = []
-        for item_id in section.get('items', []):
+        section['resolved_entries'] = []
+        for item_id in section.get('entries', []):
             if item_id in lookup:
-                section['resolved_items'].append(lookup[item_id])
+                section['resolved_entries'].append(lookup[item_id])
             else:
                 print(f"Warning: item '{item_id}' not found in lookup")
 
@@ -97,8 +102,9 @@ if __name__ == '__main__':
 
     # Build item lookup and resolve index page subsection references
     item_lookup = build_item_lookup(profile_data)
-    resolve_subsections(profile_data.get('researchSections', []), item_lookup)
-    resolve_subsections(profile_data.get('teachingSections', []), item_lookup)
+    home = profile_data.get('home', {})
+    resolve_subsections(home.get('research', []), item_lookup)
+    resolve_subsections(home.get('teaching', []), item_lookup)
 
     # Render markdown content files
     md = markdown.Markdown()
@@ -137,7 +143,7 @@ if __name__ == '__main__':
     render_template('activities.html', 'dist/activities/index.html', data=profile_data, is_home_page=False)
 
     # Generate sitemap.xml and robots.txt
-    base_url = profile_data['baseUrl']
+    base_url = profile_data['site']['baseUrl']
     today = datetime.now().strftime('%Y-%m-%d')
     pages = [{'path': p, 'lastmod': today} for p in ['/', '/publications/', '/projects/', '/activities/']]
     for tmpl, output in [('sitemap.xml', 'dist/sitemap.xml'), ('robots.txt', 'dist/robots.txt')]:

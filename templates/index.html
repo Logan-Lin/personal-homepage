@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block title %}{{ data.title }}{% endblock %} {%
+{% extends 'base.html' %} {% block title %}{{ data.site.title }}{% endblock %} {%
 block content %}
 <div class="row g-0 rounded bg-body-secondary my-4">
     <div class="col p-4 d-flex flex-column pb-2">
@@ -8,12 +8,12 @@ block content %}
 
 <article class="section" id="research">
     {% with section_title="Research" %}{% include 'partials/section-header.html' %}{% endwith %}
-    {% for subsection in data.researchSections %}
+    {% for subsection in data.home.research %}
       {% if not loop.first %}<hr/>{% endif %}
       <div>
         <p class="section-desc">{{ subsection.desc }}</p>
         <div class="list-group list-group-flush">
-            {% for item in subsection.resolved_items %}
+            {% for item in subsection.resolved_entries %}
               {% include 'partials/item.html' %}
             {% endfor %}
         </div>
@@ -23,12 +23,12 @@ block content %}
 
 <article class="section" id="teaching">
     {% with section_title="Teaching" %}{% include 'partials/section-header.html' %}{% endwith %}
-    {% for subsection in data.teachingSections %}
+    {% for subsection in data.home.teaching %}
       {% if not loop.first %}<hr/>{% endif %}
       <div>
         <p class="section-desc">{{ subsection.desc }}</p>
         <div class="list-group list-group-flush">
-            {% for item in subsection.resolved_items %}
+            {% for item in subsection.resolved_entries %}
               {% include 'partials/item.html' %}
             {% endfor %}
         </div>

@@ -1,438 +1,449 @@
-baseUrl: https://www.yanlincs.com
-siteName: Yan Lin's Homepage
-title: Yan Lin's Homepage
-description: Yan Lin - Researcher in computer science, specializing in data mining and hobbyist in SysOps and full-stack development
+site:
+  baseUrl: https://www.yanlincs.com
+  name: Yan Lin's Homepage
+  title: Yan Lin's Homepage
+  description: Yan Lin - Researcher in computer science, specializing in data mining and hobbyist in SysOps and full-stack development
 
-footerLinks:
-  - name: Email
-    url: mailto:s@yanlincs.com
-  - name: GitHub
-    url: https://github.com/Logan-Lin
-    external: true
+navigation:
+  navbar:
+    - name: Publications
+      url: /publications/
+    - name: Projects
+      url: /projects/
+    - name: Activities
+      url: /activities/
+    - name: Blog
+      url: https://blog.yanlincs.com
+  footer:
+    - name: Email
+      url: mailto:s@yanlincs.com
+    - name: GitHub
+      url: https://github.com/Logan-Lin
+      external: true
 
-navbar:
-  - name: Publications
-    url: /publications/
-  - name: Projects
-    url: /projects/
-  - name: Activities
-    url: /activities/
-  - name: Blog
-    url: https://blog.yanlincs.com
+home:
+  research:
+    - desc: "Trajectory representation learning is one of my established research topics. It aims to learn representations of trajectories (of vehicle, human, or vessel, etc.) that are universal across various downstream tasks. This also extends to building a multi-task/foundational model for trajectories that can perform various tasks at once."
+      entries:
+        - unite-survey
+        - uvtm
+        - mmtec
+        - ctle
+        - transfertraj
+        - trajmamba
 
-researchSections:
-  - desc: "Trajectory representation learning is one of my established research topics. It aims to learn representations of trajectories (of vehicle, human, or vessel, etc.) that are universal across various downstream tasks. This also extends to building a multi-task/foundational model for trajectories that can perform various tasks at once."
-    items:
-      - unite-survey
-      - uvtm
-      - mmtec
-      - ctle
-      - transfertraj
-      - trajmamba
+    - desc: "Spatiotemporal data mining is a broader topic that is inclusive of the above. It covers research on extracting and utilizing patterns from large-scale data with spatial information and that is dynamic over time (usually sourced from transportation scenarios)."
+      entries:
+        - dot
+        - ripcn
+        - plmtrajrec
+        - path-llm
+        - dutytte
+        - mobility-llm
 
-  - desc: "Spatiotemporal data mining is a broader topic that is inclusive of the above. It covers research on extracting and utilizing patterns from large-scale data with spatial information and that is dynamic over time (usually sourced from transportation scenarios)."
-    items:
-      - dot
-      - ripcn
-      - plmtrajrec
-      - path-llm
-      - dutytte
-      - mobility-llm
+    - desc: "Interdisciplinary research between data mining and materials science is a new research direction I am exploring. The promise is that data mining enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design."
+      entries:
+        - amden-neurips25-ai4mat
+        - amden-pncs17
+        - villum-inverse-design
+        - sculptdrug
 
-  - desc: "Interdisciplinary research between data mining and materials science is a new research direction I am exploring. The promise is that data mining enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design."
-    items:
-      - amden-neurips25-ai4mat
-      - amden-pncs17
-      - villum-inverse-design
-      - sculptdrug
+  teaching:
+    - desc: "My course teaching follows three core principles: a solid understanding of the subject matter, awareness of students' established experiences and background, and problem-based learning style applied throughout lectures, exercises, and exams. This translates to practices including tailor-made blog-style literature that is both professional and intuitive, inspirational lectures that connect theory to real-world problems, and progressively-arranged hands-on exercises that build practical problem-solving skills."
+      entries:
+        - ai-systems
+    - desc: "I am building my supervision experience, currently supervising Bachelor's-level semester projects. My supervision focuses on problem definition, critical thinking about design choices, and delivering convincing conclusions."
+      entries:
+        - sw6-camera-behind
 
-teachingSections:
-  - desc: "My course teaching follows three core principles: a solid understanding of the subject matter, awareness of students' established experiences and background, and problem-based learning style applied throughout lectures, exercises, and exams. This translates to practices including tailor-made blog-style literature that is both professional and intuitive, inspirational lectures that connect theory to real-world problems, and progressively-arranged hands-on exercises that build practical problem-solving skills."
-    items:
-      - ai-systems
-  - desc: "I am building my supervision experience, currently supervising Bachelor's-level semester projects. My supervision focuses on problem definition, critical thinking about design choices, and delivering convincing conclusions."
-    items:
-      - sw6-camera-behind
+publications:
+  primary:
+    desc: "Publications where I am the first, co-first, or lead student author. For each work, I contribute significantly to some or all of the following: problem formulation, algorithm design, paper drafting and revision, code implementation, and experimental evaluation."
+    entries:
+      - id: ripcn
+        title: "RIPCN: A Road Impedance Principal Component Network for Probabilistic Traffic Flow Forecasting"
+        authors: Haochen Lv*, <strong>Yan Lin*</strong>, Shengnan Guo, Xiaowei Mao, Hong Nie, Letian Gong, Youfang Lin, Huaiyu Wan
+        tags:
+          - "KDD"
+          - "2026"
+        links:
+          Preprint: "https://arxiv.org/abs/2512.21685"
 
-primaryPublicationsDesc: "Publications where I am the first, co-first, or lead student author. For each work, I contribute significantly to some or all of the following: problem formulation, algorithm design, paper drafting and revision, code implementation, and experimental evaluation."
-primaryPublications:
-  - id: ripcn
-    title: "RIPCN: A Road Impedance Principal Component Network for Probabilistic Traffic Flow Forecasting"
-    authors: Haochen Lv*, <strong>Yan Lin*</strong>, Shengnan Guo, Xiaowei Mao, Hong Nie, Letian Gong, Youfang Lin, Huaiyu Wan
-    tags:
-      - "KDD"
-      - "2026"
-    links:
-      Preprint: "https://arxiv.org/abs/2512.21685"
+      - id: trajmamba
+        title: "TrajMamba: An Efficient and Semantic-rich Vehicle Trajectory Pre-training Model"
+        authors: Yichen Liu*, <strong>Yan Lin*</strong>, Shengnan Guo, Zeyu Zhou, Youfang Lin, Huaiyu Wan
+        tags:
+          - "NeurIPS"
+          - "2025"
+        links:
+          Poster: "https://neurips.cc/virtual/2025/poster/115959"
 
-  - id: trajmamba
-    title: "TrajMamba: An Efficient and Semantic-rich Vehicle Trajectory Pre-training Model"
-    authors: Yichen Liu*, <strong>Yan Lin*</strong>, Shengnan Guo, Zeyu Zhou, Youfang Lin, Huaiyu Wan
-    tags:
-      - "NeurIPS"
-      - "2025"
-    links:
-      Poster: "https://neurips.cc/virtual/2025/poster/115959"
+      - id: transfertraj
+        title: "TransferTraj: A Vehicle Trajectory Learning Model for Region and Task Transferability"
+        authors: Tonglong Wei*, <strong>Yan Lin*</strong>, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, Gao Cong, Huaiyu Wan
+        tags:
+          - "NeurIPS"
+          - "2025"
+        links:
+          Oral: "https://neurips.cc/virtual/2025/oral/117509"
+          Poster: "https://neurips.cc/virtual/2025/poster/117508"
+          Preprint: "https://arxiv.org/abs/2505.12672"
 
-  - id: transfertraj
-    title: "TransferTraj: A Vehicle Trajectory Learning Model for Region and Task Transferability"
-    authors: Tonglong Wei*, <strong>Yan Lin*</strong>, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, Gao Cong, Huaiyu Wan
-    tags:
-      - "NeurIPS"
-      - "2025"
-    links:
-      Oral: "https://neurips.cc/virtual/2025/oral/117509"
-      Poster: "https://neurips.cc/virtual/2025/poster/117508"
-      Preprint: "https://arxiv.org/abs/2505.12672"
+      - id: plmtrajrec
+        title: "PLMTrajRec: A Scalable and Generalizable Trajectory Recovery Method with Pre-trained Language Models"
+        authors: Tonglong Wei*, <strong>Yan Lin*</strong>, Youfang Lin, Shengnan Guo, Jilin Hu, Haitao Yuan, Gao Cong, Huaiyu Wan
+        tags:
+          - "NeurIPS"
+          - "2025"
+        links:
+          Poster: "https://neurips.cc/virtual/2025/poster/117945"
+          Preprint: "https://arxiv.org/abs/2410.14281"
 
-  - id: plmtrajrec
-    title: "PLMTrajRec: A Scalable and Generalizable Trajectory Recovery Method with Pre-trained Language Models"
-    authors: Tonglong Wei*, <strong>Yan Lin*</strong>, Youfang Lin, Shengnan Guo, Jilin Hu, Haitao Yuan, Gao Cong, Huaiyu Wan 
-    tags:
-      - "NeurIPS"
-      - "2025"
-    links:
-      Poster: "https://neurips.cc/virtual/2025/poster/117945"
-      Preprint: "https://arxiv.org/abs/2410.14281"
+      - id: uvtm
+        title: "UVTM: Universal Vehicle Trajectory Modeling with ST Feature Domain Generation"
+        authors: "<strong>Yan Lin</strong>, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin, Huaiyu Wan"
+        tags:
+          - "IEEE TKDE"
+          - "2025"
+        links:
+          Paper: "https://ieeexplore.ieee.org/document/11004614"
+          Preprint: "https://arxiv.org/abs/2402.07232"
+          Code: "https://github.com/Logan-Lin/UVTM"
 
-  - id: uvtm
-    title: "UVTM: Universal Vehicle Trajectory Modeling with ST Feature Domain Generation"
-    authors: "<strong>Yan Lin</strong>, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin, Huaiyu Wan"
-    tags:
-      - "IEEE TKDE"
-      - "2025"
-    links:
-      Paper: "https://ieeexplore.ieee.org/document/11004614"
-      Preprint: "https://arxiv.org/abs/2402.07232"
-      Code: "https://github.com/Logan-Lin/UVTM"
+      - id: trajcogn
+        title: "TrajCogn: Leveraging LLMs for Cognizing Movement Patterns and Travel Purposes from Trajectories"
+        authors: "Zeyu Zhou*, <strong>Yan Lin*</strong>, Haomin Wen, Shengnan Guo, Jilin Hu, Youfang Lin, Huaiyu Wan"
+        tags:
+          - "IJCAI"
+          - "2025"
+        links:
+          Paper: https://www.ijcai.org/proceedings/2025/411
+          Preprint: "https://arxiv.org/abs/2405.12459"
+          Code: "https://github.com/Zeru19/PLM4Traj"
 
-  - id: trajcogn
-    title: "TrajCogn: Leveraging LLMs for Cognizing Movement Patterns and Travel Purposes from Trajectories"
-    authors: "Zeyu Zhou*, <strong>Yan Lin*</strong>, Haomin Wen, Shengnan Guo, Jilin Hu, Youfang Lin, Huaiyu Wan"
-    tags:
-      - "IJCAI"
-      - "2025"
-    links:
-      Paper: https://www.ijcai.org/proceedings/2025/411
-      Preprint: "https://arxiv.org/abs/2405.12459"
-      Code: "https://github.com/Zeru19/PLM4Traj"
+      - id: unite-survey
+        title: "UniTE: A Survey and Unified Pipeline for Pre-training Spatiotemporal Trajectory Embeddings"
+        authors: "<strong>Yan Lin</strong>, Zeyu Zhou, Yicheng Liu, Haochen Lv, Haomin Wen, Tianyi Li, Yushuai Li, Christian S. Jensen, Shengnan Guo, Youfang Lin, Huaiyu Wan"
+        tags:
+          - "IEEE TKDE"
+          - "2025"
+        links:
+          Paper: "https://ieeexplore.ieee.org/document/10818577"
+          Preprint: "https://arxiv.org/abs/2407.12550"
+          Code: "https://github.com/Logan-Lin/UniTE"
 
-  - id: unite-survey
-    title: "UniTE: A Survey and Unified Pipeline for Pre-training Spatiotemporal Trajectory Embeddings"
-    authors: "<strong>Yan Lin</strong>, Zeyu Zhou, Yicheng Liu, Haochen Lv, Haomin Wen, Tianyi Li, Yushuai Li, Christian S. Jensen, Shengnan Guo, Youfang Lin, Huaiyu Wan"
-    tags:
-      - "IEEE TKDE"
-      - "2025"
-    links:
-      Paper: "https://ieeexplore.ieee.org/document/10818577"
-      Preprint: "https://arxiv.org/abs/2407.12550"
-      Code: "https://github.com/Logan-Lin/UniTE"
+      - id: path-llm
+        title: "Path-LLM: A Multi-Modal Path Representation Learning by Aligning and Fusing with Large Language Models"
+        authors: "Yongfu Wei*, <strong>Yan Lin*</strong>, Hongfan Gao, Ronghui Xu, Sean Bin Yang, Jilin Hu"
+        tags:
+          - "WWW"
+          - "2025"
+        links:
+          Paper: "https://openreview.net/forum?id=KmMSQS6tFn"
+          Code: "https://github.com/decisionintelligence/Path-LLM"
 
-  - id: path-llm
-    title: "Path-LLM: A Multi-Modal Path Representation Learning by Aligning and Fusing with Large Language Models"
-    authors: "Yongfu Wei*, <strong>Yan Lin*</strong>, Hongfan Gao, Ronghui Xu, Sean Bin Yang, Jilin Hu"
-    tags:
-      - "WWW"
-      - "2025"
-    links:
-      Paper: "https://openreview.net/forum?id=KmMSQS6tFn"
-      Code: "https://github.com/decisionintelligence/Path-LLM"
+      - id: dutytte
+        title: "DutyTTE: Deciphering Uncertainty in Origin-Destination Travel Time Estimation"
+        authors: "Xiaowei Mao*, <strong>Yan Lin*</strong>, Shengnan Guo, Yubin Chen, Xingyu Xian, Haomin Wen, Qisen Xu, Youfang Lin, Huaiyu Wan"
+        tags:
+          - "AAAI"
+          - "2025"
+        links:
+          Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/33350"
+          Preprint: "https://arxiv.org/abs/2408.12809"
 
-  - id: dutytte
-    title: "DutyTTE: Deciphering Uncertainty in Origin-Destination Travel Time Estimation"
-    authors: "Xiaowei Mao*, <strong>Yan Lin*</strong>, Shengnan Guo, Yubin Chen, Xingyu Xian, Haomin Wen, Qisen Xu, Youfang Lin, Huaiyu Wan"
-    tags:
-      - "AAAI"
-      - "2025"
-    links:
-      Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/33350"
-      Preprint: "https://arxiv.org/abs/2408.12809"
+      - id: mobility-llm
+        title: "Mobility-LLM: Learning Visiting Intentions and Travel Preference from Human Mobility Data with Large Language Models"
+        authors: "Letian Gong*, <strong>Yan Lin*</strong>, Xinyue Zhang, Yiwen Lu, Xuedi Han, Yichen Liu, Shengnan Guo, Youfang Lin, Huaiyu Wan"
+        tags:
+          - "NeurIPS"
+          - "2024"
+        links:
+          Paper: "https://openreview.net/forum?id=0feJEykDRx"
+          Poster: "https://neurips.cc/virtual/2024/poster/96914"
 
-  - id: mobility-llm
-    title: "Mobility-LLM: Learning Visiting Intentions and Travel Preference from Human Mobility Data with Large Language Models"
-    authors: "Letian Gong*, <strong>Yan Lin*</strong>, Xinyue Zhang, Yiwen Lu, Xuedi Han, Yichen Liu, Shengnan Guo, Youfang Lin, Huaiyu Wan"
-    tags:
-      - "NeurIPS"
-      - "2024"
-    links:
-      Paper: "https://openreview.net/forum?id=0feJEykDRx"
-      Poster: "https://neurips.cc/virtual/2024/poster/96914"
+      - id: dot
+        title: "Origin-Destination Travel Time Oracle for Map-based Services"
+        authors: "<strong>Yan Lin</strong>, Huaiyu Wan, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin"
+        tags:
+          - "SIGMOD"
+          - "2024"
+        links:
+          Paper: "https://dl.acm.org/doi/10.1145/3617337"
+          Preprint: "https://arxiv.org/abs/2307.03048"
+          Code: "https://github.com/Logan-Lin/DOT"
 
-  - id: dot
-    title: "Origin-Destination Travel Time Oracle for Map-based Services"
-    authors: "<strong>Yan Lin</strong>, Huaiyu Wan, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin"
-    tags:
-      - "SIGMOD"
-      - "2024"
-    links:
-      Paper: "https://dl.acm.org/doi/10.1145/3617337"
-      Preprint: "https://arxiv.org/abs/2307.03048"
-      Code: "https://github.com/Logan-Lin/DOT"
+      - id: mmtec
+        title: "Pre-training General Trajectory Embeddings with Maximum Multi-view Entropy Coding"
+        authors: "<strong>Yan Lin</strong>, Huaiyu Wan, Shengnan Guo, Jilin Hu, Christian S. Jensen, Youfang Lin"
+        tags:
+          - "IEEE TKDE"
+          - "2023"
+        links:
+          Paper: "https://ieeexplore.ieee.org/abstract/document/10375102"
+          Preprint: "https://arxiv.org/abs/2207.14539"
+          Code: "https://github.com/Logan-Lin/MMTEC"
 
-  - id: mmtec
-    title: "Pre-training General Trajectory Embeddings with Maximum Multi-view Entropy Coding"
-    authors: "<strong>Yan Lin</strong>, Huaiyu Wan, Shengnan Guo, Jilin Hu, Christian S. Jensen, Youfang Lin"
-    tags:
-      - "IEEE TKDE"
-      - "2023"
-    links:
-      Paper: "https://ieeexplore.ieee.org/abstract/document/10375102"
-      Preprint: "https://arxiv.org/abs/2207.14539"
-      Code: "https://github.com/Logan-Lin/MMTEC"
+      - id: tale
+        title: "Pre-training Time-Aware Location Embeddings from Spatial-Temporal Trajectories"
+        authors: "Huaiyu Wan, <strong>Yan Lin</strong>, Shengnan Guo, Youfang Lin"
+        tags:
+          - "IEEE TKDE"
+          - "2022"
+        links:
+          Paper: "https://ieeexplore.ieee.org/abstract/document/9351627"
+          Code: "https://github.com/Logan-Lin/TALE"
 
-  - id: tale
-    title: "Pre-training Time-Aware Location Embeddings from Spatial-Temporal Trajectories"
-    authors: "Huaiyu Wan, <strong>Yan Lin</strong>, Shengnan Guo, Youfang Lin"
-    tags:
-      - "IEEE TKDE"
-      - "2022"
-    links:
-      Paper: "https://ieeexplore.ieee.org/abstract/document/9351627"
-      Code: "https://github.com/Logan-Lin/TALE"
+      - id: ctle
+        title: "Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction"
+        authors: "<strong>Yan Lin</strong>, Huaiyu Wan, Shengnan Guo, Youfang Lin"
+        tags:
+          - "AAAI"
+          - "2021"
+        links:
+          Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/16548"
+          Code: "https://github.com/Logan-Lin/CTLE"
 
-  - id: ctle
-    title: "Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction"
-    authors: "<strong>Yan Lin</strong>, Huaiyu Wan, Shengnan Guo, Youfang Lin"
-    tags:
-      - "AAAI"
-      - "2021"
-    links:
-      Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/16548"
-      Code: "https://github.com/Logan-Lin/CTLE"
+  secondary:
+    desc: "Publications where I serve as a contributing author. My involvement in these works typically includes technical discussion, algorithm refinement, or contribution to experiments and writing."
+    entries:
+      - title: "Traj-MLLM: Can Multimodal Large Language Models Reform Trajectory Data Mining?"
+        authors: Shuo Liu, Di Yao, <strong>Yan Lin</strong>, Gao Cong, Jingping Bi
+        tags:
+          - "KDD"
+          - "2026"
+        links:
+          Preprint: "https://arxiv.org/abs/2509.00053"
 
-secondaryPublicationsDesc: "Publications where I serve as a contributing author. My involvement in these works typically includes technical discussion, algorithm refinement, or contribution to experiments and writing."
-secondaryPublications:
+      - id: sculptdrug
+        title: "SculptDrug: A Spatial Condition-Aware Bayesian Flow Model for Structure-based Drug Design"
+        authors: Qingsong Zhong, Haomin Yu, <strong>Yan Lin</strong>, Wangmeng Shen, Long Zeng, Jilin Hu
+        tags:
+          - "AAAI"
+          - "2026"
+        links:
+          Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/37139"
+          Preprint: "https://arxiv.org/abs/2511.12489"
 
-  - title: "Traj-MLLM: Can Multimodal Large Language Models Reform Trajectory Data Mining?"
-    authors: Shuo Liu, Di Yao, <strong>Yan Lin</strong>, Gao Cong, Jingping Bi
-    tags:
-      - "KDD"
-      - "2026"
-    links:
-      Preprint: "https://arxiv.org/abs/2509.00053"
+      - title: "Spatial-Temporal Feedback Diffusion Guidance for Controlled Traffic Imputation"
+        authors: Xiaowei Mao, Huihu Ding, <strong>Yan Lin</strong>, Tingrui Wu, Shengnan Guo, Dazhuo Qiu, Feiling Fang, Jilin Hu, Huaiyu Wan
+        tags:
+          - "AAAI"
+          - "2026"
+        links:
+          Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/38581"
+          Preprint: "https://arxiv.org/abs/2601.04572"
 
-  - id: sculptdrug
-    title: "SculptDrug: A Spatial Condition-Aware Bayesian Flow Model for Structure-based Drug Design"
-    authors: Qingsong Zhong, Haomin Yu, <strong>Yan Lin</strong>, Wangmeng Shen, Long Zeng, Jilin Hu
-    tags:
-      - "AAAI"
-      - "2026"
-    links:
-      Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/37139"
-      Preprint: "https://arxiv.org/abs/2511.12489"
+      - title: "DUET: Dual Clustering Enhanced Multivariate Time Series Forecasting"
+        authors: "Xiangfei Qiu, Xingjian Wu, <strong>Yan Lin</strong>, Chenjuan Guo, Jilin Hu, Bin Yang"
+        tags:
+          - "KDD"
+          - "2025"
+        links:
+          Paper: "https://dl.acm.org/doi/10.1145/3690624.3709325"
+          Preprint: "https://arxiv.org/abs/2412.10859"
+          Code: "https://github.com/decisionintelligence/DUET"
 
-  - title: "Spatial-Temporal Feedback Diffusion Guidance for Controlled Traffic Imputation"
-    authors: Xiaowei Mao, Huihu Ding, <strong>Yan Lin</strong>, Tingrui Wu, Shengnan Guo, Dazhuo Qiu, Feiling Fang, Jilin Hu, Huaiyu Wan
-    tags:
-      - "AAAI"
-      - "2026"
-    links:
-      Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/38581"
-      Preprint: "https://arxiv.org/abs/2601.04572"
+      - title: "Diff-RNTraj: A Structure-aware Diffusion Model for Road Network-constrained Trajectory Generation"
+        authors: "Tonglong Wei, Youfang Lin, Shengnan Guo, <strong>Yan Lin</strong>, Yiheng Huang, Chenyang Xiang, Yuqing Bai, Menglu Ya, Huaiyu Wan"
+        tags:
+          - "IEEE TKDE"
+          - "2024"
+        links:
+          Paper: "https://www.computer.org/csdl/journal/tk/5555/01/10679607/20b3hlbjBOo"
+          Preprint: "https://arxiv.org/abs/2402.07369"
+          Code: "https://github.com/wtl52656/Diff-RNTraj"
 
-  - title: "DUET: Dual Clustering Enhanced Multivariate Time Series Forecasting"
-    authors: "Xiangfei Qiu, Xingjian Wu, <strong>Yan Lin</strong>, Chenjuan Guo, Jilin Hu, Bin Yang"
-    tags:
-      - "KDD"
-      - "2025"
-    links:
-      Paper: "https://dl.acm.org/doi/10.1145/3690624.3709325"
-      Preprint: "https://arxiv.org/abs/2412.10859"
-      Code: "https://github.com/decisionintelligence/DUET"
+      - title: "STCDM: Spatio-Temporal Contrastive Diffusion Model for Check-In Sequence Generation"
+        authors: "Letian Gong, Shengnan Guo, <strong>Yan Lin</strong>, Yichen Liu, Erwen Zheng, Yiwei Shuang, Youfang Lin, Jilin Hu, Huaiyu Wan"
+        tags:
+          - "IEEE TKDE"
+          - "2024"
+        links:
+          Paper: "https://ieeexplore.ieee.org/document/10836764"
 
-  - title: "Diff-RNTraj: A Structure-aware Diffusion Model for Road Network-constrained Trajectory Generation"
-    authors: "Tonglong Wei, Youfang Lin, Shengnan Guo, <strong>Yan Lin</strong>, Yiheng Huang, Chenyang Xiang, Yuqing Bai, Menglu Ya, Huaiyu Wan"
-    tags:
-      - "IEEE TKDE"
-      - "2024"
-    links:
-      Paper: "https://www.computer.org/csdl/journal/tk/5555/01/10679607/20b3hlbjBOo"
-      Preprint: "https://arxiv.org/abs/2402.07369"
-      Code: "https://github.com/wtl52656/Diff-RNTraj"
+      - title: "Micro-Macro Spatial-Temporal Graph-based Encoder-Decoder for Map-Constrained Trajectory Recovery"
+        authors: "Tonglong Wei, Youfang Lin, <strong>Yan Lin</strong>, Shengnan Guo, Lan Zhang, Huaiyu Wan"
+        tags:
+          - "IEEE TKDE"
+          - "2024"
+        links:
+          Paper: "https://www.computer.org/csdl/journal/tk/5555/01/10517676/1WCj0j0FljW"
+          Preprint: "https://arxiv.org/abs/2404.19141"
+          Code: "https://github.com/wtl52656/MM-STGED"
 
-  - title: "STCDM: Spatio-Temporal Contrastive Diffusion Model for Check-In Sequence Generation"
-    authors: "Letian Gong, Shengnan Guo, <strong>Yan Lin</strong>, Yichen Liu, Erwen Zheng, Yiwei Shuang, Youfang Lin, Jilin Hu, Huaiyu Wan"
-    tags:
-      - "IEEE TKDE"
-      - "2024"
-    links:
-      Paper: "https://ieeexplore.ieee.org/document/10836764"
+      - title: "Inductive and Adaptive Graph Convolution Networks Equipped with Constraint Task for Spatial-Temporal Traffic Data Kriging"
+        authors: "Tonglong Wei, Youfang Lin, Shengnan Guo, <strong>Yan Lin</strong>, Yiji Zhao, Xiyuan Jin, Zhihao Wu, Huaiyu Wan"
+        tags:
+          - "KBS"
+          - "2024"
+        links:
+          Paper: "https://www.sciencedirect.com/science/article/pii/S0950705123010730"
+          Code: "https://github.com/wtl52656/IAGCN"
 
-  - title: "Micro-Macro Spatial-Temporal Graph-based Encoder-Decoder for Map-Constrained Trajectory Recovery"
-    authors: "Tonglong Wei, Youfang Lin, <strong>Yan Lin</strong>, Shengnan Guo, Lan Zhang, Huaiyu Wan"
-    tags:
-      - "IEEE TKDE"
-      - "2024"
-    links:
-      Paper: "https://www.computer.org/csdl/journal/tk/5555/01/10517676/1WCj0j0FljW"
-      Preprint: "https://arxiv.org/abs/2404.19141"
-      Code: "https://github.com/wtl52656/MM-STGED"
+      - title: "Spatial-Temporal Cross-View Contrastive Pre-Training for Check-in Sequence Representation Learning"
+        authors: "Letian Gong, Huaiyu Wan, Shengnan Guo, Li Xiucheng, <strong>Yan Lin</strong>, Erwen Zheng, Tianyi Wang, Zeyu Zhou, Youfang Lin"
+        tags:
+          - "IEEE TKDE"
+          - "2024"
+        links:
+          Paper: "https://ieeexplore.ieee.org/document/10613424"
+          Preprint: "https://arxiv.org/abs/2407.15899"
 
-  - title: "Inductive and Adaptive Graph Convolution Networks Equipped with Constraint Task for Spatial-Temporal Traffic Data Kriging"
-    authors: "Tonglong Wei, Youfang Lin, Shengnan Guo, <strong>Yan Lin</strong>, Yiji Zhao, Xiyuan Jin, Zhihao Wu, Huaiyu Wan"
-    tags:
-      - "KBS"
-      - "2024"
-    links:
-      Paper: "https://www.sciencedirect.com/science/article/pii/S0950705123010730"
-      Code: "https://github.com/wtl52656/IAGCN"
+      - title: "Contrastive Pre-training with Adversarial Perturbations for Check-In Sequence Representation Learning"
+        authors: "Letian Gong, Youfang Lin, Shengnan Guo, <strong>Yan Lin</strong>, Tianyi Wang, Erwen Zheng, Zeyu Zhou, Huaiyu Wan"
+        tags:
+          - "AAAI"
+          - "2023"
+        links:
+          Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/25546"
+          Code: "https://github.com/LetianGong/CACSR"
 
-  - title: "Spatial-Temporal Cross-View Contrastive Pre-Training for Check-in Sequence Representation Learning"
-    authors: "Letian Gong, Huaiyu Wan, Shengnan Guo, Li Xiucheng, <strong>Yan Lin</strong>, Erwen Zheng, Tianyi Wang, Zeyu Zhou, Youfang Lin"
-    tags:
-      - "IEEE TKDE"
-      - "2024"
-    links:
-      Paper: "https://ieeexplore.ieee.org/document/10613424"
-      Preprint: "https://arxiv.org/abs/2407.15899"
+      - title: "Adversarial Self-Attentive Time-Variant Neural Networks for Multi-Step Time Series Forecasting"
+        authors: "Changxia Gao, Ning Zhang, Youru Li, <strong>Yan Lin</strong>, Huaiyu Wan"
+        tags:
+          - "ESWA"
+          - "2023"
+        links:
+          Paper: "https://www.sciencedirect.com/science/article/pii/S0957417423012241"
 
-  - title: "Contrastive Pre-training with Adversarial Perturbations for Check-In Sequence Representation Learning"
-    authors: "Letian Gong, Youfang Lin, Shengnan Guo, <strong>Yan Lin</strong>, Tianyi Wang, Erwen Zheng, Zeyu Zhou, Huaiyu Wan"
-    tags:
-      - "AAAI"
-      - "2023"
-    links:
-      Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/25546"
-      Code: "https://github.com/LetianGong/CACSR"
+      - title: "Multi-scale Adaptive Attention-based Time-Variant Neural Networks for Multi-step Time Series Forecasting"
+        authors: "Changxia Gao, Ning Zhang, Youru Li, <strong>Yan Lin</strong>, Huaiyu Wan"
+        tags:
+          - "APIN"
+          - "2023"
+        links:
+          Paper: "https://link.springer.com/article/10.1007/s10489-023-05057-7"
 
-  - title: "Adversarial Self-Attentive Time-Variant Neural Networks for Multi-Step Time Series Forecasting"
-    authors: "Changxia Gao, Ning Zhang, Youru Li, <strong>Yan Lin</strong>, Huaiyu Wan"
-    tags:
-      - "ESWA"
-      - "2023"
-    links:
-      Paper: "https://www.sciencedirect.com/science/article/pii/S0957417423012241"
+      - title: "WITRAN: Water-wave Information Transmission and Recurrent Acceleration Network for Long-range Time Series Forecasting"
+        authors: "Yuxin Jia, Youfang Lin, Xinyan Hao, <strong>Yan Lin</strong>, Shengnan Guo, Huaiyu Wan"
+        tags:
+          - "NeurIPS"
+          - "2023"
+        links:
+          Paper: "https://openreview.net/forum?id=y08bkEtNBK"
+          Code: "https://github.com/Water2sea/WITRAN"
 
-  - title: "Multi-scale Adaptive Attention-based Time-Variant Neural Networks for Multi-step Time Series Forecasting"
-    authors: "Changxia Gao, Ning Zhang, Youru Li, <strong>Yan Lin</strong>, Huaiyu Wan"
-    tags:
-      - "APIN"
-      - "2023"
-    links:
-      Paper: "https://link.springer.com/article/10.1007/s10489-023-05057-7"
+projects:
+  primary:
+    desc: "Projects where I serve as the principal investigator or lead developer, responsible for the overall research direction, system design, and implementation."
+    entries:
+      - title: "Research on <i>Prediction of User Travel Destination and Travel Time Based on Trajectory Representation Learning</i>"
+        tags:
+          - "Fundamental Research Funds for the Central Universities of China"
+        desc: "Applies representation learning to trajectory data to transform original features into high-level information, improving the performance of downstream tasks such as travel time and destination prediction."
+        links: {}
 
-  - title: "WITRAN: Water-wave Information Transmission and Recurrent Acceleration Network for Long-range Time Series Forecasting"
-    authors: "Yuxin Jia, Youfang Lin, Xinyan Hao, <strong>Yan Lin</strong>, Shengnan Guo, Huaiyu Wan"
-    tags:
-      - "NeurIPS"
-      - "2023"
-    links:
-      Paper: "https://openreview.net/forum?id=y08bkEtNBK"
-      Code: "https://github.com/Water2sea/WITRAN"
+      - title: "Development of <i>OverleafCopilot - Empowering Academic Writing in Overleaf with Large Language Models</i>"
+        tags:
+          - "Personal Interest Project"
+        desc: "This project aims to develop a Browser extension to seamlessly integrate Large Language Models (such as ChatGPT) into the popular online academic writing platform, Overleaf."
+        links:
+          Home: "https://www.overleafcopilot.com/"
+          Install: "https://chromewebstore.google.com/detail/overleaf-copilot/eoadabdpninlhkkbhngoddfjianhlghb"
 
-primaryProjectsDesc: "Projects where I serve as the principal investigator or lead developer, responsible for the overall research direction, system design, and implementation."
-primaryProjects:
-  - title: "Research on <i>Prediction of User Travel Destination and Travel Time Based on Trajectory Representation Learning</i>"
-    tags:
-      - "Fundamental Research Funds for the Central Universities of China"
-    desc: "Applies representation learning to trajectory data to transform original features into high-level information, improving the performance of downstream tasks such as travel time and destination prediction."
-    links: {}
+      - title: "Development of <i>PromptGenius - All-purpose prompts for LLMs</i>"
+        tags:
+          - "Personal Interest Project"
+        desc: "This project focuses on developing a website that offers a wide range of prompt categories, enhancing the versatility of LLMs for various tasks and improving their output quality."
+        links:
+          Website: "https://www.promptgenius.site/"
+          Code: "https://github.com/wenhaomin/ChatGPT-PromptGenius"
 
-  - title: "Development of <i>OverleafCopilot - Empowering Academic Writing in Overleaf with Large Language Models</i>"
-    tags:
-      - "Personal Interest Project"
-    desc: "This project aims to develop a Browser extension to seamlessly integrate Large Language Models (such as ChatGPT) into the popular online academic writing platform, Overleaf."
-    links:
-      Home: "https://www.overleafcopilot.com/"
-      Install: "https://chromewebstore.google.com/detail/overleaf-copilot/eoadabdpninlhkkbhngoddfjianhlghb"
+  secondary:
+    desc: "Projects where I participate as a key researcher, contributing to specific aspects such as model development, data analysis, or experimental design."
+    entries:
+      - id: villum-inverse-design
+        title: "Research on <i>Inverse Design of Materials Using Diffusion Probabilistic Models</i>"
+        tags:
+          - "Villum Foundation"
+        desc: "This project focuses on developing diffusion probabilistic models to first understand the relationship between chemistry/structure and material properties, then enable the inverse design of new materials with specific properties."
+        links: {}
 
-  - title: "Development of <i>PromptGenius - All-purpose prompts for LLMs</i>"
-    tags:
-      - "Personal Interest Project"
-    desc: "This project focuses on developing a website that offers a wide range of prompt categories, enhancing the versatility of LLMs for various tasks and improving their output quality."
-    links:
-      Website: "https://www.promptgenius.site/"
-      Code: "https://github.com/wenhaomin/ChatGPT-PromptGenius"
+      - title: "Research on <i>Pre-training Representation Learning Methods of Spatial-temporal Trajectory Data for Traffic Prediction</i>"
+        tags:
+          - "National Natural Science Foundation of China"
+        desc: "This project aims to propose pre-training representation learning methods for spatial-temporal trajectory data, modeling multiple features to improve traffic prediction tasks. It demonstrates how trajectory representation learning can enhance traffic data mining."
+        links: {}
 
-secondaryProjectsDesc: "Projects where I participate as a key researcher, contributing to specific aspects such as model development, data analysis, or experimental design."
-secondaryProjects:
-  - id: villum-inverse-design
-    title: "Research on <i>Inverse Design of Materials Using Diffusion Probabilistic Models</i>"
-    tags:
-      - "Villum Foundation"
-    desc: "This project focuses on developing diffusion probabilistic models to first understand the relationship between chemistry/structure and material properties, then enable the inverse design of new materials with specific properties."
-    links: {}
+      - title: "Research on <i>Spatial-temporal Trajectory Generation and Representation Learning Methods for Sparsity Problems</i>"
+        tags:
+          - "National Natural Science Foundation of China"
+        desc: "This project explores how to generate high-quality spatial-temporal trajectory data and corresponding representations to address sparsity-related issues, thereby supporting a variety of downstream tasks."
+        links: {}
 
-  - title: "Research on <i>Pre-training Representation Learning Methods of Spatial-temporal Trajectory Data for Traffic Prediction</i>"
-    tags:
-      - "National Natural Science Foundation of China"
-    desc: "This project aims to propose pre-training representation learning methods for spatial-temporal trajectory data, modeling multiple features to improve traffic prediction tasks. It demonstrates how trajectory representation learning can enhance traffic data mining."
-    links: {}
+activities:
+  courses:
+    desc: "University-level courses I teach, covering lectures, literatures, exercises, and exam assessments."
+    entries:
+      - id: ai-systems
+        title: "AI Systems & Infrastructure"
+        tags:
+          - "Fall 2025"
+          - "Aalborg University"
+        desc: "This course introduces students to streamlined interaction with AI models and systems, as well as implementation and deployment of scalable, production-ready AI systems on real-world infrastructures."
+        links:
+          Moodle: https://www.moodle.aau.dk/course/view.php?id=57016
+          Literature: https://blog.yanlincs.com/ai-system/
 
-  - title: "Research on <i>Spatial-temporal Trajectory Generation and Representation Learning Methods for Sparsity Problems</i>"
-    tags:
-      - "National Natural Science Foundation of China"
-    desc: "This project explores how to generate high-quality spatial-temporal trajectory data and corresponding representations to address sparsity-related issues, thereby supporting a variety of downstream tasks."
-    links: {}
+  supervision:
+    desc: "Student projects I supervise, covering project proposals, problem definition, design choices, and final delivery."
+    entries:
+      - id: sw6-camera-behind
+        title: "A Camera That Sees Behind"
+        tags:
+          - "Fall 2025 - Spring 2026"
+          - "Aalborg University"
+        desc: "A Bachelor's semester project on developing a computationally lightweight model deployable on embedded devices to remove humans from images or video feeds, serving as a prototype GDPR-compliant surveillance system."
+        links:
+          Proposal: https://github.com/Logan-Lin/camera-sees-behind/releases/tag/v1.2-sw6-26
 
-coursesDesc: "University-level courses I teach, covering lectures, literatures, exercises, and exam assessments."
-courses:
-  - id: ai-systems
-    title: "AI Systems & Infrastructure"
-    tags:
-      - "Fall 2025"
-      - "Aalborg University"
-    desc: "This course introduces students to streamlined interaction with AI models and systems, as well as implementation and deployment of scalable, production-ready AI systems on real-world infrastructures."
-    links:
-      Moodle: https://www.moodle.aau.dk/course/view.php?id=57016
-      Literature: https://blog.yanlincs.com/ai-system/
+  presentations:
+    desc: "Oral presentations, tutorials, and guest lectures delivered at international conferences and universities."
+    entries:
+      - id: amden-neurips25-ai4mat
+        title: "AMDEN: Amorphous Materials DEnoising Network"
+        tags:
+          - "Workshop"
+          - "NeurIPS 2025"
+        links:
+          Paper: "https://openreview.net/forum?id=cEgjPFdLvl"
 
-supervisionDesc: "Student projects I supervise, covering project proposals, problem definition, design choices, and final delivery."
-supervision:
-  - id: sw6-camera-behind
-    title: "A Camera That Sees Behind"
-    tags:
-      - "Fall 2025 - Spring 2026"
-      - "Aalborg University"
-    desc: "A Bachelor's semester project on developing a computationally lightweight model deployable on embedded devices to remove humans from images or video feeds, serving as a prototype GDPR-compliant surveillance system."
-    links:
-      Proposal: https://github.com/Logan-Lin/camera-sees-behind/releases/tag/v1.2-sw6-26
+      - id: amden-pncs17
+        title: "AMDEN: Amorphous Materials DEnoising Network"
+        tags:
+          - "Oral Presentation"
+          - "PNCS17"
+        links:
+          Slides: "https://github.com/Logan-Lin/amden-presentation/releases/tag/v1.2-pncs17"
 
-presentationsDesc: "Oral presentations, tutorials, and guest lectures delivered at international conferences and universities."
-presentations:
-  - id: amden-neurips25-ai4mat
-    title: "AMDEN: Amorphous Materials DEnoising Network"
-    tags:
-      - "Workshop"
-      - "NeurIPS 2025"
-    links:
-      Paper: "https://openreview.net/forum?id=cEgjPFdLvl"
+      - title: "Self-supervised Learning of Trajectory Data"
+        tags:
+          - "Guest lecture"
+          - "Aalborg University"
+        links: {}
 
-  - id: amden-pncs17
-    title: "AMDEN: Amorphous Materials DEnoising Network"
-    tags: 
-      - "Oral Presentation"
-      - "PNCS17"
-    links:
-      Slides: "https://github.com/Logan-Lin/amden-presentation/releases/tag/v1.2-pncs17"
+      - title: "PLM4Traj: Leveraging Pre-trained Language Models for Cognizing Movement Patterns and Travel Purposes from Trajectories"
+        tags:
+          - "Workshop"
+          - "KDD 2024"
+        links:
+          Paper: "https://arxiv.org/abs/2405.12459"
 
-  - title: "Self-supervised Learning of Trajectory Data"
-    tags:
-      - "Guest lecture"
-      - "Aalborg University"
-    links: {}
+      - title: "Origin-Destination Travel Time Oracle for Map-based Services"
+        tags:
+          - "Paper Oral"
+          - "SIGMOD 2024"
+        links: {}
 
-  - title: "PLM4Traj: Leveraging Pre-trained Language Models for Cognizing Movement Patterns and Travel Purposes from Trajectories"
-    tags:
-      - "Workshop"
-      - "KDD 2024"
-    links:
-      Paper: "https://arxiv.org/abs/2405.12459"
+      - title: "Self-supervised Learning of Spatial-temporal Trajectories"
+        tags:
+          - "Tutorial"
+          - "SpatialDI 2024"
+        links: {}
 
-  - title: "Origin-Destination Travel Time Oracle for Map-based Services"
-    tags:
-      - "Paper Oral"
-      - "SIGMOD 2024"
-    links: {}
-
-  - title: "Self-supervised Learning of Spatial-temporal Trajectories"
-    tags:
-      - "Tutorial"
-      - "SpatialDI 2024"
-    links: {}
-
-  - title: "Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction"
-    tags:
-      - "Paper Oral"
-      - "AAAI 2021"
-    links: {}
+      - title: "Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction"
+        tags:
+          - "Paper Oral"
+          - "AAAI 2021"
+        links: {}

@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ data.title }} - Publications{% endblock %}
+{% block title %}{{ data.site.title }} - Publications{% endblock %}
 
 {% block content %}
   <article class="section">
     {% with section_title="Publications" %}{% include 'partials/section-header.html' %}{% endwith %}
-    {% if data.primaryPublicationsDesc %}<p class="section-desc">{{ data.primaryPublicationsDesc }}</p>{% endif %}
+    {% if data.publications.primary.desc %}<p class="section-desc">{{ data.publications.primary.desc }}</p>{% endif %}
     <div class="list-group list-group-flush">
-      {% for pub in data.primaryPublications %}
+      {% for pub in data.publications.primary.entries %}
         {% with type='primary' %}
           {% include 'partials/publication.html' %}
         {% endwith %}
       {% endfor %}
     </div>
     <hr/>
-    {% if data.secondaryPublicationsDesc %}<p class="section-desc">{{ data.secondaryPublicationsDesc }}</p>{% endif %}
+    {% if data.publications.secondary.desc %}<p class="section-desc">{{ data.publications.secondary.desc }}</p>{% endif %}
     <div class="list-group list-group-flush">
-      {% for pub in data.secondaryPublications %}
+      {% for pub in data.publications.secondary.entries %}
         {% with type='secondary' %}
           {% include 'partials/publication.html' %}
         {% endwith %}

@@ -1,22 +1,22 @@
 {% extends 'base.html' %}
 
-{% block title %}{{ data.title }} - Projects{% endblock %}
+{% block title %}{{ data.site.title }} - Projects{% endblock %}
 
 {% block content %}
   <article class="section">
     {% with section_title="Projects" %}{% include 'partials/section-header.html' %}{% endwith %}
-    {% if data.primaryProjectsDesc %}<p class="section-desc">{{ data.primaryProjectsDesc }}</p>{% endif %}
+    {% if data.projects.primary.desc %}<p class="section-desc">{{ data.projects.primary.desc }}</p>{% endif %}
     <div class="list-group list-group-flush">
-      {% for project in data.primaryProjects %}
+      {% for project in data.projects.primary.entries %}
         {% with type='primary' %}
           {% include 'partials/project.html' %}
         {% endwith %}
       {% endfor %}
     </div>
     <hr/>
-    {% if data.secondaryProjectsDesc %}<p class="section-desc">{{ data.secondaryProjectsDesc }}</p>{% endif %}
+    {% if data.projects.secondary.desc %}<p class="section-desc">{{ data.projects.secondary.desc }}</p>{% endif %}
     <div class="list-group list-group-flush">
-      {% for project in data.secondaryProjects %}
+      {% for project in data.projects.secondary.entries %}
         {% with type='secondary' %}
           {% include 'partials/project.html' %}
         {% endwith %}
