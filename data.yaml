@@ -240,6 +240,14 @@ publications:
           - "2026"
         links: {}
 
+      - title: "ForceTraj: Modeling Realistic Intention and Heterogeneous Interactions for Multi-modal Trajectory Prediction"
+        authors: Guanyu Yao, Yan Lin, Letian Gong, Xinyue Zhang, Yiwei Shuang, Shengnan Guo, Huaiyu Wan 
+        tags:
+          - "DASFAA"
+          - "2026"
+        links:
+          Paper: https://link.springer.com/chapter/10.1007/978-981-92-0375-8_24
+
       - title: "Traj-MLLM: Can Multimodal Large Language Models Reform Trajectory Data Mining?"
         authors: Shuo Liu, Di Yao, Yan Lin, Gao Cong, Jingping Bi
         tags:
