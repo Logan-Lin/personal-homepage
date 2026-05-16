@@ -8,6 +8,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"regexp"
 	"strings"
 	"time"
 
@@ -33,6 +34,8 @@ func build() error {
 	if err != nil {
 		return fmt.Errorf("load %s: %w", srcData, err)
 	}
+
+	boldSiteAuthor(data)
 
 	lookup := buildItemLookup(data)
 	if home, ok := data["home"].(map[string]interface{}); ok {
@@ -119,6 +122,48 @@ func loadYAML(path string) (map[string]interface{}, error) {
 		return nil, err
 	}
 	return data, nil
+}
+
+func boldSiteAuthor(data map[string]interface{}) {
+	site, ok := data["site"].(map[string]interface{})
+	if !ok {
+		return
+	}
+	name, ok := site["author"].(string)
+	if !ok || name == "" {
+		return
+	}
+	quoted := regexp.QuoteMeta(name)
+	stripRe := regexp.MustCompile(`<strong>\s*` + quoted + `\s*</strong>`)
+	wrapRe := regexp.MustCompile(`\b` + quoted + `\b`)
+	bold := "<strong>" + name + "</strong>"
+
+	pubs, ok := data["publications"].(map[string]interface{})
+	if !ok {
+		return
+	}
+	for _, key := range []string{"primary", "secondary"} {
+		section, ok := pubs[key].(map[string]interface{})
+		if !ok {
+			continue
+		}
+		entries, ok := section["entries"].([]interface{})
+		if !ok {
+			continue
+		}
+		for _, e := range entries {
+			entry, ok := e.(map[string]interface{})
+			if !ok {
+				continue
+			}
+			authors, ok := entry["authors"].(string)
+			if !ok {
+				continue
+			}
+			stripped := stripRe.ReplaceAllString(authors, name)
+			entry["authors"] = wrapRe.ReplaceAllString(stripped, bold)
+		}
+	}
 }
 
 func buildItemLookup(data map[string]interface{}) map[string]map[string]interface{} {

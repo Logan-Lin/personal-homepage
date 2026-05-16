@@ -4,6 +4,7 @@ site:
   title: Yan Lin's Homepage
   description: Yan Lin - Researcher in computer science, specializing in data mining and hobbyist in SysOps and full-stack development
   footerText: "Designed and engineered by Yan Lin."
+  author: Yan Lin
 
 navigation:
   navbar:
@@ -61,9 +62,26 @@ publications:
   primary:
     desc: "Publications where I am the first, co-first, or lead student author. For each work, I contribute significantly to some or all of the following: problem formulation, algorithm design, paper drafting and revision, code implementation, and experimental evaluation."
     entries:
+      - id: disgmm
+        title: "DiSGMM: A Method for Time-varying Microscopic Weight Completion on Road Networks"
+        authors: Yan Lin, Hu Jilin, Shengnan Guo, Christian S. Jensen, Youfang Lin, Huaiyu Wan
+        tags:
+          - "IJCAI"
+          - "2026"
+        links:
+          Preprint: "https://arxiv.org/abs/2603.29837"
+
+      - id: trajar
+        title: "TrajAR: Long-Term Trajectory Prediction at Urban Intersections via Multi-scale Interaction Perception"
+        authors: Letian Gong*, Yan Lin*, Xinyue Zhang, YiWei Shuang, Guanyu Yao, Cheng Long, Shengnan Guo, Youfang Lin, Huaiyu Wan
+        tags:
+          - "IJCAI"
+          - "2026"
+        links: {}
+
       - id: ripcn
         title: "RIPCN: A Road Impedance Principal Component Network for Probabilistic Traffic Flow Forecasting"
-        authors: Haochen Lv*, <strong>Yan Lin*</strong>, Shengnan Guo, Xiaowei Mao, Hong Nie, Letian Gong, Youfang Lin, Huaiyu Wan
+        authors: Haochen Lv*, Yan Lin*, Shengnan Guo, Xiaowei Mao, Hong Nie, Letian Gong, Youfang Lin, Huaiyu Wan
         tags:
           - "KDD"
           - "2026"
@@ -72,7 +90,7 @@ publications:
 
       - id: trajmamba
         title: "TrajMamba: An Efficient and Semantic-rich Vehicle Trajectory Pre-training Model"
-        authors: Yichen Liu*, <strong>Yan Lin*</strong>, Shengnan Guo, Zeyu Zhou, Youfang Lin, Huaiyu Wan
+        authors: Yichen Liu*, Yan Lin*, Shengnan Guo, Zeyu Zhou, Youfang Lin, Huaiyu Wan
         tags:
           - "NeurIPS"
           - "2025"
@@ -81,7 +99,7 @@ publications:
 
       - id: transfertraj
         title: "TransferTraj: A Vehicle Trajectory Learning Model for Region and Task Transferability"
-        authors: Tonglong Wei*, <strong>Yan Lin*</strong>, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, Gao Cong, Huaiyu Wan
+        authors: Tonglong Wei*, Yan Lin*, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, Gao Cong, Huaiyu Wan
         tags:
           - "NeurIPS"
           - "2025"
@@ -92,7 +110,7 @@ publications:
 
       - id: plmtrajrec
         title: "PLMTrajRec: A Scalable and Generalizable Trajectory Recovery Method with Pre-trained Language Models"
-        authors: Tonglong Wei*, <strong>Yan Lin*</strong>, Youfang Lin, Shengnan Guo, Jilin Hu, Haitao Yuan, Gao Cong, Huaiyu Wan
+        authors: Tonglong Wei*, Yan Lin*, Youfang Lin, Shengnan Guo, Jilin Hu, Haitao Yuan, Gao Cong, Huaiyu Wan
         tags:
           - "NeurIPS"
           - "2025"
@@ -102,7 +120,7 @@ publications:
 
       - id: uvtm
         title: "UVTM: Universal Vehicle Trajectory Modeling with ST Feature Domain Generation"
-        authors: "<strong>Yan Lin</strong>, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin, Huaiyu Wan"
+        authors: "Yan Lin, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin, Huaiyu Wan"
         tags:
           - "IEEE TKDE"
           - "2025"
@@ -113,7 +131,7 @@ publications:
 
       - id: trajcogn
         title: "TrajCogn: Leveraging LLMs for Cognizing Movement Patterns and Travel Purposes from Trajectories"
-        authors: "Zeyu Zhou*, <strong>Yan Lin*</strong>, Haomin Wen, Shengnan Guo, Jilin Hu, Youfang Lin, Huaiyu Wan"
+        authors: "Zeyu Zhou*, Yan Lin*, Haomin Wen, Shengnan Guo, Jilin Hu, Youfang Lin, Huaiyu Wan"
         tags:
           - "IJCAI"
           - "2025"
@@ -124,7 +142,7 @@ publications:
 
       - id: unite-survey
         title: "UniTE: A Survey and Unified Pipeline for Pre-training Spatiotemporal Trajectory Embeddings"
-        authors: "<strong>Yan Lin</strong>, Zeyu Zhou, Yicheng Liu, Haochen Lv, Haomin Wen, Tianyi Li, Yushuai Li, Christian S. Jensen, Shengnan Guo, Youfang Lin, Huaiyu Wan"
+        authors: "Yan Lin, Zeyu Zhou, Yicheng Liu, Haochen Lv, Haomin Wen, Tianyi Li, Yushuai Li, Christian S. Jensen, Shengnan Guo, Youfang Lin, Huaiyu Wan"
         tags:
           - "IEEE TKDE"
           - "2025"
@@ -135,7 +153,7 @@ publications:
 
       - id: path-llm
         title: "Path-LLM: A Multi-Modal Path Representation Learning by Aligning and Fusing with Large Language Models"
-        authors: "Yongfu Wei*, <strong>Yan Lin*</strong>, Hongfan Gao, Ronghui Xu, Sean Bin Yang, Jilin Hu"
+        authors: "Yongfu Wei*, Yan Lin*, Hongfan Gao, Ronghui Xu, Sean Bin Yang, Jilin Hu"
         tags:
           - "WWW"
           - "2025"
@@ -145,7 +163,7 @@ publications:
 
       - id: dutytte
         title: "DutyTTE: Deciphering Uncertainty in Origin-Destination Travel Time Estimation"
-        authors: "Xiaowei Mao*, <strong>Yan Lin*</strong>, Shengnan Guo, Yubin Chen, Xingyu Xian, Haomin Wen, Qisen Xu, Youfang Lin, Huaiyu Wan"
+        authors: "Xiaowei Mao*, Yan Lin*, Shengnan Guo, Yubin Chen, Xingyu Xian, Haomin Wen, Qisen Xu, Youfang Lin, Huaiyu Wan"
         tags:
           - "AAAI"
           - "2025"
@@ -155,7 +173,7 @@ publications:
 
       - id: mobility-llm
         title: "Mobility-LLM: Learning Visiting Intentions and Travel Preference from Human Mobility Data with Large Language Models"
-        authors: "Letian Gong*, <strong>Yan Lin*</strong>, Xinyue Zhang, Yiwen Lu, Xuedi Han, Yichen Liu, Shengnan Guo, Youfang Lin, Huaiyu Wan"
+        authors: "Letian Gong*, Yan Lin*, Xinyue Zhang, Yiwen Lu, Xuedi Han, Yichen Liu, Shengnan Guo, Youfang Lin, Huaiyu Wan"
         tags:
           - "NeurIPS"
           - "2024"
@@ -165,7 +183,7 @@ publications:
 
       - id: dot
         title: "Origin-Destination Travel Time Oracle for Map-based Services"
-        authors: "<strong>Yan Lin</strong>, Huaiyu Wan, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin"
+        authors: "Yan Lin, Huaiyu Wan, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin"
         tags:
           - "SIGMOD"
           - "2024"
@@ -176,7 +194,7 @@ publications:
 
       - id: mmtec
         title: "Pre-training General Trajectory Embeddings with Maximum Multi-view Entropy Coding"
-        authors: "<strong>Yan Lin</strong>, Huaiyu Wan, Shengnan Guo, Jilin Hu, Christian S. Jensen, Youfang Lin"
+        authors: "Yan Lin, Huaiyu Wan, Shengnan Guo, Jilin Hu, Christian S. Jensen, Youfang Lin"
         tags:
           - "IEEE TKDE"
           - "2023"
@@ -187,7 +205,7 @@ publications:
 
       - id: tale
         title: "Pre-training Time-Aware Location Embeddings from Spatial-Temporal Trajectories"
-        authors: "Huaiyu Wan, <strong>Yan Lin</strong>, Shengnan Guo, Youfang Lin"
+        authors: "Huaiyu Wan, Yan Lin, Shengnan Guo, Youfang Lin"
         tags:
           - "IEEE TKDE"
           - "2022"
@@ -197,7 +215,7 @@ publications:
 
       - id: ctle
         title: "Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction"
-        authors: "<strong>Yan Lin</strong>, Huaiyu Wan, Shengnan Guo, Youfang Lin"
+        authors: "Yan Lin, Huaiyu Wan, Shengnan Guo, Youfang Lin"
         tags:
           - "AAAI"
           - "2021"
@@ -208,8 +226,22 @@ publications:
   secondary:
     desc: "Publications where I serve as a contributing author. My involvement in these works typically includes technical discussion, algorithm refinement, or contribution to experiments and writing."
     entries:
+      - title: "Low-Rank Prior-Induced Consistency Flow Matching for Efficient Traffic Imputation"
+        authors: Xiaowei Mao, Tingrui Wu, YangYawen, Shengnan Guo, Yan Lin, Shilong Zhao, Haochen Lv, Youfang Lin, Huaiyu Wan
+        tags:
+          - "KDD"
+          - "2026"
+        links: {}
+
+      - title: "G-VTM: A Multimodal Vision-Trajectory Model for Generalized Vehicle Trajectory Prediction"
+        authors: Xinyue Zhang, Letian Gong, Yan Lin, Jinjun Cheng, Junlin Zhang, Guanyu Yao, Shengnan Guo, Youfang Lin, Shaojiang Wang, Huaiyu Wan
+        tags:
+          - "IJCAI"
+          - "2026"
+        links: {}
+
       - title: "Traj-MLLM: Can Multimodal Large Language Models Reform Trajectory Data Mining?"
-        authors: Shuo Liu, Di Yao, <strong>Yan Lin</strong>, Gao Cong, Jingping Bi
+        authors: Shuo Liu, Di Yao, Yan Lin, Gao Cong, Jingping Bi
         tags:
           - "KDD"
           - "2026"
@@ -218,7 +250,7 @@ publications:
 
       - id: sculptdrug
         title: "SculptDrug: A Spatial Condition-Aware Bayesian Flow Model for Structure-based Drug Design"
-        authors: Qingsong Zhong, Haomin Yu, <strong>Yan Lin</strong>, Wangmeng Shen, Long Zeng, Jilin Hu
+        authors: Qingsong Zhong, Haomin Yu, Yan Lin, Wangmeng Shen, Long Zeng, Jilin Hu
         tags:
           - "AAAI"
           - "2026"
@@ -227,7 +259,7 @@ publications:
           Preprint: "https://arxiv.org/abs/2511.12489"
 
       - title: "Spatial-Temporal Feedback Diffusion Guidance for Controlled Traffic Imputation"
-        authors: Xiaowei Mao, Huihu Ding, <strong>Yan Lin</strong>, Tingrui Wu, Shengnan Guo, Dazhuo Qiu, Feiling Fang, Jilin Hu, Huaiyu Wan
+        authors: Xiaowei Mao, Huihu Ding, Yan Lin, Tingrui Wu, Shengnan Guo, Dazhuo Qiu, Feiling Fang, Jilin Hu, Huaiyu Wan
         tags:
           - "AAAI"
           - "2026"
@@ -236,7 +268,7 @@ publications:
           Preprint: "https://arxiv.org/abs/2601.04572"
 
       - title: "DUET: Dual Clustering Enhanced Multivariate Time Series Forecasting"
-        authors: "Xiangfei Qiu, Xingjian Wu, <strong>Yan Lin</strong>, Chenjuan Guo, Jilin Hu, Bin Yang"
+        authors: "Xiangfei Qiu, Xingjian Wu, Yan Lin, Chenjuan Guo, Jilin Hu, Bin Yang"
         tags:
           - "KDD"
           - "2025"
@@ -246,7 +278,7 @@ publications:
           Code: "https://github.com/decisionintelligence/DUET"
 
       - title: "Diff-RNTraj: A Structure-aware Diffusion Model for Road Network-constrained Trajectory Generation"
-        authors: "Tonglong Wei, Youfang Lin, Shengnan Guo, <strong>Yan Lin</strong>, Yiheng Huang, Chenyang Xiang, Yuqing Bai, Menglu Ya, Huaiyu Wan"
+        authors: "Tonglong Wei, Youfang Lin, Shengnan Guo, Yan Lin, Yiheng Huang, Chenyang Xiang, Yuqing Bai, Menglu Ya, Huaiyu Wan"
         tags:
           - "IEEE TKDE"
           - "2024"
@@ -256,7 +288,7 @@ publications:
           Code: "https://github.com/wtl52656/Diff-RNTraj"
 
       - title: "STCDM: Spatio-Temporal Contrastive Diffusion Model for Check-In Sequence Generation"
-        authors: "Letian Gong, Shengnan Guo, <strong>Yan Lin</strong>, Yichen Liu, Erwen Zheng, Yiwei Shuang, Youfang Lin, Jilin Hu, Huaiyu Wan"
+        authors: "Letian Gong, Shengnan Guo, Yan Lin, Yichen Liu, Erwen Zheng, Yiwei Shuang, Youfang Lin, Jilin Hu, Huaiyu Wan"
         tags:
           - "IEEE TKDE"
           - "2024"
@@ -264,7 +296,7 @@ publications:
           Paper: "https://ieeexplore.ieee.org/document/10836764"
 
       - title: "Micro-Macro Spatial-Temporal Graph-based Encoder-Decoder for Map-Constrained Trajectory Recovery"
-        authors: "Tonglong Wei, Youfang Lin, <strong>Yan Lin</strong>, Shengnan Guo, Lan Zhang, Huaiyu Wan"
+        authors: "Tonglong Wei, Youfang Lin, Yan Lin, Shengnan Guo, Lan Zhang, Huaiyu Wan"
         tags:
           - "IEEE TKDE"
           - "2024"
@@ -274,7 +306,7 @@ publications:
           Code: "https://github.com/wtl52656/MM-STGED"
 
       - title: "Inductive and Adaptive Graph Convolution Networks Equipped with Constraint Task for Spatial-Temporal Traffic Data Kriging"
-        authors: "Tonglong Wei, Youfang Lin, Shengnan Guo, <strong>Yan Lin</strong>, Yiji Zhao, Xiyuan Jin, Zhihao Wu, Huaiyu Wan"
+        authors: "Tonglong Wei, Youfang Lin, Shengnan Guo, Yan Lin, Yiji Zhao, Xiyuan Jin, Zhihao Wu, Huaiyu Wan"
         tags:
           - "KBS"
           - "2024"
@@ -283,7 +315,7 @@ publications:
           Code: "https://github.com/wtl52656/IAGCN"
 
       - title: "Spatial-Temporal Cross-View Contrastive Pre-Training for Check-in Sequence Representation Learning"
-        authors: "Letian Gong, Huaiyu Wan, Shengnan Guo, Li Xiucheng, <strong>Yan Lin</strong>, Erwen Zheng, Tianyi Wang, Zeyu Zhou, Youfang Lin"
+        authors: "Letian Gong, Huaiyu Wan, Shengnan Guo, Li Xiucheng, Yan Lin, Erwen Zheng, Tianyi Wang, Zeyu Zhou, Youfang Lin"
         tags:
           - "IEEE TKDE"
           - "2024"
@@ -292,7 +324,7 @@ publications:
           Preprint: "https://arxiv.org/abs/2407.15899"
 
       - title: "Contrastive Pre-training with Adversarial Perturbations for Check-In Sequence Representation Learning"
-        authors: "Letian Gong, Youfang Lin, Shengnan Guo, <strong>Yan Lin</strong>, Tianyi Wang, Erwen Zheng, Zeyu Zhou, Huaiyu Wan"
+        authors: "Letian Gong, Youfang Lin, Shengnan Guo, Yan Lin, Tianyi Wang, Erwen Zheng, Zeyu Zhou, Huaiyu Wan"
         tags:
           - "AAAI"
           - "2023"
@@ -301,7 +333,7 @@ publications:
           Code: "https://github.com/LetianGong/CACSR"
 
       - title: "Adversarial Self-Attentive Time-Variant Neural Networks for Multi-Step Time Series Forecasting"
-        authors: "Changxia Gao, Ning Zhang, Youru Li, <strong>Yan Lin</strong>, Huaiyu Wan"
+        authors: "Changxia Gao, Ning Zhang, Youru Li, Yan Lin, Huaiyu Wan"
         tags:
           - "ESWA"
           - "2023"
@@ -309,7 +341,7 @@ publications:
           Paper: "https://www.sciencedirect.com/science/article/pii/S0957417423012241"
 
       - title: "Multi-scale Adaptive Attention-based Time-Variant Neural Networks for Multi-step Time Series Forecasting"
-        authors: "Changxia Gao, Ning Zhang, Youru Li, <strong>Yan Lin</strong>, Huaiyu Wan"
+        authors: "Changxia Gao, Ning Zhang, Youru Li, Yan Lin, Huaiyu Wan"
         tags:
           - "APIN"
           - "2023"
@@ -317,7 +349,7 @@ publications:
           Paper: "https://link.springer.com/article/10.1007/s10489-023-05057-7"
 
       - title: "WITRAN: Water-wave Information Transmission and Recurrent Acceleration Network for Long-range Time Series Forecasting"
-        authors: "Yuxin Jia, Youfang Lin, Xinyan Hao, <strong>Yan Lin</strong>, Shengnan Guo, Huaiyu Wan"
+        authors: "Yuxin Jia, Youfang Lin, Xinyan Hao, Yan Lin, Shengnan Guo, Huaiyu Wan"
         tags:
           - "NeurIPS"
           - "2023"
