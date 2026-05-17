@@ -6,7 +6,6 @@
   --border-color: #dee2e6;
   --primary-text: #58151c;
   --secondary-text: #052c65;
-  --link-hover-color: #555;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,7 +17,6 @@
     --border-color: #495057;
     --primary-text: #ffddb3;
     --secondary-text: #c6e2ff;
-    --link-hover-color: #ddd;
   }
 }
 
@@ -42,19 +40,17 @@ body {
   line-height: 1.5;
 }
 
-a {
+a, a:hover
+{
   color: inherit;
+}
+
+a {
   text-decoration: none;
 }
 
 a:hover {
-  color: inherit;
-}
-
-img {
-  vertical-align: middle;
-  max-width: 100%;
-  height: auto;
+  text-decoration: underline;
 }
 
 p {
@@ -68,25 +64,10 @@ ul, ol {
   margin-bottom: 1rem;
 }
 
-small {
-  font-size: 0.875em;
-}
-
 hr {
   margin: 1.0rem 0;
   border: 0;
   border-top: 1px dashed var(--border-color);
-}
-
-blockquote {
-  border-left: 4px solid var(--border-color);
-  margin: 1.5em 0;
-  padding: 0.5em 1em;
-  background-color: var(--background-secondary);
-}
-
-blockquote p {
-  margin: 0;
 }
 
 .section-title {
@@ -157,12 +138,7 @@ blockquote p {
   font-weight: 800;
   font-size: 1.8rem;
   margin-right: auto;
-  text-decoration: none;
   color: inherit;
-}
-
-.header-nav .site-title:hover {
-  color: var(--link-hover-color);
 }
 
 @media (max-width: 600px) {
@@ -207,12 +183,6 @@ footer {
 .list-group {
   display: flex;
   flex-direction: column;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-.list-group-flush {
-  border-radius: 0;
 }
 
 .list-group-flush .list-group-item {
@@ -224,10 +194,7 @@ footer {
 }
 
 .list-group-item {
-  position: relative;
-  display: block;
   padding: 0.5rem 1rem;
-  background-color: transparent;
   border: 1px solid var(--border-color);
 }
 
@@ -257,28 +224,6 @@ footer {
   color: var(--secondary-text);
 }
 
-.link {
-  text-decoration: none;
-}
-
-.link:hover {
-  color: var(--link-hover-color);
-}
-
-.link-secondary,
-.link-secondary:hover {
-  color: var(--link-hover-color);
-  text-decoration: none;
-}
-
-.icon-link {
-  text-decoration: none;
-}
-
-.icon-link-hover:hover {
-  text-decoration: underline;
-}
-
 .d-inline-block { display: inline-block; }
 .d-flex { display: flex; }
 
@@ -297,8 +242,6 @@ footer {
 .mb-1 { margin-bottom: 0.25rem; }
 .my-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
 .ml-3 { margin-left: 1rem; }
-
-.text-start { text-align: left; }
 
 .text-secondary,
 .text-muted {

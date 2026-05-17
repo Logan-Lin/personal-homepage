@@ -5,10 +5,10 @@
     </div>
     <div class="d-flex gap-2">
       {% for name, url in pub.links %}
-        <a class="link icon-link icon-link-hover item-link link-secondary" href="{{ url }}" target="_blank" rel="noopener noreferrer">{{ name }}</a>
+        <a class="item-link" href="{{ url }}" target="_blank" rel="noopener noreferrer">{{ name }}</a>
       {% endfor %}
     </div>
   </div>
   <div class="item-title">{{ pub.title|safe }}</div>
-  <p class="item-desc">{{ pub.authors|safe }}</p>
+  <div class="item-desc">{{ pub.authors|safe }}</div>
 </div> 

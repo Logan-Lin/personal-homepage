@@ -14,7 +14,7 @@
     {% for subsection in data.home.research %}
       {% if not forloop.First %}<hr/>{% endif %}
       <div>
-        <p class="section-desc">{{ subsection.desc }}</p>
+        <div class="section-desc">{{ subsection.desc }}</div>
         <div class="list-group list-group-flush">
             {% for item in subsection.resolved_entries %}
               {% include 'partials/item.html' %}
@@ -29,7 +29,7 @@
     {% for subsection in data.home.teaching %}
       {% if not forloop.First %}<hr/>{% endif %}
       <div>
-        <p class="section-desc">{{ subsection.desc }}</p>
+        <div class="section-desc">{{ subsection.desc }}</div>
         <div class="list-group list-group-flush">
             {% for item in subsection.resolved_entries %}
               {% include 'partials/item.html' %}

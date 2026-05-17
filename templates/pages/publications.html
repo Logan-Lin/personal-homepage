@@ -5,7 +5,7 @@
 {% block content %}
   <article class="section">
     {% with section_title="Publications" %}{% include 'partials/section-header.html' %}{% endwith %}
-    {% if data.publications.primary.desc %}<p class="section-desc">{{ data.publications.primary.desc }}</p>{% endif %}
+    {% if data.publications.primary.desc %}<div class="section-desc">{{ data.publications.primary.desc }}</div>{% endif %}
     <div class="list-group list-group-flush">
       {% for pub in data.publications.primary.entries %}
         {% with type='primary' %}
@@ -14,7 +14,7 @@
       {% endfor %}
     </div>
     <hr/>
-    {% if data.publications.secondary.desc %}<p class="section-desc">{{ data.publications.secondary.desc }}</p>{% endif %}
+    {% if data.publications.secondary.desc %}<div class="section-desc">{{ data.publications.secondary.desc }}</div>{% endif %}
     <div class="list-group list-group-flush">
       {% for pub in data.publications.secondary.entries %}
         {% with type='secondary' %}
@@ -23,8 +23,6 @@
       {% endfor %}
     </div>
 
-    <div class="text-start mt-3">
-      <small class="text-muted" style="font-size: 0.8rem;">* Equal Contribution</small>
-    </div>
+    <div class="mt-3">* Equal Contribution</div>
   </article>
 {% endblock %}

@@ -5,7 +5,7 @@
 {% block content %}
   <article class="section">
     {% with section_title="Projects" %}{% include 'partials/section-header.html' %}{% endwith %}
-    {% if data.projects.primary.desc %}<p class="section-desc">{{ data.projects.primary.desc }}</p>{% endif %}
+    {% if data.projects.primary.desc %}<div class="section-desc">{{ data.projects.primary.desc }}</div>{% endif %}
     <div class="list-group list-group-flush">
       {% for project in data.projects.primary.entries %}
         {% with type='primary' %}
@@ -14,7 +14,7 @@
       {% endfor %}
     </div>
     <hr/>
-    {% if data.projects.secondary.desc %}<p class="section-desc">{{ data.projects.secondary.desc }}</p>{% endif %}
+    {% if data.projects.secondary.desc %}<div class="section-desc">{{ data.projects.secondary.desc }}</div>{% endif %}
     <div class="list-group list-group-flush">
       {% for project in data.projects.secondary.entries %}
         {% with type='secondary' %}
