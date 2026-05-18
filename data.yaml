@@ -420,8 +420,8 @@ activities:
       - id: ai-systems
         title: "AI Systems & Infrastructure"
         tags:
-          - "Fall 2025"
           - "Aalborg University"
+          - "Fall 2025"
         desc: "This course introduces students to streamlined interaction with AI models and systems, as well as implementation and deployment of scalable, production-ready AI systems on real-world infrastructures."
         links:
           Literature: https://blog.yanlincs.com/ai-system/
@@ -432,8 +432,8 @@ activities:
       - id: sw6-camera-behind
         title: "A Camera That Sees Behind"
         tags:
-          - "Fall 2025 - Spring 2026"
           - "Aalborg University"
+          - "2025 - 2026"
         desc: "A Bachelor's semester project on developing a computationally lightweight model deployable on embedded devices to remove humans from images or video feeds, serving as a prototype GDPR-compliant surveillance system."
         links:
           Proposal: https://github.com/Logan-Lin/camera-sees-behind/releases/tag/v1.2-sw6-26

@@ -21,35 +21,33 @@
 </head>
 
 <body>
-  <main class="container">
-    <header class="border-bottom pt-3 pb-2">
-      <nav class="header-nav">
-        <a href="/" class="site-title">{{ data.site.name }}</a>
-        {% for nav in data.navigation.navbar %}
-        <a href="{{ nav.url }}"
-           {% if nav.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
-          {{ nav.name }}
-        </a>
-        {% endfor %}
-      </nav>
-    </header>
+  <header class="border-bottom pt-3 pb-2">
+    <nav class="header-nav">
+      <a href="/" class="site-title">{{ data.site.name }}</a>
+      {% for nav in data.navigation.navbar %}
+      <a href="{{ nav.url }}"
+         {% if nav.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+        {{ nav.name }}
+      </a>
+      {% endfor %}
+    </nav>
+  </header>
 
+  <main>
     {% block content %}{% endblock %}
   </main>
 
   <footer>
-    <div class="container">
-        <div class="footer-line">
-            <span class="text-secondary footer-text">© {{ year }} - {{ data.site.footerText }}</span>
-            <span class="footer-links">
-                {% for link in data.navigation.footer %}
-                <a href="{{ link.url }}"
-                   {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
-                  {{ link.name }}
-                </a>
-                {% endfor %}
-            </span>
-        </div>
+    <div class="footer-line">
+      <span class="text-secondary footer-text">© {{ year }} - {{ data.site.footerText }}</span>
+      <span class="footer-links">
+        {% for link in data.navigation.footer %}
+        <a href="{{ link.url }}"
+           {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
+          {{ link.name }}
+        </a>
+        {% endfor %}
+      </span>
     </div>
   </footer>
 
