@@ -15,8 +15,8 @@
     --text-color: #f8f9fa;
     --text-secondary: #adb5bd;
     --border-color: #495057;
-    --primary-text: #ffddb3;
-    --secondary-text: #c6e2ff;
+    --primary-text: #d4be9f;
+    --secondary-text: #9fbed4;
   }
 }
 
@@ -187,16 +187,14 @@ footer {
   color: var(--text-secondary);
 }
 
-.item-link {
+.item-link,
+.item-link:hover {
   font-size: 0.8rem;
+  color: var(--secondary-text);
 }
 
 .primary-text {
   color: var(--primary-text);
-}
-
-.secondary-text {
-  color: var(--secondary-text);
 }
 
 .d-inline-block { display: inline-block; }

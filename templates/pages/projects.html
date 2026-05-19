@@ -7,19 +7,15 @@
     {% with section_title="Projects" %}{% include 'partials/section-header.html' %}{% endwith %}
     {% if data.projects.primary.desc %}<div class="section-desc">{{ data.projects.primary.desc }}</div>{% endif %}
     <div class="list-group list-group-flush">
-      {% for project in data.projects.primary.entries %}
-        {% with type='primary' %}
-          {% include 'partials/project.html' %}
-        {% endwith %}
+      {% for item in data.projects.primary.entries %}
+        {% include 'partials/item.html' %}
       {% endfor %}
     </div>
     <hr/>
     {% if data.projects.secondary.desc %}<div class="section-desc">{{ data.projects.secondary.desc }}</div>{% endif %}
     <div class="list-group list-group-flush">
-      {% for project in data.projects.secondary.entries %}
-        {% with type='secondary' %}
-          {% include 'partials/project.html' %}
-        {% endwith %}
+      {% for item in data.projects.secondary.entries %}
+        {% include 'partials/item.html' %}
       {% endfor %}
     </div>
   </article>

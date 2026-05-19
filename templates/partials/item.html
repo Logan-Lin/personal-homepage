@@ -1,17 +1,16 @@
-{% if item._type == 'publication' %}
-  {% with pub=item type=item._subtype %}
-    {% include 'partials/publication.html' %}
-  {% endwith %}
-{% elif item._type == 'project' %}
-  {% with project=item type=item._subtype %}
-    {% include 'partials/project.html' %}
-  {% endwith %}
-{% elif item._type == 'teaching' %}
-  {% with teaching=item %}
-    {% include 'partials/teaching.html' %}
-  {% endwith %}
-{% elif item._type == 'presentation' %}
-  {% with presentation=item %}
-    {% include 'partials/presentation.html' %}
-  {% endwith %}
-{% endif %}
+<div class="list-group-item">
+  <div class="d-flex align-items-center gap-2">
+    <div class="d-inline-block item-tags primary-text">
+      {{ item.tags|join:"<span class='text-muted'> | </span>"|safe }}
+    </div>
+    <div class="d-flex gap-2">
+      {% for link in item.links %}
+        <a class="item-link" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="item-title">{{ item.title|safe }}</div>
+  {% if item.desc %}
+    <div class="item-desc">{{ item.desc|safe }}</div>
+  {% endif %}
+</div>

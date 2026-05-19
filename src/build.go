@@ -117,11 +117,52 @@ func loadYAML(path string) (map[string]interface{}, error) {
 	if err != nil {
 		return nil, err
 	}
-	var data map[string]interface{}
-	if err := yaml.Unmarshal(b, &data); err != nil {
+	var root yaml.Node
+	if err := yaml.Unmarshal(b, &root); err != nil {
 		return nil, err
 	}
+	data, _ := nodeToInterface(&root, "").(map[string]interface{})
 	return data, nil
+}
+
+func nodeToInterface(n *yaml.Node, parentKey string) interface{} {
+	switch n.Kind {
+	case yaml.DocumentNode:
+		if len(n.Content) > 0 {
+			return nodeToInterface(n.Content[0], parentKey)
+		}
+		return nil
+	case yaml.MappingNode:
+		if parentKey == "links" {
+			links := make([]interface{}, 0, len(n.Content)/2)
+			for i := 0; i < len(n.Content); i += 2 {
+				links = append(links, map[string]interface{}{
+					"name": n.Content[i].Value,
+					"url":  n.Content[i+1].Value,
+				})
+			}
+			return links
+		}
+		m := make(map[string]interface{}, len(n.Content)/2)
+		for i := 0; i < len(n.Content); i += 2 {
+			key := n.Content[i].Value
+			m[key] = nodeToInterface(n.Content[i+1], key)
+		}
+		return m
+	case yaml.SequenceNode:
+		s := make([]interface{}, 0, len(n.Content))
+		for _, item := range n.Content {
+			s = append(s, nodeToInterface(item, ""))
+		}
+		return s
+	case yaml.ScalarNode:
+		var v interface{}
+		_ = n.Decode(&v)
+		return v
+	case yaml.AliasNode:
+		return nodeToInterface(n.Alias, parentKey)
+	}
+	return nil
 }
 
 func boldSiteAuthor(data map[string]interface{}) {
@@ -156,34 +197,30 @@ func boldSiteAuthor(data map[string]interface{}) {
 			if !ok {
 				continue
 			}
-			authors, ok := entry["authors"].(string)
+			desc, ok := entry["desc"].(string)
 			if !ok {
 				continue
 			}
-			stripped := stripRe.ReplaceAllString(authors, name)
-			entry["authors"] = wrapRe.ReplaceAllString(stripped, bold)
+			stripped := stripRe.ReplaceAllString(desc, name)
+			entry["desc"] = wrapRe.ReplaceAllString(stripped, bold)
 		}
 	}
 }
 
 func buildItemLookup(data map[string]interface{}) map[string]map[string]interface{} {
 	lookup := map[string]map[string]interface{}{}
-	sources := []struct {
-		path    []string
-		kind    string
-		subtype string
-	}{
-		{[]string{"publications", "primary", "entries"}, "publication", "primary"},
-		{[]string{"publications", "secondary", "entries"}, "publication", "secondary"},
-		{[]string{"projects", "primary", "entries"}, "project", "primary"},
-		{[]string{"projects", "secondary", "entries"}, "project", "secondary"},
-		{[]string{"activities", "courses", "entries"}, "teaching", "primary"},
-		{[]string{"activities", "supervision", "entries"}, "teaching", "primary"},
-		{[]string{"activities", "presentations", "entries"}, "presentation", "secondary"},
+	paths := [][]string{
+		{"publications", "primary", "entries"},
+		{"publications", "secondary", "entries"},
+		{"projects", "primary", "entries"},
+		{"projects", "secondary", "entries"},
+		{"activities", "courses", "entries"},
+		{"activities", "supervision", "entries"},
+		{"activities", "presentations", "entries"},
 	}
-	for _, src := range sources {
+	for _, path := range paths {
 		var node interface{} = data
-		for _, k := range src.path {
+		for _, k := range path {
 			m, ok := node.(map[string]interface{})
 			if !ok {
 				node = nil
@@ -200,17 +237,9 @@ func buildItemLookup(data map[string]interface{}) map[string]map[string]interfac
 			if !ok {
 				continue
 			}
-			id, ok := m["id"].(string)
-			if !ok {
-				continue
+			if id, ok := m["id"].(string); ok {
+				lookup[id] = m
 			}
-			entry := make(map[string]interface{}, len(m)+2)
-			for k, v := range m {
-				entry[k] = v
-			}
-			entry["_type"] = src.kind
-			entry["_subtype"] = src.subtype
-			lookup[id] = entry
 		}
 	}
 	return lookup

@@ -7,19 +7,15 @@
     {% with section_title="Publications" %}{% include 'partials/section-header.html' %}{% endwith %}
     {% if data.publications.primary.desc %}<div class="section-desc">{{ data.publications.primary.desc }}</div>{% endif %}
     <div class="list-group list-group-flush">
-      {% for pub in data.publications.primary.entries %}
-        {% with type='primary' %}
-          {% include 'partials/publication.html' %}
-        {% endwith %}
+      {% for item in data.publications.primary.entries %}
+        {% include 'partials/item.html' %}
       {% endfor %}
     </div>
     <hr/>
     {% if data.publications.secondary.desc %}<div class="section-desc">{{ data.publications.secondary.desc }}</div>{% endif %}
     <div class="list-group list-group-flush">
-      {% for pub in data.publications.secondary.entries %}
-        {% with type='secondary' %}
-          {% include 'partials/publication.html' %}
-        {% endwith %}
+      {% for item in data.publications.secondary.entries %}
+        {% include 'partials/item.html' %}
       {% endfor %}
     </div>
 

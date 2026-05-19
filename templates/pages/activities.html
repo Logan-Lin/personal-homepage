@@ -9,8 +9,8 @@
     <div>
       <div class="section-desc">{{ data.activities.courses.desc }}</div>
       <div class="list-group list-group-flush">
-        {% for teaching in data.activities.courses.entries %}
-          {% include 'partials/teaching.html' %}
+        {% for item in data.activities.courses.entries %}
+          {% include 'partials/item.html' %}
         {% endfor %}
       </div>
     </div>
@@ -20,8 +20,8 @@
     <div>
       <div class="section-desc">{{ data.activities.supervision.desc }}</div>
       <div class="list-group list-group-flush">
-        {% for teaching in data.activities.supervision.entries %}
-          {% include 'partials/teaching.html' %}
+        {% for item in data.activities.supervision.entries %}
+          {% include 'partials/item.html' %}
         {% endfor %}
       </div>
     </div>
@@ -31,8 +31,8 @@
     <div>
       {% if data.activities.presentations.desc %}<div class="section-desc">{{ data.activities.presentations.desc }}</div>{% endif %}
       <div class="list-group list-group-flush">
-        {% for presentation in data.activities.presentations.entries %}
-          {% include 'partials/presentation.html' %}
+        {% for item in data.activities.presentations.entries %}
+          {% include 'partials/item.html' %}
         {% endfor %}
       </div>
     </div>
