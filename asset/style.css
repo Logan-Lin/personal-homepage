@@ -4,8 +4,8 @@
   --text-color: #212529;
   --text-secondary: #6c757d;
   --border-color: #dee2e6;
-  --primary-text: #58151c;
-  --secondary-text: #052c65;
+  --primary-text: #427b58;
+  --secondary-text: #076678;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,8 +15,8 @@
     --text-color: #f8f9fa;
     --text-secondary: #adb5bd;
     --border-color: #495057;
-    --primary-text: #d4be9f;
-    --secondary-text: #9fbed4;
+    --primary-text: #8ec07c;
+    --secondary-text: #83a598;
   }
 }
 
