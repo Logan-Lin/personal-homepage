@@ -203,15 +203,16 @@ footer {
 .p-4 { padding: 1.5rem; }
 .px-0 { padding-left: 0; padding-right: 0; }
 .pt-3 { padding-top: 1rem; }
+.pt-4 { padding-top: 1.5rem; }
 .pb-2 { padding-bottom: 0.5rem; }
 .mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
 .mb-0 { margin-bottom: 0; }
 .mb-1 { margin-bottom: 0.25rem; }
 .my-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
 .ml-3 { margin-left: 1rem; }
 
-.text-secondary,
-.text-muted {
+.text-secondary {
   color: var(--text-secondary);
 }
 

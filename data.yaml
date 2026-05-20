@@ -443,6 +443,7 @@ activities:
     entries:
       - id: amden-neurips25-ai4mat
         title: "AMDEN: Amorphous Materials DEnoising Network"
+        desc: "Jonas A. Finkler*, Yan Lin*, Morten M Smedskjaer, Tao Du, Jilin Hu"
         tags:
           - "Workshop"
           - "NeurIPS 2025"
@@ -451,6 +452,7 @@ activities:
 
       - id: amden-pncs17
         title: "AMDEN: Amorphous Materials DEnoising Network"
+        desc: "Yan Lin*, Jonas A. Finkler*, Tao Du, Morten M. Smedskjaer, Jilin Hu"
         tags:
           - "Oral Presentation"
           - "PNCS17"
@@ -464,6 +466,7 @@ activities:
         links: {}
 
       - title: "PLM4Traj: Leveraging Pre-trained Language Models for Cognizing Movement Patterns and Travel Purposes from Trajectories"
+        desc: "Zeyu Zhou*, Yan Lin*, Haomin Wen, Qisen Xu, Shengnan Guo, Jilin Hu, Youfang Lin, Huaiyu Wan"
         tags:
           - "Workshop"
           - "KDD 2024"

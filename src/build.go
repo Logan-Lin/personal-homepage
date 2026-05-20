@@ -165,60 +165,18 @@ func nodeToInterface(n *yaml.Node, parentKey string) interface{} {
 	return nil
 }
 
-func boldSiteAuthor(data map[string]interface{}) {
-	site, ok := data["site"].(map[string]interface{})
-	if !ok {
-		return
-	}
-	name, ok := site["author"].(string)
-	if !ok || name == "" {
-		return
-	}
-	quoted := regexp.QuoteMeta(name)
-	stripRe := regexp.MustCompile(`<strong>\s*` + quoted + `\s*</strong>`)
-	wrapRe := regexp.MustCompile(`\b` + quoted + `\b`)
-	bold := "<strong>" + name + "</strong>"
-
-	pubs, ok := data["publications"].(map[string]interface{})
-	if !ok {
-		return
-	}
-	for _, key := range []string{"primary", "secondary"} {
-		section, ok := pubs[key].(map[string]interface{})
-		if !ok {
-			continue
-		}
-		entries, ok := section["entries"].([]interface{})
-		if !ok {
-			continue
-		}
-		for _, e := range entries {
-			entry, ok := e.(map[string]interface{})
-			if !ok {
-				continue
-			}
-			desc, ok := entry["desc"].(string)
-			if !ok {
-				continue
-			}
-			stripped := stripRe.ReplaceAllString(desc, name)
-			entry["desc"] = wrapRe.ReplaceAllString(stripped, bold)
-		}
-	}
+var itemPaths = [][]string{
+	{"publications", "primary", "entries"},
+	{"publications", "secondary", "entries"},
+	{"projects", "primary", "entries"},
+	{"projects", "secondary", "entries"},
+	{"activities", "courses", "entries"},
+	{"activities", "supervision", "entries"},
+	{"activities", "presentations", "entries"},
 }
 
-func buildItemLookup(data map[string]interface{}) map[string]map[string]interface{} {
-	lookup := map[string]map[string]interface{}{}
-	paths := [][]string{
-		{"publications", "primary", "entries"},
-		{"publications", "secondary", "entries"},
-		{"projects", "primary", "entries"},
-		{"projects", "secondary", "entries"},
-		{"activities", "courses", "entries"},
-		{"activities", "supervision", "entries"},
-		{"activities", "presentations", "entries"},
-	}
-	for _, path := range paths {
+func walkItems(data map[string]interface{}, fn func(map[string]interface{})) {
+	for _, path := range itemPaths {
 		var node interface{} = data
 		for _, k := range path {
 			m, ok := node.(map[string]interface{})
@@ -237,11 +195,42 @@ func buildItemLookup(data map[string]interface{}) map[string]map[string]interfac
 			if !ok {
 				continue
 			}
-			if id, ok := m["id"].(string); ok {
-				lookup[id] = m
-			}
+			fn(m)
 		}
 	}
+}
+
+func boldSiteAuthor(data map[string]interface{}) {
+	site, ok := data["site"].(map[string]interface{})
+	if !ok {
+		return
+	}
+	name, ok := site["author"].(string)
+	if !ok || name == "" {
+		return
+	}
+	quoted := regexp.QuoteMeta(name)
+	stripRe := regexp.MustCompile(`<strong>\s*` + quoted + `\s*</strong>`)
+	wrapRe := regexp.MustCompile(`\b` + quoted + `\b`)
+	bold := "<strong>" + name + "</strong>"
+
+	walkItems(data, func(entry map[string]interface{}) {
+		desc, ok := entry["desc"].(string)
+		if !ok {
+			return
+		}
+		stripped := stripRe.ReplaceAllString(desc, name)
+		entry["desc"] = wrapRe.ReplaceAllString(stripped, bold)
+	})
+}
+
+func buildItemLookup(data map[string]interface{}) map[string]map[string]interface{} {
+	lookup := map[string]map[string]interface{}{}
+	walkItems(data, func(m map[string]interface{}) {
+		if id, ok := m["id"].(string); ok {
+			lookup[id] = m
+		}
+	})
 	return lookup
 }
 
