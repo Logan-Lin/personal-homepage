@@ -36,12 +36,12 @@ home:
 
     - desc: "Spatiotemporal data mining is a broader topic that is inclusive of the above. It covers research on extracting and utilizing patterns from large-scale data with spatial information and that is dynamic over time (usually sourced from transportation scenarios)."
       entries:
+        - disgmm
         - dot
         - ripcn
         - plmtrajrec
         - path-llm
         - dutytte
-        - mobility-llm
 
     - desc: "Interdisciplinary research between data mining and materials science is a new research direction I am exploring. The promise is that data mining enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design."
       entries:
