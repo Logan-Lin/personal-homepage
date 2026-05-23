@@ -48,6 +48,10 @@ func build() error {
 		return fmt.Errorf("render content: %w", err)
 	}
 
+	if err := os.RemoveAll(outDir); err != nil {
+		return fmt.Errorf("clean %s: %w", outDir, err)
+	}
+
 	for _, d := range []string{outDir, filepath.Join(outDir, "publications"), filepath.Join(outDir, "projects"), filepath.Join(outDir, "activities")} {
 		if err := os.MkdirAll(d, 0o755); err != nil {
 			return err
