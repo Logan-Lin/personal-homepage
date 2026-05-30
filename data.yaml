@@ -54,8 +54,9 @@ home:
     - desc: "My course teaching follows three core principles: a solid understanding of the subject matter, awareness of students' established experiences and background, and problem-based learning style applied throughout lectures, exercises, and exams. This translates to practices including tailor-made blog-style literature that is both professional and intuitive, inspirational lectures that connect theory to real-world problems, and progressively-arranged hands-on exercises that build practical problem-solving skills."
       entries:
         - ai-systems
-    - desc: "I am building my supervision experience, currently supervising Bachelor's-level semester projects. My supervision focuses on problem definition, critical thinking about design choices, and delivering convincing conclusions."
+    - desc: "I am building my supervision experience, supervising Bachelor's and Master's semester projects. My supervision focuses on problem definition, critical thinking about design choices, and delivering convincing conclusions."
       entries:
+        - assess-data-traj
         - sw6-camera-behind
 
 publications:
@@ -421,7 +422,7 @@ activities:
         title: "AI Systems & Infrastructure"
         tags:
           - "Aalborg University"
-          - "Fall 2025"
+          - "2025 - 2026"
         desc: "This course introduces students to streamlined interaction with AI models and systems, as well as implementation and deployment of scalable, production-ready AI systems on real-world infrastructures."
         links:
           Literature: https://blog.yanlincs.com/ai-system/
@@ -429,6 +430,16 @@ activities:
   supervision:
     desc: "Student projects I supervise, covering project proposals, problem definition, design choices, and final delivery."
     entries:
+      - id: assess-data-traj
+        title: "Assessment of the Data Foundation for Trajectory Machine Learning"
+        tags:
+          - "Aalborg University"
+          - "2026"
+        desc: "A Master's semester project on bringing a data-centric perspective to trajectory machine learning, assessing the quality of training data and developing filtering and augmentation methods to improve model performance on downstream tasks."
+        links:
+          Proposal: https://github.com/Logan-Lin/assess-data-traj/releases
+          Slides: https://github.com/Logan-Lin/traj-rep-generalization/releases
+
       - id: sw6-camera-behind
         title: "A Camera That Sees Behind"
         tags:
