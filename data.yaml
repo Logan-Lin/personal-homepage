@@ -45,7 +45,7 @@ home:
 
     - desc: "Interdisciplinary research between data mining and materials science is a new research direction I am exploring. The promise is that data mining enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design."
       entries:
-        - amden-neurips25-ai4mat
+        - amden
         - amden-pncs17
         - villum-inverse-design
         - sculptdrug
@@ -63,6 +63,16 @@ publications:
   primary:
     desc: "Publications where I am the first, co-first, or lead student author. For each work, I contribute significantly to some or all of the following: problem formulation, algorithm design, paper drafting and revision, code implementation, and experimental evaluation."
     entries:
+      - id: amden
+        title: "Inverse Design of Amorphous Materials with Targeted Properties"
+        desc: "Jonas A. Finkler*, Yan Lin*, Tao Du, Jilin Hu, Morten M. Smedskjaer"
+        tags:
+          - "Advanced Materials"
+          - "2026"
+        links:
+          Preprint: "https://arxiv.org/abs/2509.13916"
+          Code: "https://github.com/Logan-Lin/AMDEN-code"
+
       - id: disgmm
         title: "DiSGMM: A Method for Time-varying Microscopic Weight Completion on Road Networks"
         desc: Yan Lin, Hu Jilin, Shengnan Guo, Christian S. Jensen, Youfang Lin, Huaiyu Wan
