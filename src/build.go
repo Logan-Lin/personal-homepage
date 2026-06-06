@@ -219,12 +219,12 @@ func boldSiteAuthor(data map[string]interface{}) {
 	bold := "<strong>" + name + "</strong>"
 
 	walkItems(data, func(entry map[string]interface{}) {
-		desc, ok := entry["desc"].(string)
+		authors, ok := entry["authors"].(string)
 		if !ok {
 			return
 		}
-		stripped := stripRe.ReplaceAllString(desc, name)
-		entry["desc"] = wrapRe.ReplaceAllString(stripped, bold)
+		stripped := stripRe.ReplaceAllString(authors, name)
+		entry["authors"] = wrapRe.ReplaceAllString(stripped, bold)
 	})
 }
 
