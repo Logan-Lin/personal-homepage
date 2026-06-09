@@ -70,6 +70,7 @@ publications:
           - "Advanced Materials"
           - "2026"
         links:
+          Paper: "https://doi.org/10.1002/adma.202522493"
           Preprint: "https://arxiv.org/abs/2509.13916"
           Code: "https://github.com/Logan-Lin/AMDEN-code"
 
