@@ -182,7 +182,7 @@ footer {
 .item-author {
   margin: 0;
   font-size: 0.8rem;
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .item-desc {
