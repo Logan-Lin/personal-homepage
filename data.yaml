@@ -38,7 +38,6 @@ home:
         - mmtec
         - ctle
         - transfertraj
-        - trajmamba
 
     - desc: "Spatiotemporal data mining is a broader topic that is inclusive of the above. It covers research on extracting and utilizing patterns from large-scale data with spatial information and that is dynamic over time (usually sourced from transportation scenarios)."
       entries:
@@ -47,7 +46,6 @@ home:
         - ripcn
         - plmtrajrec
         - path-llm
-        - dutytte
 
     - desc: "Interdisciplinary research between data mining and materials science is a new research direction I am exploring. The promise is that data mining enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design."
       entries:
@@ -72,6 +70,7 @@ publications:
       - id: amden
         title: "Inverse Design of Amorphous Materials with Targeted Properties"
         authors: "Jonas A. Finkler*, Yan Lin*, Tao Du, Jilin Hu, Morten M. Smedskjaer"
+        desc: "Generates atomic structures of disordered materials such as glasses that match desired target properties, and refines them into stable low-energy configurations. Also introduces new datasets of amorphous materials to support this kind of design."
         tags:
           - "Advanced Materials"
           - "2026"
@@ -83,6 +82,7 @@ publications:
       - id: disgmm
         title: "DiSGMM: A Method for Time-varying Microscopic Weight Completion on Road Networks"
         authors: Yan Lin, Hu Jilin, Shengnan Guo, Christian S. Jensen, Youfang Lin, Huaiyu Wan
+        desc: "Fills in missing fine-grained, time-varying traffic conditions on road networks, such as travel speeds on individual road segments during specific time periods, when observations are sparse both across segments and within each segment. Estimates the full range of likely conditions for each segment and time rather than a single value."
         tags:
           - "IJCAI"
           - "2026"
@@ -92,6 +92,7 @@ publications:
       - id: trajar
         title: "TrajAR: Long-Term Trajectory Prediction at Urban Intersections via Multi-scale Interaction Perception"
         authors: Letian Gong*, Yan Lin*, Xinyue Zhang, YiWei Shuang, Guanyu Yao, Cheng Long, Shengnan Guo, Youfang Lin, Huaiyu Wan
+        desc: ""
         tags:
           - "IJCAI"
           - "2026"
@@ -100,6 +101,7 @@ publications:
       - id: ripcn
         title: "RIPCN: A Road Impedance Principal Component Network for Probabilistic Traffic Flow Forecasting"
         authors: Haochen Lv*, Yan Lin*, Shengnan Guo, Xiaowei Mao, Hong Nie, Letian Gong, Youfang Lin, Huaiyu Wan
+        desc: "Forecasts future traffic flow across a road network while also estimating how uncertain each prediction is, combining transportation theory with learned models to capture how congestion shifts traffic between connected roads over time."
         tags:
           - "KDD"
           - "2026"
@@ -109,6 +111,7 @@ publications:
       - id: trajmamba
         title: "TrajMamba: An Efficient and Semantic-rich Vehicle Trajectory Pre-training Model"
         authors: Yichen Liu*, Yan Lin*, Shengnan Guo, Zeyu Zhou, Youfang Lin, Huaiyu Wan
+        desc: "Learns rich and compact representations of vehicle GPS trajectories that capture both how vehicles move and why they travel. Removes redundant trajectory points and folds in travel purpose information from roads and nearby places, improving accuracy and efficiency across downstream tasks."
         tags:
           - "NeurIPS"
           - "2025"
@@ -118,6 +121,7 @@ publications:
       - id: transfertraj
         title: "TransferTraj: A Vehicle Trajectory Learning Model for Region and Task Transferability"
         authors: Tonglong Wei*, Yan Lin*, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, Gao Cong, Huaiyu Wan
+        desc: "Learns from vehicle GPS trajectories in a way that transfers across different geographic regions and different prediction tasks without retraining, removing the need to keep separate specialized models. Handles each task by treating it as recovering hidden parts of a trajectory, so one model serves many tasks even with limited data."
         tags:
           - "NeurIPS"
           - "2025"
@@ -129,6 +133,7 @@ publications:
       - id: plmtrajrec
         title: "PLMTrajRec: A Scalable and Generalizable Trajectory Recovery Method with Pre-trained Language Models"
         authors: Tonglong Wei*, Yan Lin*, Youfang Lin, Shengnan Guo, Jilin Hu, Haitao Yuan, Gao Cong, Huaiyu Wan
+        desc: "Recovers the missing points in sparse movement trajectories to restore detailed paths, while needing only a small amount of dense training data and generalizing across trajectories recorded at different sampling rates."
         tags:
           - "NeurIPS"
           - "2025"
@@ -139,6 +144,7 @@ publications:
       - id: uvtm
         title: "UVTM: Universal Vehicle Trajectory Modeling with ST Feature Domain Generation"
         authors: "Yan Lin, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin, Huaiyu Wan"
+        desc: "A single model for vehicle GPS trajectories that handles many tasks such as travel time estimation, trajectory recovery, and trajectory prediction, instead of maintaining a separate model for each. It stays accurate even when trajectories are sparse or only part of their features are available, by learning to rebuild dense and complete trajectories from incomplete ones."
         tags:
           - "IEEE TKDE"
           - "2025"
@@ -150,6 +156,7 @@ publications:
       - id: trajcogn
         title: "TrajCogn: Leveraging LLMs for Cognizing Movement Patterns and Travel Purposes from Trajectories"
         authors: "Zeyu Zhou*, Yan Lin*, Haomin Wen, Shengnan Guo, Jilin Hu, Youfang Lin, Huaiyu Wan"
+        desc: "Adapts large language models to understand movement trajectories so they can recognize how people move and infer the purposes behind their travel. A single model handles a range of trajectory analysis tasks across different settings."
         tags:
           - "IJCAI"
           - "2025"
@@ -161,6 +168,7 @@ publications:
       - id: unite-survey
         title: "UniTE: A Survey and Unified Pipeline for Pre-training Spatiotemporal Trajectory Embeddings"
         authors: "Yan Lin, Zeyu Zhou, Yicheng Liu, Haochen Lv, Haomin Wen, Tianyi Li, Yushuai Li, Christian S. Jensen, Shengnan Guo, Youfang Lin, Huaiyu Wan"
+        desc: "Surveys existing methods for learning reusable representations of movement trajectories and brings them together into a single modular framework with shared code, so that new methods can be built, compared, and evaluated on common ground."
         tags:
           - "IEEE TKDE"
           - "2025"
@@ -172,6 +180,7 @@ publications:
       - id: path-llm
         title: "Path-LLM: A Multi-Modal Path Representation Learning by Aligning and Fusing with Large Language Models"
         authors: "Yongfu Wei*, Yan Lin*, Hongfan Gao, Ronghui Xu, Sean Bin Yang, Jilin Hu"
+        desc: "Learns representations of paths in a road network by combining the network structure with text that describes physical and regional context, which earlier methods left out. The combined view improves accuracy on tasks such as ranking paths and estimating travel time, including settings with little or no labeled data."
         tags:
           - "WWW"
           - "2025"
@@ -182,6 +191,7 @@ publications:
       - id: dutytte
         title: "DutyTTE: Deciphering Uncertainty in Origin-Destination Travel Time Estimation"
         authors: "Xiaowei Mao*, Yan Lin*, Shengnan Guo, Yubin Chen, Xingyu Xian, Haomin Wen, Qisen Xu, Youfang Lin, Huaiyu Wan"
+        desc: "Estimates the travel time between an origin and a destination and quantifies how uncertain each prediction is, by first inferring the likely route the trip will follow and then producing reliable confidence intervals that reflect how individual road segments contribute to the overall uncertainty under varying conditions."
         tags:
           - "AAAI"
           - "2025"
@@ -192,6 +202,7 @@ publications:
       - id: mobility-llm
         title: "Mobility-LLM: Learning Visiting Intentions and Travel Preference from Human Mobility Data with Large Language Models"
         authors: "Letian Gong*, Yan Lin*, Xinyue Zhang, Yiwen Lu, Xuedi Han, Yichen Liu, Shengnan Guo, Youfang Lin, Huaiyu Wan"
+        desc: "Analyzes human mobility data such as sequences of visited locations to uncover why people visit places and what travel preferences they hold, and uses large language models to support tasks like predicting future locations."
         tags:
           - "NeurIPS"
           - "2024"
@@ -202,6 +213,7 @@ publications:
       - id: dot
         title: "Origin-Destination Travel Time Oracle for Map-based Services"
         authors: "Yan Lin, Huaiyu Wan, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin"
+        desc: "Estimates the travel time between an origin and a destination at a given departure time by learning from many historical trips that connect the same pair of locations. It first infers a likely route between the two points and then predicts the travel time along it, improving accuracy for map-based navigation services."
         tags:
           - "SIGMOD"
           - "2024"
@@ -213,6 +225,7 @@ publications:
       - id: mmtec
         title: "Pre-training General Trajectory Embeddings with Maximum Multi-view Entropy Coding"
         authors: "Yan Lin, Huaiyu Wan, Shengnan Guo, Jilin Hu, Christian S. Jensen, Youfang Lin"
+        desc: "Learns general-purpose representations of movement trajectories from unlabeled data that capture both travel behavior and spatial and temporal patterns. The learned representations avoid task-specific bias so they transfer well across many downstream tasks."
         tags:
           - "IEEE TKDE"
           - "2023"
@@ -224,6 +237,7 @@ publications:
       - id: tale
         title: "Pre-training Time-Aware Location Embeddings from Spatial-Temporal Trajectories"
         authors: "Huaiyu Wan, Yan Lin, Shengnan Guo, Youfang Lin"
+        desc: "Learns vector representations of locations from spatial-temporal trajectories that capture not only where places are but also when people visit them, since the time of visit reflects what a place is used for. These time-aware representations are pre-trained without labels and improve a range of downstream location-based prediction tasks."
         tags:
           - "IEEE TKDE"
           - "2022"
@@ -234,6 +248,7 @@ publications:
       - id: ctle
         title: "Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction"
         authors: "Yan Lin, Huaiyu Wan, Shengnan Guo, Youfang Lin"
+        desc: "Pre-trains location representations from movement trajectories that capture how the meaning of a place changes with its surrounding context and the time of visit, leading to more accurate prediction of a user's next location."
         tags:
           - "AAAI"
           - "2021"
@@ -246,6 +261,7 @@ publications:
     entries:
       - title: "Low-Rank Prior-Induced Consistency Flow Matching for Efficient Traffic Imputation"
         authors: Xiaowei Mao, Tingrui Wu, YangYawen, Shengnan Guo, Yan Lin, Shilong Zhao, Haochen Lv, Youfang Lin, Huaiyu Wan
+        desc: ""
         tags:
           - "KDD"
           - "2026"
@@ -253,13 +269,15 @@ publications:
 
       - title: "G-VTM: A Multimodal Vision-Trajectory Model for Generalized Vehicle Trajectory Prediction"
         authors: Xinyue Zhang, Letian Gong, Yan Lin, Jinjun Cheng, Junlin Zhang, Guanyu Yao, Shengnan Guo, Youfang Lin, Shaojiang Wang, Huaiyu Wan
+        desc: ""
         tags:
           - "IJCAI"
           - "2026"
         links: {}
 
       - title: "ForceTraj: Modeling Realistic Intention and Heterogeneous Interactions for Multi-modal Trajectory Prediction"
-        authors: Guanyu Yao, Yan Lin, Letian Gong, Xinyue Zhang, Yiwei Shuang, Shengnan Guo, Huaiyu Wan 
+        authors: Guanyu Yao, Yan Lin, Letian Gong, Xinyue Zhang, Yiwei Shuang, Shengnan Guo, Huaiyu Wan
+        desc: "Predicts the future paths of vehicles for autonomous driving by inferring driver intentions such as lane changes and by modeling how nearby vehicles influence each other. It produces several plausible future trajectories rather than a single guess, which improves prediction accuracy on real driving datasets."
         tags:
           - "DASFAA"
           - "2026"
@@ -268,6 +286,7 @@ publications:
 
       - title: "Traj-MLLM: Can Multimodal Large Language Models Reform Trajectory Data Mining?"
         authors: Shuo Liu, Di Yao, Yan Lin, Gao Cong, Jingping Bi
+        desc: "Lets multimodal large language models analyze movement trajectories across different regions and tasks without any training, by turning raw trajectories into combined image and text inputs that keep their spatial and temporal structure. A single setup then handles many trajectory analysis tasks."
         tags:
           - "KDD"
           - "2026"
@@ -277,6 +296,7 @@ publications:
       - id: sculptdrug
         title: "SculptDrug: A Spatial Condition-Aware Bayesian Flow Model for Structure-based Drug Design"
         authors: Qingsong Zhong, Haomin Yu, Yan Lin, Wangmeng Shen, Long Zeng, Jilin Hu
+        desc: "Generates drug molecules that fit a target protein's three-dimensional structure, keeping the molecules shaped to sit within the protein's surface and consistent with both its overall form and fine details. This produces more accurate candidate molecules for structure-based drug discovery."
         tags:
           - "AAAI"
           - "2026"
@@ -286,6 +306,7 @@ publications:
 
       - title: "Spatial-Temporal Feedback Diffusion Guidance for Controlled Traffic Imputation"
         authors: Xiaowei Mao, Huihu Ding, Yan Lin, Tingrui Wu, Shengnan Guo, Dazhuo Qiu, Feiling Fang, Jilin Hu, Huaiyu Wan
+        desc: "Fills in missing values in traffic data by guiding the generation process to stay close to the available observations, adjusting how strongly it follows them for each location and time so that places with few observations are reconstructed more accurately."
         tags:
           - "AAAI"
           - "2026"
@@ -295,6 +316,7 @@ publications:
 
       - title: "DUET: Dual Clustering Enhanced Multivariate Time Series Forecasting"
         authors: "Xiangfei Qiu, Xingjian Wu, Yan Lin, Chenjuan Guo, Jilin Hu, Bin Yang"
+        desc: "Improves forecasting of multivariate time series by adapting to how patterns change over time and by modeling the relationships between the different variables while reducing the influence of noisy ones."
         tags:
           - "KDD"
           - "2025"
@@ -305,6 +327,7 @@ publications:
 
       - title: "Diff-RNTraj: A Structure-aware Diffusion Model for Road Network-constrained Trajectory Generation"
         authors: "Tonglong Wei, Youfang Lin, Shengnan Guo, Yan Lin, Yiheng Huang, Chenyang Xiang, Yuqing Bai, Menglu Ya, Huaiyu Wan"
+        desc: "Generates synthetic vehicle trajectories that stay on real road networks and carry road-level information, helping address the shortage of public trajectory data caused by privacy concerns. Each generated point is tied to a road segment and a moving rate, so the trajectories are realistic and ready for downstream trajectory mining tasks."
         tags:
           - "IEEE TKDE"
           - "2024"
@@ -315,6 +338,7 @@ publications:
 
       - title: "STCDM: Spatio-Temporal Contrastive Diffusion Model for Check-In Sequence Generation"
         authors: "Letian Gong, Shengnan Guo, Yan Lin, Yichen Liu, Erwen Zheng, Yiwei Shuang, Youfang Lin, Jilin Hu, Huaiyu Wan"
+        desc: "Generates realistic synthetic check-in sequences that capture how people move and visit places over time and space, so that researchers can study and build on this kind of data without relying on scarce real records that are limited by privacy concerns."
         tags:
           - "IEEE TKDE"
           - "2024"
@@ -323,6 +347,7 @@ publications:
 
       - title: "Micro-Macro Spatial-Temporal Graph-based Encoder-Decoder for Map-Constrained Trajectory Recovery"
         authors: "Tonglong Wei, Youfang Lin, Yan Lin, Shengnan Guo, Lan Zhang, Huaiyu Wan"
+        desc: "Reconstructs the missing points in sparse GPS trajectories so the recovered paths stay on the road network. It combines the fine details of each individual trip with broader travel patterns shared across many trips to fill in the gaps more accurately."
         tags:
           - "IEEE TKDE"
           - "2024"
@@ -333,6 +358,7 @@ publications:
 
       - title: "Inductive and Adaptive Graph Convolution Networks Equipped with Constraint Task for Spatial-Temporal Traffic Data Kriging"
         authors: "Tonglong Wei, Youfang Lin, Shengnan Guo, Yan Lin, Yiji Zhao, Xiyuan Jin, Zhihao Wu, Huaiyu Wan"
+        desc: "Estimates traffic conditions at locations that have no sensor by learning from the sensors that are available, and handles newly added locations without needing to retrain the model."
         tags:
           - "KBS"
           - "2024"
@@ -342,6 +368,7 @@ publications:
 
       - title: "Spatial-Temporal Cross-View Contrastive Pre-Training for Check-in Sequence Representation Learning"
         authors: "Letian Gong, Huaiyu Wan, Shengnan Guo, Li Xiucheng, Yan Lin, Erwen Zheng, Tianyi Wang, Zeyu Zhou, Youfang Lin"
+        desc: "Learns general-purpose representations of user check-in sequences from location-based services by jointly capturing where users go and when they go there. The learned representations transfer across different downstream tasks that rely on understanding user mobility."
         tags:
           - "IEEE TKDE"
           - "2024"
@@ -351,6 +378,7 @@ publications:
 
       - title: "Contrastive Pre-training with Adversarial Perturbations for Check-In Sequence Representation Learning"
         authors: "Letian Gong, Youfang Lin, Shengnan Guo, Yan Lin, Tianyi Wang, Erwen Zheng, Zeyu Zhou, Huaiyu Wan"
+        desc: "Learns general-purpose representations of human check-in sequences that capture spatial and temporal patterns of where people go over time, so the same learned features transfer across many mobility tasks. Removes the need to hand-design how the data is varied during training, giving stronger and more reliable results than task-specific models."
         tags:
           - "AAAI"
           - "2023"
@@ -360,6 +388,7 @@ publications:
 
       - title: "Adversarial Self-Attentive Time-Variant Neural Networks for Multi-Step Time Series Forecasting"
         authors: "Changxia Gao, Ning Zhang, Youru Li, Yan Lin, Huaiyu Wan"
+        desc: "Forecasts many future steps of a time series at once and adapts to how the patterns in the series change over time. A training scheme that judges whether predictions look realistic and flow naturally from the recent input helps keep long-range forecasts accurate."
         tags:
           - "ESWA"
           - "2023"
@@ -368,6 +397,7 @@ publications:
 
       - title: "Multi-scale Adaptive Attention-based Time-Variant Neural Networks for Multi-step Time Series Forecasting"
         authors: "Changxia Gao, Ning Zhang, Youru Li, Yan Lin, Huaiyu Wan"
+        desc: "Forecasts future values of a time series over multiple steps ahead by adapting to how temporal patterns change over time and by capturing patterns that appear at different time scales. Tested on climate and energy consumption data, it gives more accurate forecasts than prior methods."
         tags:
           - "APIN"
           - "2023"
@@ -376,6 +406,7 @@ publications:
 
       - title: "WITRAN: Water-wave Information Transmission and Recurrent Acceleration Network for Long-range Time Series Forecasting"
         authors: "Yuxin Jia, Youfang Lin, Xinyan Hao, Yan Lin, Shengnan Guo, Huaiyu Wan"
+        desc: "Forecasts time series far into the future by jointly capturing patterns at different time scales and the repeating structure across them. It does this while keeping computation efficient, so it stays fast and accurate even on very long horizons."
         tags:
           - "NeurIPS"
           - "2023"
