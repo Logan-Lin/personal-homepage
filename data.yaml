@@ -47,7 +47,7 @@ home:
         - plmtrajrec
         - path-llm
 
-    - desc: "Interdisciplinary research between data mining and materials science is a new research direction I am exploring. The promise is that data mining enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design."
+    - desc: "AI for materials science is a new research direction I am exploring. The promise is that data mining-driven AI enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design."
       entries:
         - amden
         - amden-pncs17
