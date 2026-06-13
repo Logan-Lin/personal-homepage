@@ -111,7 +111,7 @@ publications:
       - id: trajmamba
         title: "TrajMamba: An Efficient and Semantic-rich Vehicle Trajectory Pre-training Model"
         authors: Yichen Liu*, Yan Lin*, Shengnan Guo, Zeyu Zhou, Youfang Lin, Huaiyu Wan
-        desc: "Learns rich and compact representations of vehicle GPS trajectories that capture both how vehicles move and why they travel. Removes redundant trajectory points and folds in travel purpose information from roads and nearby places, improving accuracy and efficiency across downstream tasks."
+        desc: "Learns rich and compact representations of vehicle GPS trajectories that capture both how vehicles move and why they travel. Removes redundant trajectory points and adds travel purpose information from roads and nearby places, improving accuracy and efficiency across downstream tasks."
         tags:
           - "NeurIPS"
           - "2025"
@@ -168,7 +168,7 @@ publications:
       - id: unite-survey
         title: "UniTE: A Survey and Unified Pipeline for Pre-training Spatiotemporal Trajectory Embeddings"
         authors: "Yan Lin, Zeyu Zhou, Yicheng Liu, Haochen Lv, Haomin Wen, Tianyi Li, Yushuai Li, Christian S. Jensen, Shengnan Guo, Youfang Lin, Huaiyu Wan"
-        desc: "Surveys existing methods for learning reusable representations of movement trajectories and brings them together into a single modular framework with shared code, so that new methods can be built, compared, and evaluated on common ground."
+        desc: "Surveys existing methods for learning reusable representations of movement trajectories and brings them together into a single modular framework with shared code, so that new methods can be built, compared, and evaluated on the same basis."
         tags:
           - "IEEE TKDE"
           - "2025"
@@ -191,7 +191,7 @@ publications:
       - id: dutytte
         title: "DutyTTE: Deciphering Uncertainty in Origin-Destination Travel Time Estimation"
         authors: "Xiaowei Mao*, Yan Lin*, Shengnan Guo, Yubin Chen, Xingyu Xian, Haomin Wen, Qisen Xu, Youfang Lin, Huaiyu Wan"
-        desc: "Estimates the travel time between an origin and a destination and quantifies how uncertain each prediction is, by first inferring the likely route the trip will follow and then producing reliable confidence intervals that reflect how individual road segments contribute to the overall uncertainty under varying conditions."
+        desc: "Estimates the travel time between an origin and a destination and measures how uncertain each prediction is, by first inferring the likely route the trip will follow and then producing reliable confidence intervals that reflect how individual road segments contribute to the overall uncertainty under varying conditions."
         tags:
           - "AAAI"
           - "2025"
@@ -202,7 +202,7 @@ publications:
       - id: mobility-llm
         title: "Mobility-LLM: Learning Visiting Intentions and Travel Preference from Human Mobility Data with Large Language Models"
         authors: "Letian Gong*, Yan Lin*, Xinyue Zhang, Yiwen Lu, Xuedi Han, Yichen Liu, Shengnan Guo, Youfang Lin, Huaiyu Wan"
-        desc: "Analyzes human mobility data such as sequences of visited locations to uncover why people visit places and what travel preferences they hold, and uses large language models to support tasks like predicting future locations."
+        desc: "Analyzes human mobility data such as sequences of visited locations to learn why people visit places and what travel preferences they have, and uses large language models to support tasks like predicting future locations."
         tags:
           - "NeurIPS"
           - "2024"
@@ -213,7 +213,7 @@ publications:
       - id: dot
         title: "Origin-Destination Travel Time Oracle for Map-based Services"
         authors: "Yan Lin, Huaiyu Wan, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin"
-        desc: "Estimates the travel time between an origin and a destination at a given departure time by learning from many historical trips that connect the same pair of locations. It first infers a likely route between the two points and then predicts the travel time along it, improving accuracy for map-based navigation services."
+        desc: "Estimates the travel time between an origin and a destination at a given departure time by learning from many past trips that connect the same pair of locations. It first infers a likely route between the two points and then predicts the travel time along it, improving accuracy for map-based navigation services."
         tags:
           - "SIGMOD"
           - "2024"
@@ -277,7 +277,7 @@ publications:
 
       - title: "ForceTraj: Modeling Realistic Intention and Heterogeneous Interactions for Multi-modal Trajectory Prediction"
         authors: Guanyu Yao, Yan Lin, Letian Gong, Xinyue Zhang, Yiwei Shuang, Shengnan Guo, Huaiyu Wan
-        desc: "Predicts the future paths of vehicles for autonomous driving by inferring driver intentions such as lane changes and by modeling how nearby vehicles influence each other. It produces several plausible future trajectories rather than a single guess, which improves prediction accuracy on real driving datasets."
+        desc: "Predicts the future paths of vehicles for autonomous driving by inferring driver intentions such as lane changes and by modeling how nearby vehicles influence each other. It produces several likely future trajectories rather than a single guess, which improves prediction accuracy on real driving datasets."
         tags:
           - "DASFAA"
           - "2026"
@@ -388,7 +388,7 @@ publications:
 
       - title: "Adversarial Self-Attentive Time-Variant Neural Networks for Multi-Step Time Series Forecasting"
         authors: "Changxia Gao, Ning Zhang, Youru Li, Yan Lin, Huaiyu Wan"
-        desc: "Forecasts many future steps of a time series at once and adapts to how the patterns in the series change over time. A training scheme that judges whether predictions look realistic and flow naturally from the recent input helps keep long-range forecasts accurate."
+        desc: "Forecasts many future steps of a time series at once and adapts to how the patterns in the series change over time. A training scheme that judges whether predictions look realistic and follow naturally from the recent input helps keep long-range forecasts accurate."
         tags:
           - "ESWA"
           - "2023"
@@ -397,7 +397,7 @@ publications:
 
       - title: "Multi-scale Adaptive Attention-based Time-Variant Neural Networks for Multi-step Time Series Forecasting"
         authors: "Changxia Gao, Ning Zhang, Youru Li, Yan Lin, Huaiyu Wan"
-        desc: "Forecasts future values of a time series over multiple steps ahead by adapting to how temporal patterns change over time and by capturing patterns that appear at different time scales. Tested on climate and energy consumption data, it gives more accurate forecasts than prior methods."
+        desc: "Forecasts future values of a time series over multiple steps ahead by adapting to how temporal patterns change over time and by capturing patterns that appear at different time scales. Tested on climate and energy consumption data, it gives more accurate forecasts than earlier methods."
         tags:
           - "APIN"
           - "2023"
@@ -406,7 +406,7 @@ publications:
 
       - title: "WITRAN: Water-wave Information Transmission and Recurrent Acceleration Network for Long-range Time Series Forecasting"
         authors: "Yuxin Jia, Youfang Lin, Xinyan Hao, Yan Lin, Shengnan Guo, Huaiyu Wan"
-        desc: "Forecasts time series far into the future by jointly capturing patterns at different time scales and the repeating structure across them. It does this while keeping computation efficient, so it stays fast and accurate even on very long horizons."
+        desc: "Forecasts time series far into the future by jointly capturing patterns at different time scales and the repeating structure across them. It does this while keeping computation efficient, so it stays fast and accurate even over very long horizons."
         tags:
           - "NeurIPS"
           - "2023"
