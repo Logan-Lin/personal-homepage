@@ -88,6 +88,7 @@ publications:
           - "2026"
         links:
           Preprint: "https://arxiv.org/abs/2603.29837"
+          Code: "https://github.com/Logan-Lin/DiSGMM-code"
 
       - id: trajar
         title: "TrajAR: Long-Term Trajectory Prediction at Urban Intersections via Multi-scale Interaction Perception"
