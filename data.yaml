@@ -260,6 +260,16 @@ publications:
   secondary:
     desc: "Publications where I serve as a contributing author. My involvement in these works typically includes technical discussion, algorithm refinement, or contribution to experiments and writing."
     entries:
+      - title: "Sparse Traffic Accident Risk Forecasting With Spatial-Temporal Knowledge Graphs"
+        authors: Shengnan Guo, Yan Lin, Wei Chen, Weiwen Tang, Haochen Lv, Rongzhi Zhou, Junliang Lin, Youfang Lin, Huaiyu Wan
+        desc: "Helps cities identify where traffic accidents are most likely, even when past accident records are sparse. It combines road, traffic, weather, and location information to forecast risk at both street and neighborhood levels, supporting earlier warnings and safer travel."
+        tags:
+          - "IEEE TKDE"
+          - "2026"
+        links:
+          Paper: "https://ieeexplore.ieee.org/document/11589565"
+          Code: "https://github.com/guoshnBJTU/STKGRisk"
+
       - title: "Low-Rank Prior-Induced Consistency Flow Matching for Efficient Traffic Imputation"
         authors: Xiaowei Mao, Tingrui Wu, YangYawen, Shengnan Guo, Yan Lin, Shilong Zhao, Haochen Lv, Youfang Lin, Huaiyu Wan
         desc: ""
