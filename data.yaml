@@ -22,9 +22,6 @@ navigation:
     - name: GitHub
       url: https://github.com/Logan-Lin
       external: true
-    - name: DBLP
-      url: https://dblp.org/pid/27/586-6.html
-      external: true
     - name: Google Scholar
       url: https://scholar.google.com/citations?user=nHMmG2UAAAAJ
       external: true
