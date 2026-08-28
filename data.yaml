@@ -90,7 +90,7 @@ publications:
       - id: trajar
         title: "TrajAR: Long-Term Trajectory Prediction at Urban Intersections via Multi-scale Interaction Perception"
         authors: Letian Gong*, Yan Lin*, Xinyue Zhang, YiWei Shuang, Guanyu Yao, Cheng Long, Shengnan Guo, Youfang Lin, Huaiyu Wan
-        desc: ""
+        desc: "Predicts the future paths of vehicles, cyclists, and pedestrians at city intersections by modeling how they respond to each other, to traffic signals, and to who gives way to whom. It first sketches a rough version of each path so the prediction stays reliable further into the future, then adds detail in stages, which improves accuracy on real intersection data."
         tags:
           - "IJCAI"
           - "2026"
@@ -269,7 +269,7 @@ publications:
 
       - title: "Low-Rank Prior-Induced Consistency Flow Matching for Efficient Traffic Imputation"
         authors: Xiaowei Mao, Tingrui Wu, YangYawen, Shengnan Guo, Yan Lin, Shilong Zhao, Haochen Lv, Youfang Lin, Huaiyu Wan
-        desc: ""
+        desc: "Fills in missing values in traffic data by first building a rough estimate from the overall patterns across locations and time in the available observations, then refining that estimate in only two steps, where comparable methods need dozens. This makes it over ten times faster and more accurate, even when most readings are missing."
         tags:
           - "KDD"
           - "2026"
@@ -277,7 +277,7 @@ publications:
 
       - title: "G-VTM: A Multimodal Vision-Trajectory Model for Generalized Vehicle Trajectory Prediction"
         authors: Xinyue Zhang, Letian Gong, Yan Lin, Jinjun Cheng, Junlin Zhang, Guanyu Yao, Shengnan Guo, Youfang Lin, Shaojiang Wang, Huaiyu Wan
-        desc: ""
+        desc: "Predicts the future paths of vehicles at junctions such as intersections and roundabouts, transferring to junctions it has not seen with little or no extra training data. It combines each vehicle's past movements with images showing the road layout and how the surrounding traffic is moving, so predictions draw on the whole scene."
         tags:
           - "IJCAI"
           - "2026"
