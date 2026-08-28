@@ -78,7 +78,7 @@ publications:
 
       - id: disgmm
         title: "DiSGMM: A Method for Time-varying Microscopic Weight Completion on Road Networks"
-        authors: Yan Lin, Hu Jilin, Shengnan Guo, Christian S. Jensen, Youfang Lin, Huaiyu Wan
+        authors: Yan Lin, Jilin Hu, Shengnan Guo, Christian S. Jensen, Youfang Lin, Huaiyu Wan
         desc: "Fills in missing fine-grained, time-varying traffic conditions on road networks, such as travel speeds on individual road segments during specific time periods, when observations are sparse both across segments and within each segment. Estimates the full range of likely conditions for each segment and time rather than a single value."
         tags:
           - "IJCAI"
@@ -508,6 +508,15 @@ activities:
   presentations:
     desc: "Oral presentations, tutorials, and guest lectures delivered at international conferences and universities."
     entries:
+      - id: disgmm-ijcai26
+        title: "DiSGMM: A Method for Time-varying Microscopic Weight Completion on Road Networks"
+        authors: "Yan Lin, Jilin Hu, Shengnan Guo, Christian S. Jensen, Youfang Lin, Huaiyu Wan"
+        tags:
+          - "Oral Presentation"
+          - "IJCAI26"
+        links:
+          Slides: "https://github.com/Logan-Lin/micro-weight-rn-slides/releases/tag/v2026.08-ijcai26"
+      
       - id: amden-neurips25-ai4mat
         title: "AMDEN: Amorphous Materials DEnoising Network"
         authors: "Jonas A. Finkler*, Yan Lin*, Morten M Smedskjaer, Tao Du, Jilin Hu"
