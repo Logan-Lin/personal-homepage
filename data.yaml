@@ -71,6 +71,7 @@ publications:
         tags:
           - "Advanced Materials"
           - "2026"
+          - "IF 29.1"
         links:
           Paper: "https://doi.org/10.1002/adma.202522493"
           Preprint: "https://arxiv.org/abs/2509.13916"
@@ -83,6 +84,7 @@ publications:
         tags:
           - "IJCAI"
           - "2026"
+          - "CORE A*"
         links:
           Preprint: "https://arxiv.org/abs/2603.29837"
           Code: "https://github.com/Logan-Lin/DiSGMM-code"
@@ -94,6 +96,7 @@ publications:
         tags:
           - "IJCAI"
           - "2026"
+          - "CORE A*"
         links: {}
 
       - id: ripcn
@@ -103,6 +106,7 @@ publications:
         tags:
           - "KDD"
           - "2026"
+          - "CORE A*"
         links:
           Preprint: "https://arxiv.org/abs/2512.21685"
 
@@ -113,6 +117,7 @@ publications:
         tags:
           - "NeurIPS"
           - "2025"
+          - "CORE A*"
         links:
           Poster: "https://neurips.cc/virtual/2025/poster/115959"
 
@@ -123,6 +128,7 @@ publications:
         tags:
           - "NeurIPS"
           - "2025"
+          - "CORE A*"
         links:
           Oral: "https://neurips.cc/virtual/2025/oral/117509"
           Poster: "https://neurips.cc/virtual/2025/poster/117508"
@@ -135,6 +141,7 @@ publications:
         tags:
           - "NeurIPS"
           - "2025"
+          - "CORE A*"
         links:
           Poster: "https://neurips.cc/virtual/2025/poster/117945"
           Preprint: "https://arxiv.org/abs/2410.14281"
@@ -146,6 +153,7 @@ publications:
         tags:
           - "IEEE TKDE"
           - "2025"
+          - "IF 11.6"
         links:
           Paper: "https://ieeexplore.ieee.org/document/11004614"
           Preprint: "https://arxiv.org/abs/2402.07232"
@@ -158,6 +166,7 @@ publications:
         tags:
           - "IJCAI"
           - "2025"
+          - "CORE A*"
         links:
           Paper: https://www.ijcai.org/proceedings/2025/411
           Preprint: "https://arxiv.org/abs/2405.12459"
@@ -170,6 +179,7 @@ publications:
         tags:
           - "IEEE TKDE"
           - "2025"
+          - "IF 11.6"
         links:
           Paper: "https://ieeexplore.ieee.org/document/10818577"
           Preprint: "https://arxiv.org/abs/2407.12550"
@@ -182,6 +192,7 @@ publications:
         tags:
           - "WWW"
           - "2025"
+          - "CORE A*"
         links:
           Paper: "https://openreview.net/forum?id=KmMSQS6tFn"
           Code: "https://github.com/decisionintelligence/Path-LLM"
@@ -193,6 +204,7 @@ publications:
         tags:
           - "AAAI"
           - "2025"
+          - "CORE A*"
         links:
           Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/33350"
           Preprint: "https://arxiv.org/abs/2408.12809"
@@ -204,6 +216,7 @@ publications:
         tags:
           - "NeurIPS"
           - "2024"
+          - "CORE A*"
         links:
           Paper: "https://openreview.net/forum?id=0feJEykDRx"
           Poster: "https://neurips.cc/virtual/2024/poster/96914"
@@ -215,6 +228,7 @@ publications:
         tags:
           - "SIGMOD"
           - "2024"
+          - "CORE A*"
         links:
           Paper: "https://dl.acm.org/doi/10.1145/3617337"
           Preprint: "https://arxiv.org/abs/2307.03048"
@@ -227,6 +241,7 @@ publications:
         tags:
           - "IEEE TKDE"
           - "2023"
+          - "IF 8.9"
         links:
           Paper: "https://ieeexplore.ieee.org/abstract/document/10375102"
           Preprint: "https://arxiv.org/abs/2207.14539"
@@ -239,6 +254,7 @@ publications:
         tags:
           - "IEEE TKDE"
           - "2022"
+          - "IF 8.9"
         links:
           Paper: "https://ieeexplore.ieee.org/abstract/document/9351627"
           Code: "https://github.com/Logan-Lin/TALE"
@@ -250,6 +266,7 @@ publications:
         tags:
           - "AAAI"
           - "2021"
+          - "CORE A*"
         links:
           Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/16548"
           Code: "https://github.com/Logan-Lin/CTLE"
@@ -263,6 +280,7 @@ publications:
         tags:
           - "IEEE TKDE"
           - "2026"
+          - "IF 11.6"
         links:
           Paper: "https://ieeexplore.ieee.org/document/11589565"
           Code: "https://github.com/guoshnBJTU/STKGRisk"
@@ -273,6 +291,7 @@ publications:
         tags:
           - "KDD"
           - "2026"
+          - "CORE A*"
         links: {}
 
       - title: "G-VTM: A Multimodal Vision-Trajectory Model for Generalized Vehicle Trajectory Prediction"
@@ -281,6 +300,7 @@ publications:
         tags:
           - "IJCAI"
           - "2026"
+          - "CORE A*"
         links: {}
 
       - title: "ForceTraj: Modeling Realistic Intention and Heterogeneous Interactions for Multi-modal Trajectory Prediction"
@@ -289,6 +309,7 @@ publications:
         tags:
           - "DASFAA"
           - "2026"
+          - "CORE B"
         links:
           Paper: https://link.springer.com/chapter/10.1007/978-981-92-0375-8_24
 
@@ -298,6 +319,7 @@ publications:
         tags:
           - "KDD"
           - "2026"
+          - "CORE A*"
         links:
           Preprint: "https://arxiv.org/abs/2509.00053"
 
@@ -308,6 +330,7 @@ publications:
         tags:
           - "AAAI"
           - "2026"
+          - "CORE A*"
         links:
           Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/37139"
           Preprint: "https://arxiv.org/abs/2511.12489"
@@ -318,6 +341,7 @@ publications:
         tags:
           - "AAAI"
           - "2026"
+          - "CORE A*"
         links:
           Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/38581"
           Preprint: "https://arxiv.org/abs/2601.04572"
@@ -328,6 +352,7 @@ publications:
         tags:
           - "KDD"
           - "2025"
+          - "CORE A*"
         links:
           Paper: "https://dl.acm.org/doi/10.1145/3690624.3709325"
           Preprint: "https://arxiv.org/abs/2412.10859"
@@ -339,6 +364,7 @@ publications:
         tags:
           - "IEEE TKDE"
           - "2024"
+          - "IF 10.4"
         links:
           Paper: "https://www.computer.org/csdl/journal/tk/5555/01/10679607/20b3hlbjBOo"
           Preprint: "https://arxiv.org/abs/2402.07369"
@@ -350,6 +376,7 @@ publications:
         tags:
           - "IEEE TKDE"
           - "2024"
+          - "IF 10.4"
         links:
           Paper: "https://ieeexplore.ieee.org/document/10836764"
 
@@ -359,6 +386,7 @@ publications:
         tags:
           - "IEEE TKDE"
           - "2024"
+          - "IF 10.4"
         links:
           Paper: "https://www.computer.org/csdl/journal/tk/5555/01/10517676/1WCj0j0FljW"
           Preprint: "https://arxiv.org/abs/2404.19141"
@@ -370,6 +398,7 @@ publications:
         tags:
           - "KBS"
           - "2024"
+          - "IF 7.6"
         links:
           Paper: "https://www.sciencedirect.com/science/article/pii/S0950705123010730"
           Code: "https://github.com/wtl52656/IAGCN"
@@ -380,6 +409,7 @@ publications:
         tags:
           - "IEEE TKDE"
           - "2024"
+          - "IF 10.4"
         links:
           Paper: "https://ieeexplore.ieee.org/document/10613424"
           Preprint: "https://arxiv.org/abs/2407.15899"
@@ -390,6 +420,7 @@ publications:
         tags:
           - "AAAI"
           - "2023"
+          - "CORE A*"
         links:
           Paper: "https://ojs.aaai.org/index.php/AAAI/article/view/25546"
           Code: "https://github.com/LetianGong/CACSR"
@@ -400,6 +431,7 @@ publications:
         tags:
           - "ESWA"
           - "2023"
+          - "IF 7.5"
         links:
           Paper: "https://www.sciencedirect.com/science/article/pii/S0957417423012241"
 
@@ -409,6 +441,7 @@ publications:
         tags:
           - "APIN"
           - "2023"
+          - "IF 3.4"
         links:
           Paper: "https://link.springer.com/article/10.1007/s10489-023-05057-7"
 
@@ -418,6 +451,7 @@ publications:
         tags:
           - "NeurIPS"
           - "2023"
+          - "CORE A*"
         links:
           Paper: "https://openreview.net/forum?id=y08bkEtNBK"
           Code: "https://github.com/Water2sea/WITRAN"
