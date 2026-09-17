@@ -57,6 +57,7 @@ home:
         - ai-systems
     - desc: "I am building my supervision experience, supervising Bachelor's and Master's semester projects. My supervision focuses on problem definition, critical thinking about design choices, and delivering convincing conclusions."
       entries:
+        - traj-rep-generalization
         - assess-data-traj
         - sw6-camera-behind
 
@@ -520,6 +521,16 @@ activities:
   supervision:
     desc: "Student projects I supervise, covering project proposals, problem definition, design choices, and final delivery."
     entries:
+      - id: traj-rep-generalization
+        title: "Trajectory Representation Learning that Generalizes Across Regions, Modes, and Tasks"
+        tags:
+          - "Aalborg University"
+          - "2026"
+        desc: "A Master's semester project on learning trajectory representations that generalize across tasks, geographic regions, and transportation modes, modeling vehicle and vessel trajectories relative to road networks and sea depth contours and handling their widely varying sampling intervals."
+        links:
+          Proposal: https://github.com/Logan-Lin/traj-rep-generalization/releases/latest/download/main.pdf
+          Slides: https://github.com/Logan-Lin/traj-rep-generalization/releases/latest/download/slides.pdf
+
       - id: assess-data-traj
         title: "Assessment of the Data Foundation for Trajectory Machine Learning"
         tags:
@@ -527,8 +538,8 @@ activities:
           - "2026"
         desc: "A Master's semester project on bringing a data-centric perspective to trajectory machine learning, assessing the quality of training data and developing filtering and augmentation methods to improve model performance on downstream tasks."
         links:
-          Proposal: https://github.com/Logan-Lin/assess-data-traj/releases
-          Slides: https://github.com/Logan-Lin/traj-rep-generalization/releases
+          Proposal: https://github.com/Logan-Lin/assess-data-traj/releases/latest/download/main.pdf
+          Slides: https://github.com/Logan-Lin/traj-rep-generalization/releases/latest/download/slides.pdf
 
       - id: sw6-camera-behind
         title: "A Camera That Sees Behind"
@@ -537,7 +548,7 @@ activities:
           - "2025 - 2026"
         desc: "A Bachelor's semester project on developing a computationally lightweight model deployable on embedded devices to remove humans from images or video feeds, serving as a prototype GDPR-compliant surveillance system."
         links:
-          Proposal: https://github.com/Logan-Lin/camera-sees-behind/releases/tag/v1.2-sw6-26
+          Proposal: https://github.com/Logan-Lin/camera-sees-behind/releases/latest/download/proposal.pdf
 
   presentations:
     desc: "Oral presentations, tutorials, and guest lectures delivered at international conferences and universities."
@@ -549,7 +560,7 @@ activities:
           - "Oral Presentation"
           - "IJCAI26"
         links:
-          Slides: "https://github.com/Logan-Lin/micro-weight-rn-slides/releases/tag/v2026.08-ijcai26"
+          Slides: "https://github.com/Logan-Lin/micro-weight-rn-slides/releases/latest/download/main.pdf"
       
       - id: amden-neurips25-ai4mat
         title: "AMDEN: Amorphous Materials DEnoising Network"
@@ -567,7 +578,7 @@ activities:
           - "Oral Presentation"
           - "PNCS17"
         links:
-          Slides: "https://github.com/Logan-Lin/amden-presentation/releases/tag/v1.2-pncs17"
+          Slides: "https://github.com/Logan-Lin/amden-presentation/releases/latest/download/slide.pdf"
 
       - title: "Self-supervised Learning of Trajectory Data"
         tags:
