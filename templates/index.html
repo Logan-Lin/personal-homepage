@@ -3,23 +3,17 @@
 {% block title %}{{ data.site.title }}{% endblock %}
 
 {% block content %}
-<div class="row g-0 rounded bg-body-secondary my-4">
-    <div class="col p-4 d-flex flex-column pb-2">
-        <div class="section-desc">{{ content.bio|safe }}</div>
-    </div>
-</div>
+<div class="bio">{{ content.bio|safe }}</div>
 
 <article class="section" id="research">
     {% with section_title="Research" %}{% include 'partials/section-header.html' %}{% endwith %}
     {% for subsection in data.home.research %}
       {% if not forloop.First %}<hr/>{% endif %}
       <div>
-        <div class="section-desc">{{ subsection.desc }}</div>
-        <div class="list-group list-group-flush">
-            {% for item in subsection.resolved_entries %}
-              {% include 'partials/item.html' %}
-            {% endfor %}
-        </div>
+        <div>{{ subsection.desc }}</div>
+        {% for item in subsection.resolved_entries %}
+          {% include 'partials/item.html' %}
+        {% endfor %}
       </div>
     {% endfor %}
 </article>
@@ -29,19 +23,17 @@
     {% for subsection in data.home.teaching %}
       {% if not forloop.First %}<hr/>{% endif %}
       <div>
-        <div class="section-desc">{{ subsection.desc }}</div>
-        <div class="list-group list-group-flush">
-            {% for item in subsection.resolved_entries %}
-              {% include 'partials/item.html' %}
-            {% endfor %}
-        </div>
+        <div>{{ subsection.desc }}</div>
+        {% for item in subsection.resolved_entries %}
+          {% include 'partials/item.html' %}
+        {% endfor %}
       </div>
     {% endfor %}
 </article>
 
 <article class="section" id="service">
     {% with section_title="Service" %}{% include 'partials/section-header.html' %}{% endwith %}
-    <div class="section-desc">{{ content.service|safe }}</div>
+    <div>{{ content.service|safe }}</div>
 </article>
 
 {% endblock %}

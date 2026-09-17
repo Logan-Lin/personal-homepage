@@ -7,36 +7,30 @@
     {% with section_title="Activities" %}{% include 'partials/section-header.html' %}{% endwith %}
 
     <div>
-      <div class="section-desc">{{ data.activities.courses.desc }}</div>
-      <div class="list-group list-group-flush">
-        {% for item in data.activities.courses.entries %}
-          {% include 'partials/item.html' %}
-        {% endfor %}
-      </div>
+      <div>{{ data.activities.courses.desc }}</div>
+      {% for item in data.activities.courses.entries %}
+        {% include 'partials/item.html' %}
+      {% endfor %}
     </div>
 
     <hr/>
 
     <div>
-      <div class="section-desc">{{ data.activities.supervision.desc }}</div>
-      <div class="list-group list-group-flush">
-        {% for item in data.activities.supervision.entries %}
-          {% include 'partials/item.html' %}
-        {% endfor %}
-      </div>
+      <div>{{ data.activities.supervision.desc }}</div>
+      {% for item in data.activities.supervision.entries %}
+        {% include 'partials/item.html' %}
+      {% endfor %}
     </div>
 
     <hr/>
 
     <div>
-      {% if data.activities.presentations.desc %}<div class="section-desc">{{ data.activities.presentations.desc }}</div>{% endif %}
-      <div class="list-group list-group-flush">
-        {% for item in data.activities.presentations.entries %}
-          {% include 'partials/item.html' %}
-        {% endfor %}
-      </div>
+      {% if data.activities.presentations.desc %}<div>{{ data.activities.presentations.desc }}</div>{% endif %}
+      {% for item in data.activities.presentations.entries %}
+        {% include 'partials/item.html' %}
+      {% endfor %}
     </div>
 
-    <div class="mt-4 text-secondary">* Equal Contribution</div>
+    <div class="footnote">* Equal Contribution</div>
   </article>
 {% endblock %}

@@ -5,18 +5,14 @@
 {% block content %}
   <article class="section">
     {% with section_title="Projects" %}{% include 'partials/section-header.html' %}{% endwith %}
-    {% if data.projects.primary.desc %}<div class="section-desc">{{ data.projects.primary.desc }}</div>{% endif %}
-    <div class="list-group list-group-flush">
-      {% for item in data.projects.primary.entries %}
-        {% include 'partials/item.html' %}
-      {% endfor %}
-    </div>
+    {% if data.projects.primary.desc %}<div>{{ data.projects.primary.desc }}</div>{% endif %}
+    {% for item in data.projects.primary.entries %}
+      {% include 'partials/item.html' %}
+    {% endfor %}
     <hr/>
-    {% if data.projects.secondary.desc %}<div class="section-desc">{{ data.projects.secondary.desc }}</div>{% endif %}
-    <div class="list-group list-group-flush">
-      {% for item in data.projects.secondary.entries %}
-        {% include 'partials/item.html' %}
-      {% endfor %}
-    </div>
+    {% if data.projects.secondary.desc %}<div>{{ data.projects.secondary.desc }}</div>{% endif %}
+    {% for item in data.projects.secondary.entries %}
+      {% include 'partials/item.html' %}
+    {% endfor %}
   </article>
 {% endblock %}

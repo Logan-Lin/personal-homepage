@@ -5,20 +5,16 @@
 {% block content %}
   <article class="section">
     {% with section_title="Publications" %}{% include 'partials/section-header.html' %}{% endwith %}
-    {% if data.publications.primary.desc %}<div class="section-desc">{{ data.publications.primary.desc }}</div>{% endif %}
-    <div class="list-group list-group-flush">
-      {% for item in data.publications.primary.entries %}
-        {% include 'partials/item.html' %}
-      {% endfor %}
-    </div>
+    {% if data.publications.primary.desc %}<div>{{ data.publications.primary.desc }}</div>{% endif %}
+    {% for item in data.publications.primary.entries %}
+      {% include 'partials/item.html' %}
+    {% endfor %}
     <hr/>
-    {% if data.publications.secondary.desc %}<div class="section-desc">{{ data.publications.secondary.desc }}</div>{% endif %}
-    <div class="list-group list-group-flush">
-      {% for item in data.publications.secondary.entries %}
-        {% include 'partials/item.html' %}
-      {% endfor %}
-    </div>
+    {% if data.publications.secondary.desc %}<div>{{ data.publications.secondary.desc }}</div>{% endif %}
+    {% for item in data.publications.secondary.entries %}
+      {% include 'partials/item.html' %}
+    {% endfor %}
 
-    <div class="mt-4 text-secondary">* Equal Contribution</div>
+    <div class="footnote">* Equal Contribution</div>
   </article>
 {% endblock %}

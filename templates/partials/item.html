@@ -1,15 +1,11 @@
-<div class="list-group-item">
-  <div class="d-flex align-items-center gap-2">
-    <div class="d-inline-block item-tags">
-      {{ item.tags|join:"<span class='text-secondary'> | </span>"|safe }}
-    </div>
-    <div class="d-flex gap-2">
-      {% for link in item.links %}
-        <a class="item-link" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
-      {% endfor %}
-    </div>
+<div class="item">
+  <div class="item-meta">
+    <span>{{ item.tags|join:"<span class='text-secondary'> | </span>"|safe }}</span>
+    {% for link in item.links %}
+      <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
+    {% endfor %}
   </div>
-  <div class="item-title">{{ item.title|safe }}</div>
+  <div>{{ item.title|safe }}</div>
   {% if item.authors %}
     <div class="item-author">{{ item.authors|safe }}</div>
   {% endif %}
