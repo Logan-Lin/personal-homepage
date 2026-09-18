@@ -517,6 +517,7 @@ activities:
         desc: "This course introduces students to streamlined interaction with AI models and systems, as well as implementation and deployment of scalable, production-ready AI systems on real-world infrastructures."
         links:
           Literature: https://blog.yanlincs.com/ai-system/
+          Slides: https://github.com/orgs/AI-Systems-Infrastructure/repositories
 
   supervision:
     desc: "Student projects I supervise, covering project proposals, problem definition, design choices, and final delivery."
