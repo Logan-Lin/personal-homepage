@@ -46,6 +46,7 @@ home:
 
     - desc: "AI for materials science is a new research direction I am exploring. The promise is that data mining-driven AI enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design."
       entries:
+        - amgenc
         - amden
         - amden-pncs17
         - villum-inverse-design
@@ -65,6 +66,18 @@ publications:
   primary:
     desc: "Publications where I am the first, co-first, or lead student author. For each work, I contribute significantly to some or all of the following: problem formulation, algorithm design, paper drafting and revision, code implementation, and experimental evaluation."
     entries:
+      - id: amgenc
+        title: "AMGenC: Generating Charge Balanced Amorphous Materials"
+        authors: "Yan Lin, Jilin Hu, N. M. Anoop Krishnan, Morten M. Smedskjaer"
+        desc: "Generates atomic structures of disordered materials such as glasses that match desired target properties, and guarantees the generated materials are chemically valid. It is much more efficient than earlier methods that discarded most of the invalid materials they generated to meet this requirement."
+        tags:
+          - "NeurIPS"
+          - "2026"
+          - "CORE A*"
+        links:
+          Preprint: "https://arxiv.org/abs/2604.27613"
+          Code: "https://github.com/Logan-Lin/AMGenC-code"
+
       - id: amden
         title: "Inverse Design of Amorphous Materials with Targeted Properties"
         authors: "Jonas A. Finkler*, Yan Lin*, Tao Du, Jilin Hu, Morten M. Smedskjaer"
