@@ -571,8 +571,9 @@ activities:
         title: "DiSGMM: A Method for Time-varying Microscopic Weight Completion on Road Networks"
         authors: "Yan Lin, Jilin Hu, Shengnan Guo, Christian S. Jensen, Youfang Lin, Huaiyu Wan"
         tags:
-          - "Oral Presentation"
-          - "IJCAI26"
+          - "IJCAI"
+          - "Oral presentation"
+          - "2026"
         links:
           Slides: "https://github.com/Logan-Lin/micro-weight-rn-slides/releases/latest/download/main.pdf"
       
@@ -580,8 +581,9 @@ activities:
         title: "AMDEN: Amorphous Materials DEnoising Network"
         authors: "Jonas A. Finkler*, Yan Lin*, Morten M Smedskjaer, Tao Du, Jilin Hu"
         tags:
+          - "NeurIPS"
           - "Workshop"
-          - "NeurIPS 2025"
+          - "2025"
         links:
           Paper: "https://openreview.net/forum?id=cEgjPFdLvl"
 
@@ -589,39 +591,45 @@ activities:
         title: "AMDEN: Amorphous Materials DEnoising Network"
         authors: "Yan Lin*, Jonas A. Finkler*, Tao Du, Morten M. Smedskjaer, Jilin Hu"
         tags:
-          - "Oral Presentation"
           - "PNCS17"
+          - "Oral presentation"
+          - "2025"
         links:
           Slides: "https://github.com/Logan-Lin/amden-presentation/releases/latest/download/slide.pdf"
 
       - title: "Self-supervised Learning of Trajectory Data"
         tags:
-          - "Guest lecture"
           - "Aalborg University"
+          - "Guest lecture"
+          - "2024"
         links: {}
 
       - title: "PLM4Traj: Leveraging Pre-trained Language Models for Cognizing Movement Patterns and Travel Purposes from Trajectories"
         authors: "Zeyu Zhou*, Yan Lin*, Haomin Wen, Qisen Xu, Shengnan Guo, Jilin Hu, Youfang Lin, Huaiyu Wan"
         tags:
+          - "KDD"
           - "Workshop"
-          - "KDD 2024"
+          - "2024"
         links:
           Paper: "https://arxiv.org/abs/2405.12459"
 
       - title: "Origin-Destination Travel Time Oracle for Map-based Services"
         tags:
-          - "Paper Oral"
-          - "SIGMOD 2024"
+          - "SIGMOD"
+          - "Oral presentation"
+          - "2024"
         links: {}
 
       - title: "Self-supervised Learning of Spatial-temporal Trajectories"
         tags:
+          - "SpatialDI"
           - "Tutorial"
-          - "SpatialDI 2024"
+          - "2024"
         links: {}
 
       - title: "Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction"
         tags:
-          - "Paper Oral"
-          - "AAAI 2021"
+          - "AAAI"
+          - "Oral presentation"
+          - "2021"
         links: {}
