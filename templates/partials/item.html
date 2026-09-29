@@ -1,15 +1,15 @@
-<div class="item">
-  <div class="item-meta">
+<article class="item">
+  <p class="item-meta">
     <span>{{ item.tags|join:"<span class='text-secondary'> | </span>"|safe }}</span>
     {% for link in item.links %}
       <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
     {% endfor %}
-  </div>
-  <div>{{ item.title|safe }}</div>
+  </p>
+  <{{ heading|default:"h3" }} class="item-title">{{ item.title|safe }}</{{ heading|default:"h3" }}>
   {% if item.authors %}
-    <div class="item-author">{{ item.authors|safe }}</div>
+    <p class="item-author">{{ item.authors|safe }}</p>
   {% endif %}
   {% if item.desc %}
-    <div class="item-desc">{{ item.desc|safe }}</div>
+    <p class="item-desc">{{ item.desc|safe }}</p>
   {% endif %}
-</div>
+</article>

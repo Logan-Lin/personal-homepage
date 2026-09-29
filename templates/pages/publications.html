@@ -3,18 +3,18 @@
 {% block title %}{{ data.site.title }} - Publications{% endblock %}
 
 {% block content %}
-  <article class="section">
-    {% with section_title="Publications" %}{% include 'partials/section-header.html' %}{% endwith %}
-    {% if data.publications.primary.desc %}<div>{{ data.publications.primary.desc }}</div>{% endif %}
+  <section class="section">
+    <h1 class="section-title">Publications</h1>
+    {% if data.publications.primary.desc %}<p class="section-desc">{{ data.publications.primary.desc }}</p>{% endif %}
     {% for item in data.publications.primary.entries %}
-      {% include 'partials/item.html' %}
+      {% include 'partials/item.html' with heading="h2" %}
     {% endfor %}
     <hr/>
-    {% if data.publications.secondary.desc %}<div>{{ data.publications.secondary.desc }}</div>{% endif %}
+    {% if data.publications.secondary.desc %}<p class="section-desc">{{ data.publications.secondary.desc }}</p>{% endif %}
     {% for item in data.publications.secondary.entries %}
-      {% include 'partials/item.html' %}
+      {% include 'partials/item.html' with heading="h2" %}
     {% endfor %}
 
-    <div class="footnote">* Equal Contribution</div>
-  </article>
+    <p class="footnote">* Equal Contribution</p>
+  </section>
 {% endblock %}

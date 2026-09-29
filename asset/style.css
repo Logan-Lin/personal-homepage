@@ -81,7 +81,7 @@ nav {
   font-family: Impact, Haettenschweiler, 'Helvetica Inserat', 'Arial Narrow Bold', 'Arial Narrow', Oswald, 'Roboto Condensed', 'Ubuntu Condensed', 'DejaVu Sans Condensed', 'Liberation Sans Narrow', 'Nimbus Sans Narrow', 'Franklin Gothic Bold', 'Arial Black', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
   font-size: 1.8rem;
-  margin-right: auto;
+  margin: 0 auto 0 0;
 }
 
 @media (max-width: 600px) {
@@ -101,9 +101,14 @@ footer {
   border-top: 1px solid var(--border-color);
 }
 
+footer p {
+  margin: 0;
+}
+
 .footer-links {
   display: flex;
   gap: 1.5rem;
+  font-style: normal;
 }
 
 .bio {
@@ -137,6 +142,10 @@ footer {
   border-bottom: 1px dashed var(--border-color);
 }
 
+.section-desc {
+  margin: 0;
+}
+
 .item {
   padding-top: 1rem;
 }
@@ -145,11 +154,18 @@ footer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  margin: 0;
   font-size: 0.9rem;
+}
+
+.item-title {
+  margin: 0;
+  font: inherit;
 }
 
 .item-author,
 .item-desc {
+  margin: 0;
   font-size: 0.8rem;
   color: var(--text-secondary);
 }
@@ -163,6 +179,6 @@ footer {
 }
 
 .footnote {
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 0;
   color: var(--text-secondary);
 }

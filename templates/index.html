@@ -3,37 +3,33 @@
 {% block title %}{{ data.site.title }}{% endblock %}
 
 {% block content %}
-<div class="bio">{{ content.bio|safe }}</div>
+<section class="bio" aria-label="About">{{ content.bio|safe }}</section>
 
-<article class="section" id="research">
-    {% with section_title="Research" %}{% include 'partials/section-header.html' %}{% endwith %}
+<section class="section" id="research">
+    <h2 class="section-title">Research</h2>
     {% for subsection in data.home.research %}
       {% if not forloop.First %}<hr/>{% endif %}
-      <div>
-        <div>{{ subsection.desc }}</div>
-        {% for item in subsection.resolved_entries %}
-          {% include 'partials/item.html' %}
-        {% endfor %}
-      </div>
+      <p class="section-desc">{{ subsection.desc }}</p>
+      {% for item in subsection.resolved_entries %}
+        {% include 'partials/item.html' %}
+      {% endfor %}
     {% endfor %}
-</article>
+</section>
 
-<article class="section" id="teaching">
-    {% with section_title="Teaching" %}{% include 'partials/section-header.html' %}{% endwith %}
+<section class="section" id="teaching">
+    <h2 class="section-title">Teaching</h2>
     {% for subsection in data.home.teaching %}
       {% if not forloop.First %}<hr/>{% endif %}
-      <div>
-        <div>{{ subsection.desc }}</div>
-        {% for item in subsection.resolved_entries %}
-          {% include 'partials/item.html' %}
-        {% endfor %}
-      </div>
+      <p class="section-desc">{{ subsection.desc }}</p>
+      {% for item in subsection.resolved_entries %}
+        {% include 'partials/item.html' %}
+      {% endfor %}
     {% endfor %}
-</article>
+</section>
 
-<article class="section" id="service">
-    {% with section_title="Service" %}{% include 'partials/section-header.html' %}{% endwith %}
-    <div>{{ content.service|safe }}</div>
-</article>
+<section class="section" id="service">
+    <h2 class="section-title">Service</h2>
+    {{ content.service|safe }}
+</section>
 
 {% endblock %}

@@ -23,7 +23,11 @@
 <body>
   <header>
     <nav>
+      {% if is_home_page %}
+      <h1 class="site-title"><a href="/">{{ data.site.name }}</a></h1>
+      {% else %}
       <a href="/" class="site-title">{{ data.site.name }}</a>
+      {% endif %}
       {% for nav in data.navigation.navbar %}
       <a href="{{ nav.url }}"
          {% if nav.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
@@ -38,15 +42,15 @@
   </main>
 
   <footer>
-    <span class="text-secondary">© {{ year }} - {{ data.site.footerText }}</span>
-    <span class="footer-links">
+    <p class="text-secondary">© {{ year }} - {{ data.site.footerText }}</p>
+    <address class="footer-links">
       {% for link in data.navigation.footer %}
       <a href="{{ link.url }}"
          {% if link.external %}target="_blank" rel="noopener noreferrer"{% endif %}>
         {{ link.name }}
       </a>
       {% endfor %}
-    </span>
+    </address>
   </footer>
 
 
