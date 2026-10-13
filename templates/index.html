@@ -8,10 +8,10 @@
 <section class="section" id="research">
     <h2 class="section-title">Research</h2>
     {% for subsection in data.home.research %}
-      {% if not forloop.First %}<hr/>{% endif %}
+      <h3 class="subsection-title">{{ subsection.title }}</h3>
       <p class="section-desc">{{ subsection.desc }}</p>
       {% for item in subsection.resolved_entries %}
-        {% include 'partials/item.html' %}
+        {% include 'partials/item.html' with heading="h4" %}
       {% endfor %}
     {% endfor %}
 </section>
@@ -19,10 +19,10 @@
 <section class="section" id="teaching">
     <h2 class="section-title">Teaching</h2>
     {% for subsection in data.home.teaching %}
-      {% if not forloop.First %}<hr/>{% endif %}
+      <h3 class="subsection-title">{{ subsection.title }}</h3>
       <p class="section-desc">{{ subsection.desc }}</p>
       {% for item in subsection.resolved_entries %}
-        {% include 'partials/item.html' %}
+        {% include 'partials/item.html' with heading="h4" %}
       {% endfor %}
     {% endfor %}
 </section>

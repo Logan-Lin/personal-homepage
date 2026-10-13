@@ -5,14 +5,15 @@
 {% block content %}
   <section class="section">
     <h1 class="section-title">Projects</h1>
+    <h2 class="subsection-title">{{ data.projects.primary.title }}</h2>
     {% if data.projects.primary.desc %}<p class="section-desc">{{ data.projects.primary.desc }}</p>{% endif %}
     {% for item in data.projects.primary.entries %}
-      {% include 'partials/item.html' with heading="h2" %}
+      {% include 'partials/item.html' %}
     {% endfor %}
-    <hr/>
+    <h2 class="subsection-title">{{ data.projects.secondary.title }}</h2>
     {% if data.projects.secondary.desc %}<p class="section-desc">{{ data.projects.secondary.desc }}</p>{% endif %}
     {% for item in data.projects.secondary.entries %}
-      {% include 'partials/item.html' with heading="h2" %}
+      {% include 'partials/item.html' %}
     {% endfor %}
   </section>
 {% endblock %}

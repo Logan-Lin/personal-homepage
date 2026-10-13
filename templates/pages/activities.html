@@ -6,23 +6,22 @@
   <section class="section">
     <h1 class="section-title">Activities</h1>
 
+    <h2 class="subsection-title">{{ data.activities.courses.title }}</h2>
     <p class="section-desc">{{ data.activities.courses.desc }}</p>
     {% for item in data.activities.courses.entries %}
-      {% include 'partials/item.html' with heading="h2" %}
+      {% include 'partials/item.html' %}
     {% endfor %}
 
-    <hr/>
-
+    <h2 class="subsection-title">{{ data.activities.supervision.title }}</h2>
     <p class="section-desc">{{ data.activities.supervision.desc }}</p>
     {% for item in data.activities.supervision.entries %}
-      {% include 'partials/item.html' with heading="h2" %}
+      {% include 'partials/item.html' %}
     {% endfor %}
 
-    <hr/>
-
+    <h2 class="subsection-title">{{ data.activities.presentations.title }}</h2>
     {% if data.activities.presentations.desc %}<p class="section-desc">{{ data.activities.presentations.desc }}</p>{% endif %}
     {% for item in data.activities.presentations.entries %}
-      {% include 'partials/item.html' with heading="h2" %}
+      {% include 'partials/item.html' %}
     {% endfor %}
 
     <p class="footnote">* Equal Contribution</p>

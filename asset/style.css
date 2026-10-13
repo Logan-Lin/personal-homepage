@@ -59,12 +59,6 @@ ul, ol {
   margin-bottom: 1rem;
 }
 
-hr {
-  margin: 1.25rem 0;
-  border: 0;
-  border-top: 1px dashed var(--border-color);
-}
-
 header {
   padding: 2rem 0 1rem;
   border-bottom: 1px solid var(--border-color);
@@ -140,6 +134,17 @@ footer p {
   content: "";
   flex-grow: 1;
   border-bottom: 1px dashed var(--border-color);
+}
+
+.subsection-title {
+  margin: 2rem 0 0.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.section-title + .subsection-title {
+  margin-top: 1rem;
 }
 
 .section-desc {

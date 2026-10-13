@@ -28,7 +28,8 @@ navigation:
 
 home:
   research:
-    - desc: "Trajectory representation learning is one of my established research topics. It aims to learn representations of trajectories (of vehicle, human, or vessel, etc.) that are universal across various downstream tasks. This also extends to building a multi-task/foundational model for trajectories that can perform various tasks at once."
+    - title: "Trajectory Representation Learning"
+      desc: "Trajectory representation learning is one of my established research topics. It aims to learn representations of trajectories (of vehicle, human, or vessel, etc.) that are universal across various downstream tasks. This also extends to building a multi-task/foundational model for trajectories that can perform various tasks at once."
       entries:
         - unite-survey
         - uvtm
@@ -36,7 +37,8 @@ home:
         - ctle
         - transfertraj
 
-    - desc: "Spatiotemporal data mining is a broader topic that is inclusive of the above. It covers research on extracting and utilizing patterns from large-scale data with spatial information and that is dynamic over time (usually sourced from transportation scenarios)."
+    - title: "Spatiotemporal Data Mining"
+      desc: "Spatiotemporal data mining is a broader topic that is inclusive of the above. It covers research on extracting and utilizing patterns from large-scale data with spatial information and that is dynamic over time (usually sourced from transportation scenarios)."
       entries:
         - disgmm
         - dot
@@ -44,7 +46,8 @@ home:
         - plmtrajrec
         - path-llm
 
-    - desc: "AI for materials science is a new research direction I am exploring. The promise is that data mining-driven AI enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design."
+    - title: "AI for Materials Science"
+      desc: "AI for materials science is a new research direction I am exploring. The promise is that data mining-driven AI enables discovery of new materials with tailored properties, a non-trivial process in traditional materials design."
       entries:
         - amgenc
         - amden
@@ -53,10 +56,12 @@ home:
         - sculptdrug
 
   teaching:
-    - desc: "My course teaching follows three core principles: a solid understanding of the subject matter, awareness of students' established experiences and background, and problem-based learning style applied throughout lectures, exercises, and exams. This translates to practices including tailor-made blog-style literature that is both professional and intuitive, inspirational lectures that connect theory to real-world problems, and progressively-arranged hands-on exercises that build practical problem-solving skills."
+    - title: "Course Teaching"
+      desc: "My course teaching follows three core principles: a solid understanding of the subject matter, awareness of students' established experiences and background, and problem-based learning style applied throughout lectures, exercises, and exams. This translates to practices including tailor-made blog-style literature that is both professional and intuitive, inspirational lectures that connect theory to real-world problems, and progressively-arranged hands-on exercises that build practical problem-solving skills."
       entries:
         - ai-systems
-    - desc: "I am building my supervision experience, supervising Bachelor's and Master's semester projects. My supervision focuses on problem definition, critical thinking about design choices, and delivering convincing conclusions."
+    - title: "Student Supervision"
+      desc: "I am building my supervision experience, supervising Bachelor's and Master's semester projects. My supervision focuses on problem definition, critical thinking about design choices, and delivering convincing conclusions."
       entries:
         - traj-rep-generalization
         - assess-data-traj
@@ -64,6 +69,7 @@ home:
 
 publications:
   primary:
+    title: "Primary"
     desc: "Publications where I am the first, co-first, or lead student author. For each work, I contribute significantly to some or all of the following: problem formulation, algorithm design, paper drafting and revision, code implementation, and experimental evaluation."
     entries:
       - id: amgenc
@@ -286,6 +292,7 @@ publications:
           Code: "https://github.com/Logan-Lin/CTLE"
 
   secondary:
+    title: "Secondary"
     desc: "Publications where I serve as a contributing author. My involvement in these works typically includes technical discussion, algorithm refinement, or contribution to experiments and writing."
     entries:
       - title: "Sparse Traffic Accident Risk Forecasting With Spatial-Temporal Knowledge Graphs"
@@ -472,6 +479,7 @@ publications:
 
 projects:
   primary:
+    title: "Principal Investigator"
     desc: "Projects where I serve as the principal investigator or lead developer, responsible for the overall research direction, system design, and implementation."
     entries:
       - title: "Research on <i>Prediction of User Travel Destination and Travel Time Based on Trajectory Representation Learning</i>"
@@ -497,6 +505,7 @@ projects:
           Code: "https://github.com/wenhaomin/ChatGPT-PromptGenius"
 
   secondary:
+    title: "Participant"
     desc: "Projects where I participate as a key researcher, contributing to specific aspects such as model development, data analysis, or experimental design."
     entries:
       - id: villum-inverse-design
@@ -520,6 +529,7 @@ projects:
 
 activities:
   courses:
+    title: "Course Teaching"
     desc: "University-level courses I teach, covering lectures, literatures, exercises, and exam assessments."
     entries:
       - id: ai-systems
@@ -533,6 +543,7 @@ activities:
           Slides: https://github.com/orgs/AI-Systems-Infrastructure/repositories
 
   supervision:
+    title: "Student Supervision"
     desc: "Student projects I supervise, covering project proposals, problem definition, design choices, and final delivery."
     entries:
       - id: traj-rep-generalization
@@ -565,6 +576,7 @@ activities:
           Proposal: https://github.com/Logan-Lin/camera-sees-behind/releases/latest/download/proposal.pdf
 
   presentations:
+    title: "Presentations"
     desc: "Oral presentations, tutorials, and guest lectures delivered at international conferences and universities."
     entries:
       - id: disgmm-ijcai26
