@@ -28,6 +28,8 @@ navigation:
 
 home:
   research:
+    - desc: "My established and exploratory research topics, each with a representative mix of publications, projects, and presentations."
+
     - title: "Trajectory Representation Learning"
       desc: "Trajectory representation learning is one of my established research topics. It aims to learn representations of trajectories (of vehicle, human, or vessel, etc.) that are universal across various downstream tasks. This also extends to building a multi-task/foundational model for trajectories that can perform various tasks at once."
       entries:
