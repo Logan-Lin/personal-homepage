@@ -83,8 +83,20 @@ publications:
           - "2026"
           - "CORE A*"
         links:
+          Poster: "https://neurips.cc/virtual/2026/loc/sydney/poster/154520"
           Preprint: "https://arxiv.org/abs/2604.27613"
           Code: "https://github.com/Logan-Lin/AMGenC-code"
+
+      - id: prompt-dataset-survey
+        title: "A Survey of LLM Prompt Datasets: Taxonomy, Linguistic Patterns, and Practical Uses"
+        authors: "Yuanming Zhang*, Yan Lin*, Arijit Khan, Huaiyu Wan"
+        desc: "Surveys 129 public prompt datasets for large language models and organizes them into a unified taxonomy. Identifies the linguistic patterns that set prompts apart from general text, and shows that lightweight features built on these patterns support prompt filtering and domain routing at low cost."
+        tags:
+          - "EMNLP Findings"
+          - "2026"
+        links:
+          Preprint: "https://arxiv.org/abs/2510.09316"
+          Code: "https://github.com/ymzhang-cs/prompt-dataset-analysis"
 
       - id: amden
         title: "Inverse Design of Amorphous Materials with Targeted Properties"
