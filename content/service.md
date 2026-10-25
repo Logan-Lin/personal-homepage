@@ -1,4 +1,4 @@
-I actively contribute to the academic community through professional membership and peer review of journal and conference papers.
+I contribute to the academic community through professional association activities and peer review of journal and conference papers.
 
 - IEEE, ACM member
 - Secretary of IEEE (Denmark Section) Computer Society
