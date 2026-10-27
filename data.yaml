@@ -30,8 +30,8 @@ home:
   research:
     - desc: "Below, I list my established and exploratory research topics, each encompassing a mix of publications, projects, and presentations."
 
-    - title: "Trajectory Representation Learning"
-      desc: "Trajectory representation learning is one of my established research topics. It aims to learn representations of trajectories (of vehicles, humans, or vessels, etc.) that perform well across various downstream tasks. This also extends to building a multi-task/foundational model for trajectories that can perform multiple tasks at once."
+    - title: "Trajectory Foundation Models"
+      desc: "Building foundation models for trajectories is one of my established research topics. It aims to create a single model for trajectory data that generalizes across tasks (such as prediction and classification) and across modes of movement (such as vehicles, humans, and vessels), removing the need for a separate model for each."
       entries:
         - unite-survey
         - uvtm
@@ -158,7 +158,7 @@ publications:
       - id: transfertraj
         title: "TransferTraj: A Vehicle Trajectory Learning Model for Region and Task Transferability"
         authors: Tonglong Wei*, Yan Lin*, Zeyu Zhou, Haomin Wen, Jilin Hu, Shengnan Guo, Youfang Lin, Gao Cong, Huaiyu Wan
-        desc: "Learns from vehicle GPS trajectories in a way that transfers across different geographic regions and different prediction tasks without retraining, removing the need to keep separate specialized models. Handles each task by treating it as recovering hidden parts of a trajectory, so one model serves many tasks even with limited data."
+        desc: "Pre-trains a vehicle GPS trajectory model in one region and transfers it to other regions and to different tasks without retraining, removing the need to keep separate specialized models. Handles each task by treating it as recovering hidden parts of a trajectory, so one model serves many tasks even with limited data."
         tags:
           - "NeurIPS"
           - "2025"
@@ -183,7 +183,7 @@ publications:
       - id: uvtm
         title: "UVTM: Universal Vehicle Trajectory Modeling with ST Feature Domain Generation"
         authors: "Yan Lin, Jilin Hu, Shengnan Guo, Bin Yang, Christian S. Jensen, Youfang Lin, Huaiyu Wan"
-        desc: "A single model for vehicle GPS trajectories that handles many tasks such as travel time estimation, trajectory recovery, and trajectory prediction, instead of maintaining a separate model for each. It stays accurate even when trajectories are sparse or only part of their features are available, by learning to rebuild dense and complete trajectories from incomplete ones."
+        desc: "A foundational model for vehicle GPS trajectories that is pre-trained once and adapts to many tasks such as travel time estimation, trajectory recovery, and trajectory prediction, instead of maintaining a separate model for each. It stays accurate even when trajectories are sparse or only part of their features are available, by learning to rebuild dense and complete trajectories from incomplete ones."
         tags:
           - "IEEE TKDE"
           - "2025"
@@ -209,7 +209,7 @@ publications:
       - id: unite-survey
         title: "UniTE: A Survey and Unified Pipeline for Pre-training Spatiotemporal Trajectory Embeddings"
         authors: "Yan Lin, Zeyu Zhou, Yicheng Liu, Haochen Lv, Haomin Wen, Tianyi Li, Yushuai Li, Christian S. Jensen, Shengnan Guo, Youfang Lin, Huaiyu Wan"
-        desc: "Surveys existing methods for learning reusable representations of movement trajectories and brings them together into a single modular framework with shared code, so that new methods can be built, compared, and evaluated on the same basis."
+        desc: "Surveys existing methods for pre-training universal representations of vehicle and human trajectories that apply across different tasks, and brings them together into a single modular framework with shared code, so that new methods can be built, compared, and evaluated on the same basis."
         tags:
           - "IEEE TKDE"
           - "2025"
@@ -271,7 +271,7 @@ publications:
       - id: mmtec
         title: "Pre-training General Trajectory Embeddings with Maximum Multi-view Entropy Coding"
         authors: "Yan Lin, Huaiyu Wan, Shengnan Guo, Jilin Hu, Christian S. Jensen, Youfang Lin"
-        desc: "Learns general-purpose representations of movement trajectories from unlabeled data that capture both travel behavior and spatial and temporal patterns. The learned representations avoid task-specific bias so they transfer well across many downstream tasks."
+        desc: "Pre-trains general-purpose representations of movement trajectories from unlabeled data that capture both travel behavior and spatial and temporal patterns. The learned representations avoid task-specific bias, so they can be reused across many downstream tasks instead of being learned anew for each."
         tags:
           - "IEEE TKDE"
           - "2023"
@@ -296,7 +296,7 @@ publications:
       - id: ctle
         title: "Pre-training Context and Time Aware Location Embeddings from Spatial-Temporal Trajectories for User Next Location Prediction"
         authors: "Yan Lin, Huaiyu Wan, Shengnan Guo, Youfang Lin"
-        desc: "Pre-trains location representations from movement trajectories that capture how the meaning of a place changes with its surrounding context and the time of visit, leading to more accurate prediction of a user's next location."
+        desc: "Pre-trains location representations from human movement trajectories that capture how the meaning of a place changes with its surrounding context and the time of visit. The representations can be shared across different prediction models, making their prediction of a user's next location more accurate."
         tags:
           - "AAAI"
           - "2021"
